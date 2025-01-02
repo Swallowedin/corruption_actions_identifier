@@ -194,11 +194,51 @@ def parse_measures_with_refs(measures_text):
             refs_dict[f"{category}-{len(measures_dict[category])}"] = ref
                 
     return measures_dict, refs_dict
+def generate_best_practices_and_kpis(risk, process):
+    """Génère des bonnes pratiques et KPIs associés"""
+    prompt = f"""Pour le processus {process} et le risque {risk}, proposer :
+    1. 3-5 bonnes pratiques concrètes basées sur les standards du secteur
+    2. Pour chaque bonne pratique, 1-2 KPIs mesurables et pertinents
+
+    Format de réponse attendu :
+    BP1: [Description de la bonne pratique]
+    - KPI1: [Description du KPI] (Fréquence: [fréquence], Cible: [cible])
+    - KPI2: [Description du KPI] (Fréquence: [fréquence], Cible: [cible])
+
+    BP2: [Description de la bonne pratique]
+    - KPI1: [Description du KPI] (Fréquence: [fréquence], Cible: [cible])
+    """
+    
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.7
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        return f"Erreur de génération: {str(e)}"
+
+def parse_best_practices_and_kpis(text):
+    """Parse les bonnes pratiques et KPIs générés"""
+    practices = {}
+    current_bp = None
+    
+    for line in text.split('\n'):
+        line = line.strip()
+        if line.startswith('BP'):
+            current_bp = line.split(':', 1)[1].strip()
+            practices[current_bp] = []
+        elif line.startswith('-') and current_bp:
+            kpi = line[1:].strip()
+            practices[current_bp].append(kpi)
+            
+    return practices
 
 def main():
     st.title("🛡️ Générateur de Mesures de Remédiation des Risques")
     st.markdown("""
-    Cette application génère des mesures de remédiation pour les risques sélectionnés,
+    Cette application génère des mesures de remédiation, bonnes pratiques et KPIs 
     en se basant sur les standards ISO 37001, ISO 37301, COSO ERM et COSO CI.
     """)
     
@@ -229,69 +269,105 @@ def main():
                 )
 
     with col2:
-        if processus and selected_risks and st.button("Générer les mesures", type="primary"):
+        if processus and selected_risks and st.button("Générer l'analyse complète", type="primary"):
             all_measures = {}
             all_refs = {}
+            all_practices = {}
             results = []
             
-            with st.spinner("Génération des mesures en cours..."):
-                for risk in selected_risks:
-                    st.subheader(f"📊 {risk}")
+            progress_text = "Génération en cours..."
+            progress_bar = st.progress(0)
+            
+            for idx, risk in enumerate(selected_risks):
+                st.subheader(f"📊 {risk}")
+                
+                with st.spinner(f"Analyse du risque {idx + 1}/{len(selected_risks)}"):
+                    # Génération des mesures
                     measures_text = generate_measures(risk, processus)
                     measures_dict, refs_dict = parse_measures_with_refs(measures_text)
+                    
+                    # Génération des bonnes pratiques et KPIs
+                    practices_text = generate_best_practices_and_kpis(risk, processus)
+                    practices_dict = parse_best_practices_and_kpis(practices_text)
+                    
                     all_measures[risk] = measures_dict
                     all_refs[risk] = refs_dict
+                    all_practices[risk] = practices_dict
                     
-                    # Affichage des mesures
-                    tab_detect, tab_reduc, tab_accept = st.tabs(["Détection", "Réduction", "Acceptation"])
-                    tab_refus, tab_transf = st.tabs(["Refus", "Transfert"])
+                    # Création des onglets principaux
+                    tab_measures, tab_practices = st.tabs(["Mesures de remédiation", "Bonnes pratiques & KPIs"])
                     
-                    with tab_detect:
-                        st.write("**Mesures de détection**")
-                        for i, measure in enumerate(measures_dict.get('D', []), 1):
-                            ref = refs_dict.get(f"D-{i}", "")
-                            st.write(f"• {measure}")
-                            st.write(f"  *Ref: {ref}*")
+                    with tab_measures:
+                        # Sous-onglets pour les différentes catégories de mesures
+                        cols = st.columns(3)
+                        with cols[0]:
+                            st.markdown("### Mesures de détection (D)")
+                            for i, measure in enumerate(measures_dict.get('D', []), 1):
+                                ref = refs_dict.get(f"D-{i}", "")
+                                st.markdown(f"""
+                                📌 **Mesure {i}:**  
+                                {measure}  
+                                *Ref: {ref}*
+                                """)
+                            
+                            st.markdown("### Mesures de réduction (R)")
+                            for i, measure in enumerate(measures_dict.get('R', []), 1):
+                                ref = refs_dict.get(f"R-{i}", "")
+                                st.markdown(f"""
+                                📌 **Mesure {i}:**  
+                                {measure}  
+                                *Ref: {ref}*
+                                """)
+                        
+                        with cols[1]:
+                            st.markdown("### Mesures d'acceptation (A)")
+                            for i, measure in enumerate(measures_dict.get('A', []), 1):
+                                ref = refs_dict.get(f"A-{i}", "")
+                                st.markdown(f"""
+                                📌 **Mesure {i}:**  
+                                {measure}  
+                                *Ref: {ref}*
+                                """)
+                            
+                            st.markdown("### Mesures de refus (F)")
+                            for i, measure in enumerate(measures_dict.get('F', []), 1):
+                                ref = refs_dict.get(f"F-{i}", "")
+                                st.markdown(f"""
+                                📌 **Mesure {i}:**  
+                                {measure}  
+                                *Ref: {ref}*
+                                """)
+                        
+                        with cols[2]:
+                            st.markdown("### Mesures de transfert (T)")
+                            for i, measure in enumerate(measures_dict.get('T', []), 1):
+                                ref = refs_dict.get(f"T-{i}", "")
+                                st.markdown(f"""
+                                📌 **Mesure {i}:**  
+                                {measure}  
+                                *Ref: {ref}*
+                                """)
                     
-                    with tab_reduc:
-                        st.write("**Mesures de réduction**")
-                        for i, measure in enumerate(measures_dict.get('R', []), 1):
-                            ref = refs_dict.get(f"R-{i}", "")
-                            st.write(f"• {measure}")
-                            st.write(f"  *Ref: {ref}*")
-                    
-                    with tab_accept:
-                        st.write("**Mesures d'acceptation**")
-                        for i, measure in enumerate(measures_dict.get('A', []), 1):
-                            ref = refs_dict.get(f"A-{i}", "")
-                            st.write(f"• {measure}")
-                            st.write(f"  *Ref: {ref}*")
-                    
-                    with tab_refus:
-                        st.write("**Mesures de refus**")
-                        for i, measure in enumerate(measures_dict.get('F', []), 1):
-                            ref = refs_dict.get(f"F-{i}", "")
-                            st.write(f"• {measure}")
-                            st.write(f"  *Ref: {ref}*")
-                    
-                    with tab_transf:
-                        st.write("**Mesures de transfert**")
-                        for i, measure in enumerate(measures_dict.get('T', []), 1):
-                            ref = refs_dict.get(f"T-{i}", "")
-                            st.write(f"• {measure}")
-                            st.write(f"  *Ref: {ref}*")
-                    
-                    st.divider()
+                    with tab_practices:
+                        st.markdown("### 📋 Bonnes pratiques et indicateurs")
+                        for practice, kpis in practices_dict.items():
+                            with st.expander(practice):
+                                for kpi in kpis:
+                                    st.markdown(f"📊 {kpi}")
                     
                     # Stockage pour export
                     results.append({
                         "Processus": processus,
                         "Référence": PROCESSES[famille][processus],
                         "Risque": risk,
-                        "Mesures": measures_text
+                        "Mesures": measures_text,
+                        "Bonnes_Pratiques_KPIs": practices_text
                     })
-
-            # Analyse des mesures communes si plusieurs risques sélectionnés
+                
+                progress_bar.progress((idx + 1) / len(selected_risks))
+                st.divider()
+            
+            # Analyse des mesures communes
             if len(selected_risks) > 1:
                 st.subheader("🔄 Mesures communes identifiées")
                 common_measures = find_common_measures(all_measures)
@@ -308,14 +384,16 @@ def main():
                     common = {m: count for m, count in measures.items() if count > 1}
                     if common:
                         st.write(f"**Mesures de {category_names[category]} communes:**")
-                        for measure, count in common.items():
-                            st.write(f"• {measure} _(présente dans {count} risques)_")
+                        for measure, count in sorted(common.items(), key=lambda x: x[1], reverse=True):
+                            st.markdown(f"• {measure} _(utilisée dans {count} risques)_")
                         st.write("")
-
+            
             # Export Excel
             if results:
-                df = pd.DataFrame(results)
-                df_refs = pd.DataFrame([
+                # Création des DataFrames
+                df_main = pd.DataFrame(results)
+                
+                df_measures = pd.DataFrame([
                     {
                         "Risque": risk,
                         "Catégorie": cat,
@@ -327,26 +405,36 @@ def main():
                     for i, measure in enumerate(measures)
                 ])
                 
-                # Création du fichier Excel
+                df_practices = pd.DataFrame([
+                    {
+                        "Risque": risk,
+                        "Bonne Pratique": practice,
+                        "KPI": kpi
+                    }
+                    for risk, practices in all_practices.items()
+                    for practice, kpis in practices.items()
+                    for kpi in kpis
+                ])
+                
+                df_standards = pd.DataFrame([
+                    {
+                        "Standard": standard,
+                        "Section": section,
+                        "Description": desc if isinstance(desc, str) else ", ".join(desc)
+                    }
+                    for standard, sections in STANDARDS.items()
+                    for section, desc in sections.items()
+                ])
+                
+                # Export avec toutes les feuilles
                 buffer = io.BytesIO()
                 with pd.ExcelWriter(buffer, engine='openpyxl') as writer:
-                    df.to_excel(writer, sheet_name='Vue générale', index=False)
-                    df_refs.to_excel(writer, sheet_name='Mesures détaillées', index=False)
-                    
-                    # Ajout d'une feuille pour les standards
-                    df_standards = pd.DataFrame([
-                        {
-                            "Standard": standard,
-                            "Section": section,
-                            "Description": desc if isinstance(desc, str) else ", ".join(desc)
-                        }
-                        for standard, sections in STANDARDS.items()
-                        for section, desc in sections.items()
-                    ])
+                    df_main.to_excel(writer, sheet_name='Vue générale', index=False)
+                    df_measures.to_excel(writer, sheet_name='Mesures détaillées', index=False)
+                    df_practices.to_excel(writer, sheet_name='Bonnes Pratiques & KPIs', index=False)
                     df_standards.to_excel(writer, sheet_name='Référentiel', index=False)
                     
                     if len(selected_risks) > 1:
-                        # Ajout des mesures communes
                         df_common = pd.DataFrame([
                             {
                                 "Catégorie": cat,
@@ -365,6 +453,8 @@ def main():
                     file_name=f"mesures_remediation_{processus}.xlsx",
                     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
                 )
+                
+                st.success("✅ Génération terminée avec succès!")
 
 if __name__ == "__main__":
     main()
