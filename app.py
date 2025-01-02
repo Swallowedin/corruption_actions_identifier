@@ -1,12 +1,14 @@
 import streamlit as st
 import pandas as pd
-import openai
+from openai import OpenAI
+import os
+import io
 
 # Configuration de la page
 st.set_page_config(page_title="Générateur de Mesures de Remédiation", layout="wide")
 
 # Configuration OpenAI - À mettre dans les secrets Streamlit
-openai.api_key = st.secrets["OPENAI_API_KEY"]
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 # Données des processus intégrées directement
 PROCESSES = {
@@ -59,7 +61,7 @@ RISKS = [
     "B.3 - CON - Boulanger / Electro Dépôt",
     "B.4 - CON - United.B & AFM / Electro Dépôt",
     "B.5 - CON - Prestataires également partenaires",
-    "B.6 - CON - Gestion du personnel",
+    "B.6 - CON - Gestion du personnel"
     # ... ajoutez tous les autres risques ici
 ]
 
@@ -83,7 +85,7 @@ def generate_measures(risk, process):
     """
     
     try:
-        response = openai.ChatCompletion.create(
+        response = client.chat.completions.create(
             model="gpt-4",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.7
@@ -140,18 +142,13 @@ def main():
             # Export Excel
             if results:
                 df = pd.DataFrame(results)
-                
-                # Créer le buffer Excel
-                buffer = pd.ExcelWriter('mesures_remediation.xlsx', engine='openpyxl')
-                df.to_excel(buffer, index=False)
-                buffer.close()
-                
-                with open('mesures_remediation.xlsx', 'rb') as f:
-                    excel_data = f.read()
+                buffer = io.BytesIO()
+                with pd.ExcelWriter(buffer, engine='openpyxl') as writer:
+                    df.to_excel(writer, index=False)
                 
                 st.download_button(
                     label="📥 Télécharger le rapport Excel",
-                    data=excel_data,
+                    data=buffer.getvalue(),
                     file_name="mesures_remediation.xlsx",
                     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
                 )
