@@ -1,13 +1,13 @@
 import streamlit as st
 import pandas as pd
 from openai import OpenAI
-import os
 import io
+from collections import defaultdict
 
 # Configuration de la page
 st.set_page_config(page_title="Générateur de Mesures de Remédiation", layout="wide")
 
-# Configuration OpenAI - À mettre dans les secrets Streamlit
+# Configuration OpenAI
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 # Données des processus intégrées directement
@@ -67,26 +67,36 @@ RISKS = [
 
 def generate_measures(risk, process):
     """Génère des mesures via GPT pour un risque donné"""
-    prompt = f"""Pour le processus {process} et le risque {risk}, proposer UNIQUEMENT des mesures concrètes et spécifiques de remédiation selon les catégories suivantes. 
-    Pour chaque catégorie, donner EXACTEMENT UNE mesure concrète et applicable :
+    prompt = f"""Pour le processus {process} et le risque {risk}, proposer des mesures concrètes et spécifiques de remédiation selon les catégories suivantes.
+    Donner AU MOINS 3 mesures par catégorie. Les mesures doivent être précises, actionnables et adaptées au contexte.
 
-    D = Mesure de détection du risque
-    R = Mesure de réduction du risque
-    A = Mesure d'acceptation du risque
-    F = Mesure de refus / fin de non-recevoir
-    T = Mesure de transfert du risque
-    
+    D = Mesures de détection du risque (comment identifier/détecter)
+    R = Mesures de réduction du risque (comment réduire la probabilité ou l'impact)
+    A = Mesures d'acceptation du risque (comment gérer si on accepte le risque)
+    F = Mesures de refus / fin de non-recevoir (quelles limites fixer)
+    T = Mesures de transfert du risque (comment transférer à des tiers)
+
     Format de réponse attendu (EXACTEMENT ce format) :
-    D: [votre mesure de détection]
-    R: [votre mesure de réduction]
-    A: [votre mesure d'acceptation]
-    F: [votre mesure de refus]
-    T: [votre mesure de transfert]
+    D1: [première mesure de détection]
+    D2: [deuxième mesure de détection]
+    D3: [troisième mesure de détection]
+    R1: [première mesure de réduction]
+    R2: [deuxième mesure de réduction]
+    R3: [troisième mesure de réduction]
+    A1: [première mesure d'acceptation]
+    A2: [deuxième mesure d'acceptation]
+    A3: [troisième mesure d'acceptation]
+    F1: [première mesure de refus]
+    F2: [deuxième mesure de refus]
+    F3: [troisième mesure de refus]
+    T1: [première mesure de transfert]
+    T2: [deuxième mesure de transfert]
+    T3: [troisième mesure de transfert]
     """
     
     try:
         response = client.chat.completions.create(
-            model="gpt-4o-mini",
+            model="gpt-4",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.7
         )
@@ -94,19 +104,38 @@ def generate_measures(risk, process):
     except Exception as e:
         return f"Erreur de génération: {str(e)}"
 
+def parse_measures(measures_text):
+    """Parse les mesures générées en dictionnaire"""
+    measures_dict = defaultdict(list)
+    for line in measures_text.split('\n'):
+        if ':' in line:
+            key, value = line.split(':', 1)
+            category = key[0]  # D, R, A, F, ou T
+            measures_dict[category].append(value.strip())
+    return measures_dict
+
+def find_common_measures(all_measures):
+    """Identifie les mesures communes entre les risques"""
+    common_measures = defaultdict(lambda: defaultdict(int))
+    
+    for risk, measures in all_measures.items():
+        for category, measure_list in measures.items():
+            for measure in measure_list:
+                common_measures[category][measure] += 1
+                
+    return common_measures
+
 def main():
     st.title("🛡️ Générateur de Mesures de Remédiation des Risques")
     
     col1, col2 = st.columns([1, 2])
     
     with col1:
-        # Sélection de la famille de processus
         famille = st.selectbox(
             "Famille de processus",
             options=list(PROCESSES.keys())
         )
         
-        # Sélection du processus
         if famille:
             processus = st.selectbox(
                 "Processus",
@@ -114,7 +143,6 @@ def main():
                 format_func=lambda x: f"{x} ({PROCESSES[famille][x]})"
             )
 
-        # Sélection multiple des risques
         selected_risks = st.multiselect(
             "Risques à analyser",
             options=RISKS
@@ -122,29 +150,88 @@ def main():
 
     with col2:
         if selected_risks and st.button("Générer les mesures de remédiation"):
+            all_measures = {}
             results = []
             
             for risk in selected_risks:
                 st.subheader(f"📊 {risk}")
                 
                 with st.spinner("Génération des mesures..."):
-                    measures = generate_measures(risk, processus)
-                    st.text_area("Mesures proposées", measures, height=200)
+                    measures_text = generate_measures(risk, processus)
+                    measures_dict = parse_measures(measures_text)
+                    all_measures[risk] = measures_dict
+                    
+                    # Affichage des mesures par catégorie
+                    col_measures1, col_measures2 = st.columns(2)
+                    with col_measures1:
+                        st.write("**Mesures de Détection (D)**")
+                        for m in measures_dict['D']:
+                            st.write(f"• {m}")
+                        st.write("**Mesures de Réduction (R)**")
+                        for m in measures_dict['R']:
+                            st.write(f"• {m}")
+                        st.write("**Mesures d'Acceptation (A)**")
+                        for m in measures_dict['A']:
+                            st.write(f"• {m}")
+                            
+                    with col_measures2:
+                        st.write("**Mesures de Refus (F)**")
+                        for m in measures_dict['F']:
+                            st.write(f"• {m}")
+                        st.write("**Mesures de Transfert (T)**")
+                        for m in measures_dict['T']:
+                            st.write(f"• {m}")
                     
                     # Stockage pour export
                     results.append({
                         "Processus": processus,
                         "Référence": PROCESSES[famille][processus],
                         "Risque": risk,
-                        "Mesures": measures
+                        "Mesures": measures_text
                     })
+                    
+                st.divider()
+            
+            # Analyse des mesures communes
+            if len(selected_risks) > 1:
+                st.subheader("🔄 Mesures communes identifiées")
+                common_measures = find_common_measures(all_measures)
+                
+                for category, measures in common_measures.items():
+                    category_names = {
+                        'D': 'Détection',
+                        'R': 'Réduction',
+                        'A': 'Acceptation',
+                        'F': 'Refus',
+                        'T': 'Transfert'
+                    }
+                    
+                    common = {m: count for m, count in measures.items() if count > 1}
+                    if common:
+                        st.write(f"**Mesures de {category_names[category]} communes:**")
+                        for measure, count in common.items():
+                            st.write(f"• {measure} _(présente dans {count} risques)_")
+                        st.write("")
             
             # Export Excel
             if results:
                 df = pd.DataFrame(results)
+                df_common = pd.DataFrame([
+                    {
+                        "Catégorie": cat,
+                        "Mesure": measure,
+                        "Nombre de risques": count
+                    }
+                    for cat, measures in common_measures.items()
+                    for measure, count in measures.items()
+                    if count > 1
+                ])
+                
                 buffer = io.BytesIO()
                 with pd.ExcelWriter(buffer, engine='openpyxl') as writer:
-                    df.to_excel(writer, index=False)
+                    df.to_excel(writer, sheet_name='Mesures détaillées', index=False)
+                    if not df_common.empty:
+                        df_common.to_excel(writer, sheet_name='Mesures communes', index=False)
                 
                 st.download_button(
                     label="📥 Télécharger le rapport Excel",
