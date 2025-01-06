@@ -386,6 +386,9 @@ def render_measures_with_checkboxes(measures_dict, refs_dict):
             st.session_state['checked_measures'] = checked_measures
 
 def main():
+    # Configuration de la page doit être le PREMIER appel Streamlit
+    st.set_page_config(page_title="Générateur de Mesures de Remédiation", layout="wide")
+    
     # Initialisation
     client = init_openai()
     iso_references = load_iso_references()
@@ -425,23 +428,51 @@ def main():
     with col2:
         # Bouton de génération
         if processus and selected_risks and st.button("Générer l'analyse complète", type="primary"):
-            # [Votre code existant de génération]
-            pass
-
-        # Bouton pour réinitialiser les mesures cochées
-        if st.button("Réinitialiser les mesures cochées"):
-            st.session_state['checked_measures'] = set()
+            all_measures = {}
+            
+            for risk in selected_risks:
+                # Génération des mesures
+                measures_text = generate_measures(client, risk, processus)
+                
+                if measures_text:
+                    measures_dict, refs_dict = parse_measures_with_refs(measures_text)
+                    all_measures[risk] = {'measures': measures_dict, 'refs': refs_dict}
+                    
+                    # Affichage des mesures
+                    st.subheader(f"📊 Mesures pour le risque {risk}")
+                    render_measures(measures_dict, refs_dict)
+        
+        # Bouton pour réinitialiser
+        if st.button("Réinitialiser"):
             st.experimental_rerun()
 
     # Sidebar référentiel ISO
     st.sidebar.markdown("### 📘 Référentiel ISO 37301")
-    for section, details in iso_references['sections'].items():
+    for section, details in iso_references.get('sections', {}).items():
         with st.sidebar.expander(f"Section {section}"):
-            st.write(f"**{details['titre']}**")
-            st.write(details['description'])
+            st.write(f"**{details.get('titre', '')}**")
+            st.write(details.get('description', ''))
             st.markdown("**Objectifs :**")
-            for obj in details['objectifs']:
+            for obj in details.get('objectifs', []):
                 st.markdown(f"- {obj}")
+
+def render_measures(measures_dict, refs_dict):
+    """Affiche les mesures de manière structurée"""
+    categories = [
+        ('D', 'Détection'), 
+        ('R', 'Réduction'), 
+        ('A', 'Acceptation'), 
+        ('F', 'Refus'), 
+        ('T', 'Transfert')
+    ]
+    
+    for category, category_name in categories:
+        st.markdown(f"### {category_name}")
+        
+        for i, measure in enumerate(measures_dict.get(category, []), 1):
+            ref = refs_dict.get(f"{category}-{i}", "Pas de référence")
+            st.markdown(f"📌 **{measure}**")
+            st.markdown(f"*Référence: {ref}*")
 
 if __name__ == "__main__":
     main()
