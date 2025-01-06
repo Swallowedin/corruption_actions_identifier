@@ -12,16 +12,16 @@ metadata:
   correspondence: "Le present document reproduit integralement la Norme internationale ISO 37301:2021"
 
 resume:
-  description: |
+  description: >
     Le present document specifie des exigences et fournit un cadre directeur pour
     l'etablissement, le developpement, la mise en oeuvre, l'evaluation, la tenue a jour et
     l'amelioration d'un systeme de management de la conformite efficace au sein
     d'un organisme.
-  application: |
+  application: >
     Le present document s'applique a tous les types d'organismes, independamment du
     type, de la taille et de la nature de ses activites, qu'il appartienne au secteur public,
     prive ou a but non lucratif.
-  governance: |
+  governance: >
     L'ensemble des exigences specifiees dans le present document qui font reference
     a un organe de gouvernance s'appliquent a la direction lorsque l'organe de
     gouvernance d'un organisme n'est pas distinct de la direction.
@@ -50,14 +50,14 @@ modifications:
   precedent: "Par rapport au document remplace, revision de la norme."
 
 norme:
-  definition: |
+  definition: >
     La norme est destinee a servir de base dans les relations entre partenaires
     economiques, scientifiques, techniques et sociaux.
-  application: |
+  application: >
     La norme par nature est d'application volontaire. Referencee dans un contrat, elle
     s'impose aux parties. Une reglementation peut rendre d'application obligatoire tout ou
     partie d'une norme.
-  elaboration: |
+  elaboration: >
     La norme est un document elabore par consensus au sein d'un organisme de
     normalisation par sollicitation des representants de toutes les parties interessees.
     Son adoption est precedee d'une enquete publique.
@@ -66,24 +66,24 @@ sections:
   section_1:
     id: "1"
     title: "Domaine d'application"
-    content: |
+    content: >
       Le present document specifie des exigences et fournit des recommandations pour l'etablissement,
       le developpement, la mise en oeuvre, l'evaluation, la tenue a jour et l'amelioration d'un systeme
       de management de conformite efficace au sein d'un organisme.
 
-  section_2:
+  section_2: 
     id: "2"
     title: "References normatives"
     content: "Le present document ne contient aucune reference normative."
 
   section_3:
-    id: "3"
+    id: "3" 
     title: "Termes et definitions"
     terms:
       term_3_1:
         id: "3.1"
         name: "organisme"
-        definition: |
+        definition: >
           personne ou groupe de personnes ayant un role avec les responsabilites, l'autorite et les
           relations lui permettant d'atteindre ses objectifs
         notes:
@@ -94,7 +94,7 @@ sections:
         id: "3.2"
         name: "partie interessee"
         alt_name: "partie prenante"
-        definition: |
+        definition: >
           personne ou organisme qui peut soit influer sur une decision ou une activite, soit etre influence(e)
           ou s'estimer influence(e) par une decision ou une activite
 
@@ -109,130 +109,7 @@ sections:
           - "L'organisme doit determiner les enjeux externes et internes pertinents..."
         factors:
           - modele economique
-          - nature et etendue des relations metiers
-          - contexte legal et reglementaire
-          - situation economique
-
-      subsection_4_2:
-        id: "4.2"
-        title: "Comprehension des besoins et des attentes des parties interessees"
-        requirements:
-          - "determiner les parties interessees pertinentes"
-          - "determiner leurs exigences"
-          - "determiner les exigences a couvrir"
-
-metadata:
-  reference: "NF ISO 37301:2021-10"
-  title: "Systemes de management de la conformite - Exigences et recommandations pour la mise en oeuvre"
-  alternate_titles:
-    english: "Compliance management systems - Requirements with guidance for use"
-    german: "Compliance-Managementsysteme - Anforderungen mit Leitlinien zur Anwendung"
-  type: "Norme francaise"
-  homologation: 
-    date: "septembre 2021"
-    authority: "Directeur General d'AFNOR"
-  replaces: "NF ISO 19600, de mai 2015"
-  correspondence: "Le present document reproduit integralement la Norme internationale ISO 37301:2021"
-
-resume:
-  description: |
-    Le present document specifie des exigences et fournit un cadre directeur pour
-    l'etablissement, le developpement, la mise en oeuvre, l'evaluation, la tenue a jour et
-    l'amelioration d'un systeme de management de la conformite efficace au sein
-    d'un organisme.
-  application: |
-    Le present document s'applique a tous les types d'organismes, independamment du
-    type, de la taille et de la nature de ses activites, qu'il appartienne au secteur public,
-    prive ou a but non lucratif.
-  governance: |
-    L'ensemble des exigences specifiees dans le present document qui font reference
-    a un organe de gouvernance s'appliquent a la direction lorsque l'organe de
-    gouvernance d'un organisme n'est pas distinct de la direction.
-
-descripteurs:
-  thesaurus:
-    - entreprise
-    - gestion 
-    - conformation
-    - ethique sociale
-    - specification
-    - caracteristique de fonctionnement
-    - planification
-    - processus
-    - gestion de processus
-    - qualification
-    - echange d'information
-    - mise en oeuvre
-    - estimation
-    - efficacite
-    - controle par mesures
-    - audit de qualite
-    - verification periodique
-
-modifications:
-  precedent: "Par rapport au document remplace, revision de la norme."
-
-norme:
-  definition: |
-    La norme est destinee a servir de base dans les relations entre partenaires
-    economiques, scientifiques, techniques et sociaux.
-  application: |
-    La norme par nature est d'application volontaire. Referencee dans un contrat, elle
-    s'impose aux parties. Une reglementation peut rendre d'application obligatoire tout ou
-    partie d'une norme.
-  elaboration: |
-    La norme est un document elabore par consensus au sein d'un organisme de
-    normalisation par sollicitation des representants de toutes les parties interessees.
-    Son adoption est precedee d'une enquete publique.
-
-sections:
-  section_1:
-    id: "1"
-    title: "Domaine d'application"
-    content: |
-      Le present document specifie des exigences et fournit des recommandations pour l'etablissement,
-      le developpement, la mise en oeuvre, l'evaluation, la tenue a jour et l'amelioration d'un systeme
-      de management de conformite efficace au sein d'un organisme.
-
-  section_2:
-    id: "2"
-    title: "References normatives"
-    content: "Le present document ne contient aucune reference normative."
-
-  section_3:
-    id: "3"
-    title: "Termes et definitions"
-    terms:
-      term_3_1:
-        id: "3.1"
-        name: "organisme"
-        definition: |
-          personne ou groupe de personnes ayant un role avec les responsabilites, l'autorite et les
-          relations lui permettant d'atteindre ses objectifs
-        notes:
-          - "Le concept d'organisme englobe sans s'y limiter, les travailleurs independants..."
-          - "Si l'organisme fait partie d'une entite plus grande..."
-
-      term_3_2:
-        id: "3.2"
-        name: "partie interessee"
-        alt_name: "partie prenante"
-        definition: |
-          personne ou organisme qui peut soit influer sur une decision ou une activite, soit etre influence(e)
-          ou s'estimer influence(e) par une decision ou une activite
-
-  section_4:
-    id: "4"
-    title: "Contexte de l'organisme"
-    subsections:
-      subsection_4_1:
-        id: "4.1"
-        title: "Connaissance de l'organisme et contexte"
-        requirements:
-          - "L'organisme doit determiner les enjeux externes et internes pertinents..."
-        factors:
-          - modele economique
-          - nature et etendue des relations metiers
+          - nature et etendue des relations metiers 
           - contexte legal et reglementaire
           - situation economique
 
@@ -247,26 +124,26 @@ sections:
       subsection_4_3:
         id: "4.3"
         title: "Determination du perimetre d'application du systeme de management de conformite"
-        main_requirement: |
+        main_requirement: >
           L'organisme doit determiner les limites et l'applicabilite du systeme de management de
           conformite afin d'etablir son perimetre d'application.
         considerations:
           - "les enjeux externes et internes auxquels il est fait reference en 4.1"
           - "les exigences auxquels il est fait reference en 4.2, 4.5 et 4.6"
-        note: |
+        note: >
           Le perimetre du systeme de management de conformite vise a clarifier les principaux risques de
           conformite auxquels l'organisme fait face ainsi que les limites geographiques ou organisationnelles.
-        documentation: |
+        documentation: >
           Le perimetre d'application doit etre disponible sous la forme d'une information documentee.
 
       subsection_4_4:
         id: "4.4"
         title: "Systeme de management de conformite"
         requirements:
-          - |
+          - >
             L'organisme doit etablir, mettre en oeuvre, tenir a jour et ameliorer en continu un systeme
             de management de conformite, y compris les processus necessaires et leurs interactions.
-          - |
+          - >
             Le systeme doit refleter les valeurs, la strategie, les objectifs et les risques de conformite
             de l'organisme.
 
@@ -274,14 +151,14 @@ sections:
         id: "4.5"
         title: "Obligations de conformite"
         core_requirements:
-          - |
+          - >
             L'organisme doit systematiquement identifier les obligations de conformite applicables decoulant
             de ses activites, produits et services.
           - "evaluer leur impact sur ses operations"
         process_requirements:
           - "identifier les obligations nouvelles et modifiees"
           - "evaluer l'impact des changements identifies"
-        documentation: |
+        documentation: >
           L'organisme doit tenir a jour des informations documentees sur ses obligations de conformite.
 
       subsection_4_6:
@@ -289,15 +166,15 @@ sections:
         title: "Appreciation du risque de conformite"
         requirements:
           main: "L'organisme doit apprecier le risque de conformite"
-          identification: |
+          identification: >
             Identifier les risques lies aux obligations de conformite, activites, produits, services
             et aspects pertinents.
-          external: |
+          external: >
             Apprecier les risques relatifs aux processus externalises et realises par des tierces parties.
-          frequency: |
+          frequency: >
             Les risques doivent etre apprecies periodiquement et des que des changements significatifs
             se produisent.
-        documentation: |
+        documentation: >
           Conserver des informations documentees sur l'appreciation des risques et les actions planifiees.
 
   section_5:
@@ -312,7 +189,7 @@ sections:
             id: "5.1.1"
             title: "Organe de gouvernance et direction"
             requirements:
-              - |
+              - >
                 Assurer que la politique et les objectifs sont etablis et compatibles avec l'orientation
                 strategique
               - "Integrer les exigences aux processus metiers"
@@ -330,7 +207,7 @@ sections:
             title: "Culture de conformite"
             requirements:
               - "Developper et promouvoir une culture de conformite a tous les niveaux"
-              - |
+              - >
                 Demontrer un engagement actif, visible et coherent en faveur des comportements
                 souhaites
               - "Encourager les comportements positifs et empecher ceux qui compromettent la conformite"
@@ -346,88 +223,15 @@ sections:
               - "L'acces direct inclut la ligne hierarchique et les rapports periodiques"
               - "L'independance signifie l'absence d'interference ou de pression illegitime"
 
-      subsection_5_2:
-        id: "5.2"
-        title: "Politique de conformite"
-        main_requirements:
-          - "Appropriee a la finalite de l'organisme"
-          - "Fournit un cadre pour les objectifs"
-          - "Inclut l'engagement de satisfaire aux exigences"
-          - "Inclut l'engagement d'amelioration continue"
-        specific_requirements:
-          - "Correspondre aux valeurs et a la strategie"
-          - "Exiger la conformite aux obligations"
-          - "Decrire la fonction de conformite"
-          - "Souligner les consequences du manquement"
-          - "Encourager le signalement d'inquietudes"
-          - "Etre ecrite en langage clair"
-          - "Etre documentee et communiquee"
-
-      subsection_5_3:
-        id: "5.3"
-        title: "Roles, responsabilites et autorites"
-        subsections:
-          subsection_5_3_1:
-            id: "5.3.1"
-            title: "Organe de gouvernance et direction"
-            governance_duties:
-              - "Evaluer la direction sur l'atteinte des objectifs"
-              - "Superviser le fonctionnement du systeme"
-            management_duties:
-              - "Allouer les ressources appropriees"
-              - "Assurer les rapports reguliers"
-              - "Aligner les objectifs strategiques et operationnels"
-              - "Etablir des mecanismes de responsabilisation"
-
-          subsection_5_3_2:
-            id: "5.3.2"
-            title: "Fonction de conformite"
-            responsibilities:
-              - "Faciliter l'identification des obligations"
-              - "Documenter l'appreciation des risques"
-              - "Surveiller les performances"
-              - "Analyser et evaluer le systeme"
-              - "Etablir les mecanismes de rapport"
-            supervision:
-              - "Attribution appropriee des responsabilites"
-              - "Integration des obligations aux politiques"
-              - "Formation du personnel"
-              - "Etablissement des indicateurs"
-            access_requirements:
-              - "Aux decideurs les plus eleves"
-              - "A tous les niveaux de l'organisme"
-              - "Aux informations et donnees necessaires"
-              - "Aux conseils d'experts"
-
-          subsection_5_3_3:
-            id: "5.3.3"
-            title: "Encadrement (Management)"
-            duties:
-              - "Collaborer avec la fonction conformite"
-              - "Assurer le respect des obligations"
-              - "Identifier et partager les risques"
-              - "Integrer les obligations aux pratiques"
-              - "Soutenir la formation"
-              - "Encourager le signalement"
-              - "Participer a la resolution des incidents"
-
-          subsection_5_3_4:
-            id: "5.3.4"
-            title: "Personnel"
-            requirements:
-              - "Adherer aux obligations et politiques"
-              - "Signaler les inquietudes"
-              - "Participer a la formation"
-
-section_6:
+  section_6:
     id: "6"
     title: "Planification"
     subsections:
       subsection_6_1:
-        id: "6.1" 
+        id: "6.1"
         title: "Actions a mettre en oeuvre face aux risques et opportunites"
         requirements:
-          main: |
+          main: >
             Dans le cadre de la planification de son systeme de management de conformite, l'organisme
             doit tenir compte des enjeux mentionnes en 4.1 et des exigences mentionnees en 4.2, et
             determiner les risques et opportunites qu'il est necessaire de prendre en compte pour:
@@ -437,12 +241,12 @@ section_6:
             - s'inscrire dans une dynamique d'amelioration continue
           planning:
             considerations:
-              - des objectifs de conformite 
+              - des objectifs de conformite
               - des obligations de conformite identifiees
               - des resultats de l'appreciation des risques de conformite
             required_actions:
               - les actions a mettre en oeuvre face aux risques et opportunites
-              - |
+              - >
                 la maniere d'integrer et de mettre en oeuvre ces actions au sein des processus
                 du systeme de management de conformite
               - d'evaluer l'efficacite de ces actions
@@ -450,7 +254,7 @@ section_6:
       subsection_6_2:
         id: "6.2"
         title: "Objectifs de conformite et planification des actions pour les atteindre"
-        requirements: |
+        requirements: >
           L'organisme doit etablir des objectifs de conformite, aux fonctions et niveaux concernes.
         objectives_requirements:
           - etre en coherence avec la politique de conformite
@@ -470,7 +274,7 @@ section_6:
       subsection_6_3:
         id: "6.3"
         title: "Planification des changements"
-        main_requirement: |
+        main_requirement: >
           Lorsque l'organisme decide qu'il est necessaire de modifier le systeme de management
           de conformite, les modifications doivent etre realisees de maniere planifiee.
         considerations:
@@ -486,7 +290,7 @@ section_6:
       subsection_7_1:
         id: "7.1"
         title: "Ressources"
-        requirement: |
+        requirement: >
           L'organisme doit identifier et fournir les ressources necessaires a l'etablissement,
           la mise en oeuvre, la tenue a jour et l'amelioration continue du systeme de management
           de conformite.
@@ -499,170 +303,35 @@ section_6:
             id: "7.2.1"
             title: "Generalites"
             requirements:
-              - |
+              - >
                 determiner les competences necessaires de la ou des personnes effectuant, sous son autorite,
                 un travail qui a une incidence sur les performances de conformite
-              - |
+              - >
                 s'assurer que ces personnes sont competentes sur la base d'une formation initiale ou
                 professionnelle ou d'une experience appropriee 
-              - |
+              - >
                 le cas echeant, mener des actions pour acquerir les competences necessaires et evaluer
                 l'efficacite de ces actions
-              - |
+              - >
                 Des informations documentees appropriees doivent etre disponibles comme preuves desdites
                 competences.
-            note: |
-              Les actions envisageables peuvent notamment inclure la formation, l'encadrement ou la
-              reaffectation du personnel en activite ou le recrutement, direct ou en sous-traitance,
-              de personnes competentes.
-
-          subsection_7_2_2:
-            id: "7.2.2"
-            title: "Processus de recrutement"
-            process_requirements: |
-              Concernant l'ensemble de son personnel, l'organisme doit developper, etablir, mettre en
-              oeuvre et tenir un jour des processus de sorte que:
-            requirements:
-              - |
-                les conditions de recrutement stipulent que le personnel doit executer les obligations
-                de conformite, respecter les politiques, les processus et procedures de conformite de
-                l'organisme
-              - |
-                apres un delai raisonnable apres le debut de la prise effective du poste, le personnel
-                recoit un exemplaire de la politique de conformite, ou d'une formation specifique sur
-                celle-ci, ou dispose d'un moyen lui permettant d'y acceder
-              - |
-                des mesures disciplinaires appropriees puissent etre prises a l'encontre du personnel
-                qui n'execute pas les obligations de conformite, les politiques, les processus et
-                procedures de conformite de l'organisme
-
-          subsection_7_2_3:
-            id: "7.2.3"
-            title: "Formation"
-            main_requirement: |
-              L'organisme doit former regulierement le personnel concerne, au moment de son embauche
-              et a des intervalles planifies determines par l'organisme.
-            training_requirements:
-              - en adequation avec les roles et les risques de conformite auxquels le personnel est expose
-              - evaluee en termes d'efficacite
-              - revue regulierement
-            additional_requirement: |
-              En tenant compte des risques de conformite identifies, l'organisme doit en outre mettre
-              en oeuvre des procedures qui prevoient la sensibilisation et la formation aux mecanismes
-              de conformite pour les tierces parties qui agissent pour le compte de l'organisme.
-            documentation: "Des enregistrements de formation doivent etre conserves sous la forme d'informations documentees."
 
       subsection_7_3:
         id: "7.3"
         title: "Sensibilisation"
-        awareness_requirements: | 
+        awareness_requirements: >
           Le personnel effectuant un travail sous l'autorite de l'organisme doit:
         requirements:
           - etre sensibilise a la politique de conformite
-          - |
+          - >
             avoir conscience de leur contribution a l'efficacite du systeme de management de conformite,
             y compris aux effets benefiques d'une amelioration des performances de conformite
-          - |
+          - >
             avoir conscience des repercussions et des consequences de toute non-satisfaction aux exigences
             du systeme de management de conformite
           - avoir connaissance des moyens et des procedures pour le signalement d'inquietudes
-          - |
-            etre en capacite de faire le lien entre la politique de conformite et les obligations de
-            conformite pertinentes pour leur role
-          - comprendre l'importance de soutenir la culture de conformite
 
-      subsection_7_4:
-        id: "7.4"
-        title: "Communication"
-        requirements:
-          main: |
-            L'organisme doit determiner les besoins de communication interne et externe pertinents
-            pour le systeme de management de conformite
-          details:
-            - sur quels sujets communiquer
-            - a quels moments communiquer
-            - avec qui communiquer 
-            - comment communiquer
-        additional_requirements:
-          - tenir compte des aspects de diversite culturelle et des obstacles potentiels
-          - s'assurer que les avis des parties interessees sont pris en compte
-          - |
-            inclure des communications sur sa culture de conformite, ses objectifs de conformite
-            et ses obligations de conformite
-          - s'assurer que les messages sont fiables et coherents
-          - repondre aux communications pertinentes
-          - conserver des informations documentees comme preuves
-          - communiquer en interne des informations pertinentes
-          - s'assurer que les processus permettent au personnel de contribuer
-          - s'assurer que le personnel puisse saisir le dispositif de signalement
-          - communiquer en externe des informations pertinentes 
-
-      subsection_7_5:
-        id: "7.5"
-        title: "Informations documentees"
-        subsections:
-          subsection_7_5_1:
-            id: "7.5.1"
-            title: "Generalites"
-            requirements: |
-              Le systeme de management de conformite de l'organisme doit inclure:
-            content:
-              - les informations documentees exigees par le present document
-              - |
-                les informations documentees que l'organisme juge necessaires a l'efficacite
-                du systeme de management de conformite
-            note: |
-              L'etendue des informations documentees dans le cadre d'un systeme de management de
-              conformite peut differer selon l'organisme en fonction de:
-              - la taille de l'organisme et de son type d'activites, de processus, de produits et de services
-              - la complexite des processus et de leurs interactions
-              - la competence des personnes
-
-          subsection_7_5_2:
-            id: "7.5.2"
-            title: "Creation et mise a jour des informations documentees"
-            requirements: |
-              Lors de la creation et de la mise a jour des informations documentees, l'organisme
-              doit s'assurer que sont appropries:
-            elements:
-              - |
-                l'identification et la description des informations documentees (leur titre, date,
-                auteur, numero de reference par exemple)
-              - |
-                leur format (langue, version logicielle, graphiques, par exemple) et support
-                (papier, electronique, par exemple)
-              - |
-                la revue effectuee (pour en determiner la pertinence et l'adequation) et leur
-                approbation
-
-          subsection_7_5_3:
-            id: "7.5.3"
-            title: "Maitrise des informations documentees"
-            main_requirements: |
-              Les informations documentees exigees par le systeme de management de conformite et
-              par le present document doivent etre maitrisees pour s'assurer:
-            assurance:
-              - |
-                qu'elles sont disponibles et conviennent a l'utilisation au moment et a l'instant
-                ou elles sont necessaires
-              - |
-                qu'elles sont convenablement protegees (par exemple, de toute perte de confidentialite,
-                utilisation inappropriee ou perte d'integrite)
-            control_activities:
-              - distribution, acces, recuperation et utilisation
-              - stockage et protection, y compris preservation de la lisibilite
-              - maitrise des modifications (par exemple, controle des versions)
-              - conservation et elimination
-            external_info: |
-              Les informations documentees d'origine externe que l'organisme juge necessaires a la
-              planification et au fonctionnement du systeme de management de conformite doivent
-              etre identifiees comme il convient et maitrisees.
-            note: |
-              L'acces peut impliquer une decision relative a l'autorisation de consulter les
-              informations documentees uniquement, ou l'autorisation et l'autorite de consulter
-              et modifier les informations documentees.
-
-    section_8:
+  section_8:
     id: "8"
     title: "Realisation des activites operationnelles"
     subsections:
@@ -670,88 +339,28 @@ section_6:
         id: "8.1"
         title: "Planification et maitrise operationnelles"
         requirements:
-          main: |
+          main: >
             L'organisme doit planifier, mettre en oeuvre et maitriser les processus necessaires
             pour satisfaire aux exigences et realiser les actions determinees a l'Article 6, en:
           actions:
             - "etablissant des criteres pour ces processus"
             - "mettant en oeuvre la maitrise de ces processus conformement aux criteres"
-        documentation: |
+        documentation: >
           Des informations documentees doivent etre disponibles dans une mesure suffisante pour avoir
           l'assurance que les processus ont ete realises comme prevu.
-        additional_requirements:
-          - "maitriser les modifications prevues"
-          - "analyser les consequences des modifications imprevues"
-          - "mener des actions pour limiter tout effet negatif"
-          - |
-            s'assurer que les processus, produits ou services externalises, qui sont pertinents dans
-            le cadre du systeme de management de conformite, sont maitrises
-        note: |
-          Le fait qu'un organisme externalise des operations ne le degage pas de ses responsabilites
-          legales ou de ses obligations de conformite.
-        external_process: |
-          L'organisme doit s'assurer que les processus realises par des tierces parties sont maitrises
-          et surveilles.
 
       subsection_8_2:
         id: "8.2"
         title: "Etablissement des dispositifs de maitrise"
         requirements:
-          main: |
+          main: >
             L'organisme doit mettre en oeuvre des dispositifs de maitrise pour gerer ses obligations
             de conformite ainsi que les risques de conformite.
-          continuous: |
+          continuous: >
             Pour garantir en continu l'effectivite des dispositifs de maitrise, celles-ci doivent
             etre periodiquement surveillees, revues et mises a l'epreuve.
-        note: |
-          L'evaluation des dispositifs de maitrise consiste a mesurer leur realisation effective
-          telle que definie ou leur efficacite quant a la reduction de l'impact ou de la
-          vraisemblance du risque associe.
 
-      subsection_8_3:
-        id: "8.3"
-        title: "Signalement des inquietudes"
-        requirements:
-          main: |
-            L'organisme doit etablir, mettre en oeuvre et tenir a jour un dispositif pour encourager
-            et permettre aux personnes de signaler de bonne foi une tentative, un cas avere ou un
-            cas presume de non-respect de la politique de conformite ou de manquement a une ou des
-            obligations de conformite.
-        process_requirements:
-          - "etre visible et accessible dans l'ensemble de l'organisme"
-          - "traiter les signalements de maniere confidentielle"
-          - "accepter les signalements anonymes"
-          - "permettre aux personnes a l'origine de signalements de se proteger des represailles"
-          - "permettre au personnel d'obtenir des conseils"
-        information_requirement: |
-          L'organisme doit s'assurer que l'ensemble de son personnel est informe de l'existence de
-          procedures de signalement, de ses droits et des protections dont il beneficie et qu'il
-          est en mesure de les mettre en oeuvre.
-
-      subsection_8_4:
-        id: "8.4"
-        title: "Processus d'enquete"
-        process_requirements:
-          main: |
-            L'organisme doit developper, etablir, mettre en oeuvre et tenir un jour des processus
-            permettant d'apprecier, d'evaluer, d'etudier et de cloturer les signalements sur les
-            cas presumes ou averes de defaut de conformite.
-          fairness: |
-            Ces processus doivent garantir une prise de decision juste et impartiale.
-        investigation_requirements:
-          - |
-            Les processus d'enquete doivent etre realises par du personnel competent de maniere
-            independante et sans conflit d'interets.
-          - |
-            L'organisme doit utiliser les resultats des enquetes pour ameliorer le systeme de
-            management de conformite, le cas echeant.
-          - |
-            L'organisme doit regulierement rendre compte du nombre et des resultats des enquetes
-            a l'organe de gouvernance ou a la direction.
-        documentation: |
-          L'organisme doit conserver des informations documentees sur les enquetes.
-
-          section_9:
+  section_9:
     id: "9"
     title: "Evaluation des performances"
     subsections:
@@ -763,76 +372,15 @@ section_6:
             id: "9.1.1"
             title: "Generalites"
             requirements:
-              main: |
+              main: >
                 L'organisme doit surveiller le systeme de management de conformite pour s'assurer
                 de l'atteinte des objectifs de conformite.
               determination:
                 - "ce qu'il est necessaire de surveiller et mesurer"
-                - |
+                - >
                   les methodes de surveillance, de mesure, d'analyse et d'evaluation, selon le cas,
                   pour assurer la validite des resultats
                 - "quand la surveillance et la mesure doivent etre effectuees"
-                - |
-                  quand les resultats de la surveillance et de la mesure doivent etre analyses
-                  et evalues
-              documentation: "Des informations documentees doivent etre disponibles comme preuves desdits resultats."
-              evaluation: |
-                L'organisme doit evaluer la performance de conformite, ainsi que l'efficacite du
-                systeme de management de conformite.
-
-          subsection_9_1_2:
-            id: "9.1.2"
-            title: "Sources de retour d'informations sur les performances de conformite"
-            requirements:
-              main: |
-                L'organisme doit etablir, mettre en oeuvre, evaluer et tenir a jour des processus
-                pour obtenir des retours d'informations sur ses performances de conformite, en
-                provenance de plusieurs sources.
-              analysis: |
-                Les informations doivent faire l'objet d'une analyse et d'une evaluation critique
-                afin d'identifier les causes profondes d'un defaut de conformite, s'assurer que des
-                actions appropriees sont entreprises et reprendre ces informations dans l'appreciation
-                periodique des risques exigee en 4.6.
-
-          subsection_9_1_3:
-            id: "9.1.3"
-            title: "Mise en place des indicateurs"
-            requirements: |
-              L'organisme doit elaborer, mettre en place et tenir a jour des indicateurs appropries
-              qui l'aideront a mesurer l'atteinte de ses objectifs de conformite et a quantifier
-              ses performances de conformite.
-
-          subsection_9_1_4:
-            id: "9.1.4"
-            title: "Mecanisme de rapports (reporting) de conformite" 
-            process_requirements:
-              main: |
-                L'organisme doit etablir, mettre en oeuvre et tenir a jour des processus relatifs
-                a la remontee d'informations sur la (mise/maintien en) conformite
-              criteria:
-                - "des criteres appropries sont definis pour la remontee d'informations"
-                - "des echeances pour la production reguliere de rapports sont etablies"
-                - |
-                  le mecanisme de rapports est en place pour faciliter les remontees
-                  d'informations «ad hoc»
-                - |
-                  le mecanisme et les processus sont mis en oeuvre pour s'assurer de l'exactitude
-                  et de l'exhaustivite des informations
-                - |
-                  des informations exactes et exhaustives sont fournies aux fonctions ou niveaux
-                  concernes de l'organisme
-            protection: |
-              Tout rapport emis par la fonction de conformite a l'intention de l'organe de
-              gouvernance ou de la direction doit etre protege de maniere adequate contre toute
-              alteration.
-
-          subsection_9_1_5:
-            id: "9.1.5"
-            title: "Conservation d'elements probants"
-            requirements: |
-              Des elements precis et a jour des activites de conformite de l'organisation doivent
-              etre conserves pour faciliter le processus de surveillance et de revue et demontrer
-              la conformite au systeme de management de conformite.
 
       subsection_9_2:
         id: "9.2"
@@ -841,105 +389,24 @@ section_6:
           subsection_9_2_1:
             id: "9.2.1"
             title: "Generalites"
-            requirements: |
+            requirements: >
               L'organisme doit realiser des audits internes a des intervalles planifies pour fournir
               des informations permettant de determiner si le systeme de management de conformite:
             conformity_check:
-              - |
+              - >
                 est conforme aux propres exigences de l'organisme concernant le systeme de
                 management de conformite
               - "est conforme aux exigences du present document"
               - "est efficacement mis en oeuvre et tenu a jour"
 
-          subsection_9_2_2:
-            id: "9.2.2"
-            title: "Programme d'audit interne"
-            requirements:
-              main: |
-                L'organisme doit planifier, etablir, mettre en oeuvre et tenir a jour un ou des
-                programmes d'audit, couvrant notamment la frequence, les methodes, les responsabilites,
-                les exigences de planification et le compte-rendu.
-              considerations: |
-                Lors de l'etablissement d'un ou de programmes d'audit interne, l'organisme doit tenir
-                compte de l'importance des processus concernes et des resultats des audits precedents.
-            organizational_requirements:
-              - "definir les criteres d'audit et le perimetre de chaque audit"
-              - |
-                selectionner des auditeurs et realiser des audits pour assurer l'objectivite et
-                l'impartialite du processus d'audit
-              - |
-                veiller a ce que les resultats des audits soient transmis aux personnels
-                d'encadrement concernes et a la direction
-            note: "La direction concernee peut inclure la fonction de conformite, la direction et l'organe de gouvernance."
-            documentation: |
-              Des informations documentees doivent etre disponibles comme preuves de la mise en
-              oeuvre du ou des programmes d'audit et des resultats d'audit.
-            reference: "Des recommandations pour l'audit des systemes de management sont donnees dans l'ISO 19011."
-
-      subsection_9_3:
-        id: "9.3"
-        title: "Revue de direction"
-        subsections:
-          subsection_9_3_1:
-            id: "9.3.1"
-            title: "Generalites"
-            requirement: |
-              A des intervalles planifies, la direction doit proceder a la revue du systeme de
-              management de conformite mis en place par l'organisme, afin de s'assurer qu'il est
-              toujours approprie, adapte et efficace.
-
-          subsection_9_3_2:
-            id: "9.3.2"
-            title: "Donnees d'entree de la revue de direction"
-            requirements:
-              main: "La revue de direction doit inclure:"
-              inputs:
-                - "l'etat d'avancement des actions decidees a l'issue des revues de direction precedentes"
-                - |
-                  les modifications des enjeux externes et internes pertinents pour le systeme de
-                  management de conformite
-                - |
-                  les modifications des besoins et attentes des parties interessees pertinentes pour
-                  le systeme de management de conformite
-                - |
-                  les informations sur la performance de conformite, y compris les tendances concernant:
-                  - les non-conformites, les defauts de conformite et les actions correctives
-                  - les resultats de la surveillance et de la mesure
-                  - les resultats d'audits
-                - les opportunites d'amelioration continue
-              considerations:
-                - "l'adequation de la politique de conformite"
-                - "l'independance de la fonction de conformite"
-                - "le degre auquel les objectifs de conformite ont ete atteints"
-                - "l'adequation des ressources"
-                - "l'adequation de l'evaluation des risques de conformite"
-                - "l'efficacite des dispositifs de maitrise existants et des indicateurs de performance"
-                - |
-                  les informations provenant des personnes qui signalent des inquietudes et les
-                  informations communiquees par les parties interessees
-                - "les enquetes"
-                - "l'efficacite du systeme de signalement"
-
-          subsection_9_3_3:
-            id: "9.3.3"
-            title: "Resultats de la revue de direction"
-            requirements:
-              content: |
-                Les resultats de la revue de direction doivent inclure les decisions relatives aux
-                opportunites d'amelioration continue et aux eventuels changements a apporter au
-                systeme de management de conformite.
-              documentation: |
-                Des informations documentees doivent etre disponibles comme preuves des resultats
-                des revues de direction.
-
-                section_10:
+  section_10:
     id: "10"
     title: "Amelioration"
     subsections:
       subsection_10_1:
         id: "10.1"
         title: "Amelioration continue"
-        requirement: |
+        requirement: >
           L'organisme doit ameliorer en continu la pertinence, l'adequation et l'efficacite
           du systeme de management de conformite.
 
@@ -947,10 +414,10 @@ section_6:
         id: "10.2"
         title: "Non-conformite et actions correctives"
         requirements:
-          main: |
+          main: >
             Lorsqu'une non-conformite ou un defaut de conformite se produit, l'organisme doit:
           actions:
-            a: 
+            a:
               title: "reagir a la non-conformite ou au defaut de conformite"
               actions:
                 - "agir pour la maitriser et la corriger"
@@ -960,19 +427,3 @@ section_6:
               evaluation_steps:
                 - "effectuer la revue de la non-conformite ou du defaut de conformite"
                 - "rechercher et analyser les causes"
-                - |
-                  rechercher si des non-conformites similaires existent ou pourraient
-                  eventuellement se produire
-            c: "mettre en oeuvre toutes les actions requises"
-            d: "examiner l'efficacite de toute action corrective mise en oeuvre"
-            e: "modifier, si necessaire, le systeme de management de conformite"
-        corrective_actions: |
-          Les actions correctives doivent etre appropriees aux consequences des non-conformites
-          ou des defauts de conformite rencontres.
-        documentation:
-          main: "Des informations documentees doivent etre disponibles comme preuves:"
-          types:
-            - |
-              de la nature des non-conformites ou des defauts de conformite, ou les deux,
-              et de toute action menee ulterieurement
-            - "des resultats de toute action corrective"
