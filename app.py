@@ -1,5 +1,9 @@
 import streamlit as st
-st.set_page_config(page_title="Générateur de Mesures de Remédiation", layout="wide")
+st.set_page_config(
+    page_title="Générateur de Mesures de Remédiation",
+    layout="wide",
+    initial_sidebar_state="collapsed"  # Sidebar réduite par défaut
+)
 
 import pandas as pd
 from openai import OpenAI
@@ -262,37 +266,23 @@ def find_common_measures(all_measures):
     return common_measures
 
 def render_measures_with_checkboxes(measures_dict, refs_dict):
-    """Affiche les mesures avec des cases à cocher"""
-    # Initialiser le state si nécessaire
     if 'checked_measures' not in st.session_state:
-        st.session_state['checked_measures'] = set()
+        st.session_state['checked_measures'] = {}
     
-    categories = [
-        ('D', 'Détection'), 
-        ('R', 'Réduction'), 
-        ('A', 'Acceptation'), 
-        ('F', 'Refus'), 
-        ('T', 'Transfert')
-    ]
-    
-    for category, category_name in categories:
+    for category, category_name in [('D', 'Détection'), ('R', 'Réduction'), ('A', 'Acceptation'), ('F', 'Refus'), ('T', 'Transfert')]:
         st.markdown(f"### {category_name}")
-        
         for i, measure in enumerate(measures_dict.get(category, []), 1):
-            ref = refs_dict.get(f"{category}-{i}", "Pas de référence")
-            measure_id = f"{category}-{i}-{measure}"
-            
-            # Case à cocher avec état persistant
-            if st.checkbox(
+            checkbox_key = f"{category}-{i}-{measure}"
+            checked = st.checkbox(
                 measure,
-                key=measure_id,
-                value=measure_id in st.session_state['checked_measures']
-            ):
-                st.session_state['checked_measures'].add(measure_id)
-            else:
-                st.session_state['checked_measures'].discard(measure_id)
-            
-            st.markdown(f"*Référence: {ref}*")
+                key=checkbox_key,
+                value=st.session_state['checked_measures'].get(checkbox_key, False),
+                on_change=lambda k=checkbox_key: toggle_measure(k)
+            )
+            st.markdown(f"*Référence: {refs_dict.get(f'{category}-{i}', 'Pas de référence')}*")
+
+def toggle_measure(key):
+    st.session_state['checked_measures'][key] = not st.session_state['checked_measures'].get(key, False)
 
 def main():
     # Initialisation
@@ -451,6 +441,8 @@ def main():
             st.experimental_rerun()
 
     # Sidebar référentiel ISO
+    with st.sidebar:
+    with st.expander("📘 Référentiel ISO 37301", expanded=False):
     st.sidebar.markdown("### 📘 Référentiel ISO 37301")
     for section, details in iso_references.get('sections', {}).items():
         with st.sidebar.expander(f"Section {section}"):
