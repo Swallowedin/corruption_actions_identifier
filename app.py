@@ -7,12 +7,6 @@ import io
 from collections import defaultdict
 import yaml
 
-# Configuration de la page
-st.set_page_config(page_title="Générateur de Mesures de Remédiation", layout="wide")
-
-# Configuration OpenAI
-client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
-
 # Données des processus
 PROCESSES = {
     "PILOTAGE": {
@@ -143,12 +137,24 @@ STANDARDS = {
 }
 
 def load_iso_references():
-    with open('iso_37301_references.yaml', 'r') as file:
-        return yaml.safe_load(file)
+    try:
+        with open('iso_37301_references.yaml', 'r', encoding='utf-8') as file:
+            return yaml.safe_load(file)
+    except FileNotFoundError:
+        st.error("Fichier iso_37301_references.yaml non trouvé.")
+        return {"sections": {}}
 
-def generate_measures(risk, process):
-    """Génère des mesures via GPT avec références aux standards"""
-    prompt = f"""Pour le processus {process} et le risque {risk}, proposer des mesures concrètes et spécifiques en faisant référence aux standards ISO 37001, ISO 37301, COSO ERM et COSO CI.
+def init_openai():
+    try:
+        return OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+    except KeyError:
+        st.error("Clé API OpenAI manquante dans les secrets Streamlit.")
+        return None
+
+def generate_measures(client, risk, process):
+    """Génère des mesures via GPT"""
+    prompt = f"""Pour le processus {process} et le risque {risk}, proposer des mesures concrètes et spécifiques en se basant sur les standards ISO 37001, ISO 37301, COSO ERM et COSO CI.
+    
     Pour chaque catégorie, donner AU MOINS 3 mesures concrètes, chacune avec une référence au standard le plus pertinent.
 
     Catégories de mesures :
@@ -176,7 +182,8 @@ def generate_measures(risk, process):
         )
         return response.choices[0].message.content
     except Exception as e:
-        return f"Erreur de génération: {str(e)}"
+        st.error(f"Erreur de génération des mesures: {e}")
+        return None
 
 def parse_measures_with_refs(measures_text):
     """Parse les mesures générées avec leurs références"""
@@ -188,7 +195,6 @@ def parse_measures_with_refs(measures_text):
             key, content = line.split(':', 1)
             category = key[0]
             
-            # Extraire la mesure et la référence
             content = content.strip()
             if '(' in content and ')' in content:
                 measure = content[:content.rfind('(')].strip()
@@ -201,8 +207,9 @@ def parse_measures_with_refs(measures_text):
             refs_dict[f"{category}-{len(measures_dict[category])}"] = ref
                 
     return measures_dict, refs_dict
-def generate_best_practices_and_kpis(risk, process):
-    """Génère des bonnes pratiques et KPIs associés"""
+
+def generate_best_practices_and_kpis(client, risk, process):
+    """Génère des bonnes pratiques et KPIs"""
     prompt = f"""Pour le processus {process} et le risque {risk}, proposer :
     1. 3-5 bonnes pratiques concrètes basées sur les standards du secteur
     2. Pour chaque bonne pratique, 1-2 KPIs mesurables et pertinents
@@ -224,7 +231,8 @@ def generate_best_practices_and_kpis(risk, process):
         )
         return response.choices[0].message.content
     except Exception as e:
-        return f"Erreur de génération: {str(e)}"
+        st.error(f"Erreur de génération des bonnes pratiques: {e}")
+        return None
 
 def parse_best_practices_and_kpis(text):
     """Parse les bonnes pratiques et KPIs générés"""
@@ -242,7 +250,6 @@ def parse_best_practices_and_kpis(text):
             
     return practices
 
-
 def find_common_measures(all_measures):
     """Trouve les mesures communes entre les risques"""
     common_measures = {cat: defaultdict(int) for cat in ['D', 'R', 'A', 'F', 'T']}
@@ -254,45 +261,23 @@ def find_common_measures(all_measures):
     
     return common_measures
 
-def render_measures_with_checkboxes(measures_dict, refs_dict):
-    """Affiche les mesures avec cases à cocher"""
-    checked_measures = st.session_state.get('checked_measures', set())
-    
-    for category, category_name in [
+def render_measures(measures_dict, refs_dict):
+    """Affiche les mesures de manière structurée"""
+    categories = [
         ('D', 'Détection'), 
         ('R', 'Réduction'), 
         ('A', 'Acceptation'), 
         ('F', 'Refus'), 
         ('T', 'Transfert')
-    ]:
-        st.markdown(f"### Mesures de {category_name}")
+    ]
+    
+    for category, category_name in categories:
+        st.markdown(f"### {category_name}")
         
         for i, measure in enumerate(measures_dict.get(category, []), 1):
-            unique_key = f"{category}_{i}_{measure}"
-            is_checked = unique_key in checked_measures
-            
-            col1, col2 = st.columns([0.1, 0.9])
-            
-            with col1:
-                checked = st.checkbox(
-                    label="", 
-                    key=unique_key, 
-                    value=is_checked
-                )
-            
-            with col2:
-                ref = refs_dict.get(f"{category}-{i}", "")
-                display_text = measure if not checked else f"~~{measure}~~"
-                
-                st.markdown(display_text)
-                st.markdown(f"*Ref: {ref}*", unsafe_allow_html=True)
-            
-            if checked:
-                checked_measures.add(unique_key)
-            elif unique_key in checked_measures:
-                checked_measures.remove(unique_key)
-            
-            st.session_state['checked_measures'] = checked_measures
+            ref = refs_dict.get(f"{category}-{i}", "Pas de référence")
+            st.markdown(f"📌 **{measure}**")
+            st.markdown(f"*Référence: {ref}*")
 
 def main():
     # Initialisation
@@ -335,21 +320,119 @@ def main():
         # Bouton de génération
         if processus and selected_risks and st.button("Générer l'analyse complète", type="primary"):
             all_measures = {}
+            all_practices = {}
+            results = []
             
-            for risk in selected_risks:
-                # Génération des mesures
-                measures_text = generate_measures(client, risk, processus)
+            progress_text = "Génération en cours..."
+            progress_bar = st.progress(0)
+            
+            for idx, risk in enumerate(selected_risks):
+                st.subheader(f"📊 {risk}")
                 
-                if measures_text:
-                    measures_dict, refs_dict = parse_measures_with_refs(measures_text)
-                    all_measures[risk] = {'measures': measures_dict, 'refs': refs_dict}
-                    
-                    # Affichage des mesures
-                    st.subheader(f"📊 Mesures pour le risque {risk}")
-                    render_measures(measures_dict, refs_dict)
-        
-        # Bouton pour réinitialiser
-        if st.button("Réinitialiser"):
+                with st.spinner(f"Analyse du risque {idx + 1}/{len(selected_risks)}"):
+                    # Génération des mesures
+                    measures_text = generate_measures(client, risk, processus)
+                    if measures_text:
+                        measures_dict, refs_dict = parse_measures_with_refs(measures_text)
+                        
+                        # Génération des bonnes pratiques et KPIs
+                        practices_text = generate_best_practices_and_kpis(client, risk, processus)
+                        practices_dict = parse_best_practices_and_kpis(practices_text)
+                        
+                        all_measures[risk] = {'measures': measures_dict, 'refs': refs_dict}
+                        all_practices[risk] = practices_dict
+                        
+                        # Créer des onglets principaux
+                        tab_measures, tab_practices = st.tabs(["Mesures de remédiation", "Bonnes pratiques & KPIs"])
+                        
+                        with tab_measures:
+                            render_measures_with_checkboxes(measures_dict, refs_dict)
+                        
+                        with tab_practices:
+                            st.markdown("### 📋 Bonnes pratiques et indicateurs")
+                            for practice, kpis in practices_dict.items():
+                                with st.expander(practice):
+                                    for kpi in kpis:
+                                        st.markdown(f"📊 {kpi}")
+                        
+                        # Stockage pour export
+                        results.append({
+                            "Processus": processus,
+                            "Référence": PROCESSES[famille][processus],
+                            "Risque": risk,
+                            "Mesures": measures_text,
+                            "Bonnes_Pratiques_KPIs": practices_text
+                        })
+                
+                progress_bar.progress((idx + 1) / len(selected_risks))
+                st.divider()
+            
+            # Analyse des mesures communes
+            if len(selected_risks) > 1:
+                st.subheader("🔄 Mesures communes identifiées")
+                common_measures = find_common_measures({risk: data['measures'] for risk, data in all_measures.items()})
+                
+                for category, category_name in [
+                    ('D', 'Détection'),
+                    ('R', 'Réduction'), 
+                    ('A', 'Acceptation'), 
+                    ('F', 'Refus'), 
+                    ('T', 'Transfert')
+                ]:
+                    common = {m: count for m, count in common_measures[category].items() if count > 1}
+                    if common:
+                        st.write(f"**Mesures de {category_name} communes :**")
+                        for measure, count in sorted(common.items(), key=lambda x: x[1], reverse=True):
+                            st.markdown(f"• {measure} _(utilisée dans {count} risques)_")
+                        st.write("")
+            
+            # Export Excel
+            if results:
+                # Création des DataFrames
+                df_main = pd.DataFrame(results)
+                
+                df_measures = pd.DataFrame([
+                    {
+                        "Risque": risk,
+                        "Catégorie": cat,
+                        "Mesure": measure,
+                        "Référence": refs_dict[f"{cat}-{i+1}"]
+                    }
+                    for risk, (data) in all_measures.items()
+                    for cat, measures in data['measures'].items()
+                    for i, measure in enumerate(measures)
+                ])
+                
+                df_practices = pd.DataFrame([
+                    {
+                        "Risque": risk,
+                        "Bonne Pratique": practice,
+                        "KPI": kpi
+                    }
+                    for risk, practices in all_practices.items()
+                    for practice, kpis in practices.items()
+                    for kpi in kpis
+                ])
+                
+                # Export avec toutes les feuilles
+                buffer = io.BytesIO()
+                with pd.ExcelWriter(buffer, engine='openpyxl') as writer:
+                    df_main.to_excel(writer, sheet_name='Vue générale', index=False)
+                    df_measures.to_excel(writer, sheet_name='Mesures détaillées', index=False)
+                    df_practices.to_excel(writer, sheet_name='Bonnes Pratiques & KPIs', index=False)
+                
+                st.download_button(
+                    label="📥 Télécharger le rapport complet",
+                    data=buffer.getvalue(),
+                    file_name=f"mesures_remediation_{processus}.xlsx",
+                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                )
+                
+                st.success("✅ Génération terminée avec succès!")
+
+        # Bouton pour réinitialiser les mesures cochées
+        if st.button("Réinitialiser les mesures cochées"):
+            st.session_state['checked_measures'] = set()
             st.experimental_rerun()
 
     # Sidebar référentiel ISO
@@ -361,24 +444,6 @@ def main():
             st.markdown("**Objectifs :**")
             for obj in details.get('objectifs', []):
                 st.markdown(f"- {obj}")
-
-def render_measures(measures_dict, refs_dict):
-    """Affiche les mesures de manière structurée"""
-    categories = [
-        ('D', 'Détection'), 
-        ('R', 'Réduction'), 
-        ('A', 'Acceptation'), 
-        ('F', 'Refus'), 
-        ('T', 'Transfert')
-    ]
-    
-    for category, category_name in categories:
-        st.markdown(f"### {category_name}")
-        
-        for i, measure in enumerate(measures_dict.get(category, []), 1):
-            ref = refs_dict.get(f"{category}-{i}", "Pas de référence")
-            st.markdown(f"📌 **{measure}**")
-            st.markdown(f"*Référence: {ref}*")
 
 if __name__ == "__main__":
     main()
