@@ -261,8 +261,12 @@ def find_common_measures(all_measures):
     
     return common_measures
 
-def render_measures(measures_dict, refs_dict):
-    """Affiche les mesures de manière structurée"""
+def render_measures_with_checkboxes(measures_dict, refs_dict):
+    """Affiche les mesures avec des cases à cocher"""
+    # Initialiser le state si nécessaire
+    if 'checked_measures' not in st.session_state:
+        st.session_state['checked_measures'] = set()
+    
     categories = [
         ('D', 'Détection'), 
         ('R', 'Réduction'), 
@@ -276,7 +280,18 @@ def render_measures(measures_dict, refs_dict):
         
         for i, measure in enumerate(measures_dict.get(category, []), 1):
             ref = refs_dict.get(f"{category}-{i}", "Pas de référence")
-            st.markdown(f"📌 **{measure}**")
+            measure_id = f"{category}-{i}-{measure}"
+            
+            # Case à cocher avec état persistant
+            if st.checkbox(
+                measure,
+                key=measure_id,
+                value=measure_id in st.session_state['checked_measures']
+            ):
+                st.session_state['checked_measures'].add(measure_id)
+            else:
+                st.session_state['checked_measures'].discard(measure_id)
+            
             st.markdown(f"*Référence: {ref}*")
 
 def main():
