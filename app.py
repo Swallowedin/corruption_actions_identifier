@@ -313,171 +313,174 @@ def toggle_measure(key):
     st.session_state['checked_measures'][key] = not st.session_state['checked_measures'].get(key, False)
 
 def main():
-    # Initialisation
-    client = init_openai()
-    iso_references = load_iso_references()
+   # Initialisation
+   if 'selected_measures' not in st.session_state:
+       st.session_state.selected_measures = set()
+       
+   client = init_openai()
+   iso_references = load_iso_references()
 
-    st.title("🛡️ Générateur de Mesures de Remédiation des Risques")
-    st.markdown("""
-    Cette application génère des mesures de remédiation, 
-    bonnes pratiques et KPIs basés sur les standards de conformité.
-    """)
-    
-    # Layout en colonnes
-    col1, col2 = st.columns([1, 3])
-    
-    with col1:
-        # Sélection de la famille de processus
-        famille = st.selectbox(
-            "Famille de processus",
-            options=list(PROCESSES.keys())
-        )
-        
-        # Sélection du processus
-        processus = None
-        if famille:
-            processus = st.selectbox(
-                "Processus",
-                options=list(PROCESSES[famille].keys()),
-                format_func=lambda x: f"{x} ({PROCESSES[famille][x]})"
-            )
+   st.title("🛡️ Générateur de Mesures de Remédiation des Risques")
+   st.markdown("Cette application génère des mesures de remédiation, bonnes pratiques et KPIs basés sur les standards de conformité.")
+   
+   # Layout en colonnes
+   col1, col2 = st.columns([1, 3])
+   
+   with col1:
+       famille = st.selectbox("Famille de processus", options=list(PROCESSES.keys()))
+       
+       processus = None
+       if famille:
+           processus = st.selectbox(
+               "Processus",
+               options=list(PROCESSES[famille].keys()),
+               format_func=lambda x: f"{x} ({PROCESSES[famille][x]})"
+           )
 
-            # Sélection des risques
-            if processus:
-                selected_risks = st.multiselect(
-                    "Risques à analyser",
-                    options=RISKS
-                )
+           if processus:
+               selected_risks = st.multiselect("Risques à analyser", options=RISKS)
+               
+       # Bouton pour réinitialiser les mesures cochées
+       if st.button("Réinitialiser les mesures cochées"):
+           st.session_state['checked_measures'] = set()
+           st.experimental_rerun()
+           
+   with col2:
+       if processus and selected_risks and st.button("Générer l'analyse complète", type="primary"):
+           all_measures = {}
+           all_practices = {}
+           results = []
+           
+           progress_bar = st.progress(0)
+           
+           for idx, risk in enumerate(selected_risks):
+               st.subheader(f"📊 {risk}")
+               
+               with st.spinner(f"Analyse du risque {idx + 1}/{len(selected_risks)}"):
+                   measures_text = generate_measures(client, risk, processus)
+                   if measures_text:
+                       measures_dict, refs_dict = parse_measures_with_refs(measures_text)
+                       practices_text = generate_best_practices_and_kpis(client, risk, processus)
+                       practices_dict = parse_best_practices_and_kpis(practices_text)
+                       
+                       all_measures[risk] = {'measures': measures_dict, 'refs': refs_dict}
+                       all_practices[risk] = practices_dict
+                       
+                       tab_measures, tab_practices = st.tabs(["Mesures de remédiation", "Bonnes pratiques & KPIs"])
+                       
+                       with tab_measures:
+                           render_measures_with_checkboxes(measures_dict, refs_dict)
+                       
+                       with tab_practices:
+                           st.markdown("### 📋 Bonnes pratiques et indicateurs")
+                           for practice, kpis in practices_dict.items():
+                               with st.expander(practice):
+                                   for kpi in kpis:
+                                       st.markdown(f"📊 {kpi}")
+                       
+                       results.append({
+                           "Processus": processus,
+                           "Référence": PROCESSES[famille][processus],
+                           "Risque": risk,
+                           "Mesures": measures_text,
+                           "Bonnes_Pratiques_KPIs": practices_text
+                       })
+               
+               progress_bar.progress((idx + 1) / len(selected_risks))
+               st.divider()
+           
+           if len(selected_risks) > 1:
+               st.subheader("🔄 Mesures communes identifiées")
+               common_measures = find_common_measures({risk: data['measures'] for risk, data in all_measures.items()})
+               
+               for category, category_name in [
+                   ('D', 'Détection'),
+                   ('R', 'Réduction'), 
+                   ('A', 'Acceptation'), 
+                   ('F', 'Refus'), 
+                   ('T', 'Transfert')
+               ]:
+                   common = {m: count for m, count in common_measures[category].items() if count > 1}
+                   if common:
+                       st.write(f"**Mesures de {category_name} communes :**")
+                       for measure, count in sorted(common.items(), key=lambda x: x[1], reverse=True):
+                           st.markdown(f"• {measure} _(utilisée dans {count} risques)_")
+                       st.write("")
+           
+           if results:
+               df_main = pd.DataFrame(results)
+               df_measures = pd.DataFrame([
+                   {
+                       "Risque": risk,
+                       "Catégorie": cat,
+                       "Mesure": measure,
+                       "Référence": refs_dict[f"{cat}-{i+1}"]
+                   }
+                   for risk, (data) in all_measures.items()
+                   for cat, measures in data['measures'].items()
+                   for i, measure in enumerate(measures)
+               ])
+               
+               df_practices = pd.DataFrame([
+                   {
+                       "Risque": risk,
+                       "Bonne Pratique": practice,
+                       "KPI": kpi
+                   }
+                   for risk, practices in all_practices.items()
+                   for practice, kpis in practices.items()
+                   for kpi in kpis
+               ])
+               
+               buffer = io.BytesIO()
+               with pd.ExcelWriter(buffer, engine='openpyxl') as writer:
+                   df_main.to_excel(writer, sheet_name='Vue générale', index=False)
+                   df_measures.to_excel(writer, sheet_name='Mesures détaillées', index=False)
+                   df_practices.to_excel(writer, sheet_name='Bonnes Pratiques & KPIs', index=False)
+               
+               st.download_button(
+                   label="📥 Télécharger le rapport complet",
+                   data=buffer.getvalue(),
+                   file_name=f"mesures_remediation_{processus}.xlsx",
+                   mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+               )
+               
+               # Export des mesures sélectionnées
+               if st.session_state.checked_measures:
+                   selected_df = pd.DataFrame([
+                       {
+                           "Risque": risk,
+                           "Catégorie": key.split('-')[0],
+                           "Mesure": measure,
+                           "Sélectionnée": key in st.session_state.checked_measures
+                       }
+                       for risk, data in all_measures.items()
+                       for cat, measures in data['measures'].items()
+                       for i, measure in enumerate(measures, 1)
+                       for key in [f"{cat}-{i}-{measure}"]
+                   ])
+                   selected_buffer = io.BytesIO()
+                   selected_df.to_excel(selected_buffer, index=False)
+                   
+                   st.download_button(
+                       label="📥 Exporter les mesures sélectionnées",
+                       data=selected_buffer.getvalue(),
+                       file_name=f"mesures_selectionnees_{processus}.xlsx",
+                       mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                       key="download_selected"
+                   )
+               
+               st.success("✅ Génération terminée avec succès!")
 
-    with col2:
-        # Bouton de génération
-        if processus and selected_risks and st.button("Générer l'analyse complète", type="primary"):
-            all_measures = {}
-            all_practices = {}
-            results = []
-            
-            progress_text = "Génération en cours..."
-            progress_bar = st.progress(0)
-            
-            for idx, risk in enumerate(selected_risks):
-                st.subheader(f"📊 {risk}")
-                
-                with st.spinner(f"Analyse du risque {idx + 1}/{len(selected_risks)}"):
-                    # Génération des mesures
-                    measures_text = generate_measures(client, risk, processus)
-                    if measures_text:
-                        measures_dict, refs_dict = parse_measures_with_refs(measures_text)
-                        
-                        # Génération des bonnes pratiques et KPIs
-                        practices_text = generate_best_practices_and_kpis(client, risk, processus)
-                        practices_dict = parse_best_practices_and_kpis(practices_text)
-                        
-                        all_measures[risk] = {'measures': measures_dict, 'refs': refs_dict}
-                        all_practices[risk] = practices_dict
-                        
-                        # Créer des onglets principaux
-                        tab_measures, tab_practices = st.tabs(["Mesures de remédiation", "Bonnes pratiques & KPIs"])
-                        
-                        with tab_measures:
-                            render_measures_with_checkboxes(measures_dict, refs_dict)
-                        
-                        with tab_practices:
-                            st.markdown("### 📋 Bonnes pratiques et indicateurs")
-                            for practice, kpis in practices_dict.items():
-                                with st.expander(practice):
-                                    for kpi in kpis:
-                                        st.markdown(f"📊 {kpi}")
-                        
-                        # Stockage pour export
-                        results.append({
-                            "Processus": processus,
-                            "Référence": PROCESSES[famille][processus],
-                            "Risque": risk,
-                            "Mesures": measures_text,
-                            "Bonnes_Pratiques_KPIs": practices_text
-                        })
-                
-                progress_bar.progress((idx + 1) / len(selected_risks))
-                st.divider()
-            
-            # Analyse des mesures communes
-            if len(selected_risks) > 1:
-                st.subheader("🔄 Mesures communes identifiées")
-                common_measures = find_common_measures({risk: data['measures'] for risk, data in all_measures.items()})
-                
-                for category, category_name in [
-                    ('D', 'Détection'),
-                    ('R', 'Réduction'), 
-                    ('A', 'Acceptation'), 
-                    ('F', 'Refus'), 
-                    ('T', 'Transfert')
-                ]:
-                    common = {m: count for m, count in common_measures[category].items() if count > 1}
-                    if common:
-                        st.write(f"**Mesures de {category_name} communes :**")
-                        for measure, count in sorted(common.items(), key=lambda x: x[1], reverse=True):
-                            st.markdown(f"• {measure} _(utilisée dans {count} risques)_")
-                        st.write("")
-            
-            # Export Excel
-            if results:
-                # Création des DataFrames
-                df_main = pd.DataFrame(results)
-                
-                df_measures = pd.DataFrame([
-                    {
-                        "Risque": risk,
-                        "Catégorie": cat,
-                        "Mesure": measure,
-                        "Référence": refs_dict[f"{cat}-{i+1}"]
-                    }
-                    for risk, (data) in all_measures.items()
-                    for cat, measures in data['measures'].items()
-                    for i, measure in enumerate(measures)
-                ])
-                
-                df_practices = pd.DataFrame([
-                    {
-                        "Risque": risk,
-                        "Bonne Pratique": practice,
-                        "KPI": kpi
-                    }
-                    for risk, practices in all_practices.items()
-                    for practice, kpis in practices.items()
-                    for kpi in kpis
-                ])
-                
-                # Export avec toutes les feuilles
-                buffer = io.BytesIO()
-                with pd.ExcelWriter(buffer, engine='openpyxl') as writer:
-                    df_main.to_excel(writer, sheet_name='Vue générale', index=False)
-                    df_measures.to_excel(writer, sheet_name='Mesures détaillées', index=False)
-                    df_practices.to_excel(writer, sheet_name='Bonnes Pratiques & KPIs', index=False)
-                
-                st.download_button(
-                    label="📥 Télécharger le rapport complet",
-                    data=buffer.getvalue(),
-                    file_name=f"mesures_remediation_{processus}.xlsx",
-                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-                )
-                
-                st.success("✅ Génération terminée avec succès!")
-
-        # Bouton pour réinitialiser les mesures cochées
-        if st.button("Réinitialiser les mesures cochées"):
-            st.session_state['checked_measures'] = set()
-            st.experimental_rerun()
-
-    # Sidebar référentiel ISO
-    with st.sidebar:
-        with st.expander("📘 Référentiel ISO 37301", expanded=False):
-            for section, details in iso_references.get('sections', {}).items():
-                with st.expander(f"Section {section}"):
-                    st.write(f"**{details.get('titre', '')}**")
-                    st.write(details.get('description', ''))
-                    st.markdown("**Objectifs :**")
-                    for obj in details.get('objectifs', []):
-                        st.markdown(f"- {obj}")
+   # Sidebar référentiel ISO
+   with st.sidebar:
+       for section, details in iso_references.get('sections', {}).items():
+           with st.expander(f"📘 Section {section}"):
+               st.write(f"**{details.get('titre', '')}**")
+               st.write(details.get('description', ''))
+               st.markdown("**Objectifs :**")
+               for obj in details.get('objectifs', []):
+                   st.markdown(f"- {obj}")
 
 if __name__ == "__main__":
     main()
