@@ -1,10 +1,11 @@
 import streamlit as st
+st.set_page_config(page_title="Générateur de Mesures de Remédiation", layout="wide")
+
 import pandas as pd
 from openai import OpenAI
 import io
 from collections import defaultdict
 import yaml
-from collections import defaultdict
 
 # Configuration de la page
 st.set_page_config(page_title="Générateur de Mesures de Remédiation", layout="wide")
@@ -294,9 +295,6 @@ def render_measures_with_checkboxes(measures_dict, refs_dict):
             st.session_state['checked_measures'] = checked_measures
 
 def main():
-    # Configuration de la page doit être le PREMIER appel Streamlit
-    st.set_page_config(page_title="Générateur de Mesures de Remédiation", layout="wide")
-    
     # Initialisation
     client = init_openai()
     iso_references = load_iso_references()
