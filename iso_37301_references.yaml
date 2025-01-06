@@ -1,0 +1,2184 @@
+Systèmes de management de la conformité —
+Exigences et recommandations
+pour la mise en oeuvre
+E : Compliance management systems — Requirements with guidance for use
+D : Compliance-Managementsysteme — Anforderungen mit Leitlinien
+zur Anwendung
+Norme française
+homologuée par décision du Directeur Général d'AFNOR en septembre 2021.
+Remplace la norme homologuée NF ISO 19600, de mai 2015.
+Correspondance Le présent document reproduit intégralement la Norme internationale
+ISO 37301:2021.
+Résumé Le présent document spécifie des exigences et fournit un cadre directeur pour
+l’établissement, le développement, la mise en oeuvre, l’évaluation, la tenue à jour et
+l’amélioration d’un système de management de la conformité efficace au sein
+d’un organisme.
+Le présent document s’applique à tous les types d’organismes, indépendamment du
+type, de la taille et de la nature de ses activités, qu’il appartienne au secteur public,
+privé ou à but non lucratif.
+L’ensemble des exigences spécifiées dans le présent document qui font référence
+à un organe de gouvernance s’appliquent à la direction lorsque l’organe de
+gouvernance d’un organisme n’est pas distinct de la direction.
+Descripteurs Thésaurus International Technique : entreprise, gestion, conformation, éthique
+sociale, spécification, caractéristique de fonctionnement, planification, processus,
+gestion de processus, qualification, échange d'information, mise en oeuvre,
+estimation, efficacité, contrôle par mesures, audit de qualité, vérification périodique.
+Modifications Par rapport au document remplacé, révision de la norme.
+Corrections
+
+NF ISO 373012021-10
+NF ISO 37301 — 2 —
+La norme La norme est destinée à servir de base dans les relations entre partenaires
+économiques, scientifiques, techniques et sociaux.
+La norme par nature est d’application volontaire. Référencée dans un contrat, elle
+s’impose aux parties. Une réglementation peut rendre d’application obligatoire tout ou
+partie d’une norme.
+La norme est un document élaboré par consensus au sein d’un organisme de
+normalisation par sollicitation des représentants de toutes les parties intéressées.
+Son adoption est précédée d’une enquête publique.
+La norme fait l’objet d’un examen régulier pour évaluer sa pertinence dans le temps.
+Toute norme française prend effet le mois suivant sa date d’homologation.
+Pour comprendre
+les normes
+L’attention du lecteur est attirée sur les points suivants :
+Seules les formes verbales doit et doivent sont utilisées pour exprimer une ou des
+exigences qui doivent être respectées pour se conformer au présent document.
+Ces exigences peuvent se trouver dans le corps de la norme ou en annexe qualifiée de
+«normative». Pour les méthodes d’essai, l’utilisation de l’infinitif correspond à une
+exigence.
+Les expressions telles que, il convient et il est recommandé sont utilisées pour
+exprimer une possibilité préférée mais non exigée pour se conformer au présent
+document. Les formes verbales peut et peuvent sont utilisées pour exprimer une
+suggestion ou un conseil utiles mais non obligatoires, ou une autorisation.
+En outre, le présent document peut fournir des renseignements supplémentaires destinés
+à faciliter la compréhension ou l'utilisation de certains éléments ou à en clarifier
+l'application, sans énoncer d'exigence à respecter. Ces éléments sont présentés sous forme
+de notes ou d'annexes informatives.
+Commission
+de normalisation
+Une commission de normalisation réunit, dans un domaine d’activité donné, les
+expertises nécessaires à l’élaboration des normes françaises et des positions françaises
+sur les projets de norme européenne ou internationale. Elle peut également préparer
+des normes expérimentales et des fascicules de documentation.
+La composition de la commission de normalisation qui a élaboré le présent document est
+donnée ci-après. Lorsqu’un expert représente un organisme différent de son organisme
+d’appartenance, cette information apparaît sous la forme : organisme d’appartenance
+(organisme représenté).
+Vous avez utilisé ce document, faites part de votre expérience à ceux qui l'ont
+élaboré.
+Scannez le QR Code pour accéder au questionnaire de ce document ou
+retrouvez‐nous sur http://norminfo.afnor.org/norme/128519.
+
+
+NF ISO 373012021-10
+— 3 — NF ISO 37301
+Programme de gouvernance des organisations
+et conformité en matière de droit applicable,
+d'éthique, de déontologie
+et de bonnes pratiques AFNOR GOUVERNANCE
+Composition de la commission de normalisation
+Président : M SEASSAUD
+Secrétariat : MME LUCAS — AFNOR
+Avant-propos national
+L'attention est appelée sur le fait que certains des éléments du présent document peuvent faire l'objet de droits
+de propriété industrielle ou de droits analogues. AFNOR ne saurait être tenu pour responsable de ne pas avoir
+identifié de tels droits de propriété et averti de leur existence.
+MME ANDRIEUX AFA — AGENCE FRANCAISE ANTICORRUPTION
+MME BAILLY ETHIC INTELLIGENCE
+M BERTHOU AFNOR
+M BIRON CEA CENTRE DE GRENOBLE
+M BOUCHEZ CEA CENTRE DE GRENOBLE
+MME BRIARD INRAE
+MME CORNU EUROCOMPLIANCE
+M DE BROSSES DE BROSSES ANTOINE — PRODUCT LAW
+MME GAULIN ETHIC INTELLIGENCE
+M GUINAND MEDEF
+M HUGUET ALLDC — ASSO LEO LAGRANGE DEF CONSOMMATEURS
+M JACQUEMET BPA — BUSINESS PROCESS ASSOCIATES
+M JACQUET INRAE
+M JONQUIÈRES ASSOCIATION ACADEMIE DE L’ETHIQUE
+M LE GOFF TRAX
+MME LEPAGE MEDEF
+M LOREK TRAX
+MME PLOMB DGAFP-DION GLE ADMINISTRATION ET FONCTION PUB
+M SCOTT ETHIC INTELLIGENCE
+M SEASSAUD VINCI
+M STAPPERS WHISTLEB
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+Avant-propos ................................................................................................................................................................................................................................v
+Introduction ................................................................................................................................................................................................................................vi
+1 Domaine d’application ...................................................................................................................................................................................1
+2 Références normatives ...................................................................................................................................................................................1
+3 Termes et définitions .......................................................................................................................................................................................1
+4 Contexte de l’organisme ................................................................................................................................................................................5
+4.1 Connaissance de l’organisme et contexte ........................................................................................................................ 5
+4.2 Compréhension des besoins et des attentes des parties intéressées ...................................................... 6
+4.3 Détermination du périmètre d’application du système de management de conformité........ 6
+4.4 Système de management de conformité ........................................................................................................................... 6
+4.5 Obligations de conformité ............................................................................................................................................................. 6
+4.6 Appréciation du risque de conformité................................................................................................................................ 7
+5 Leadership ..................................................................................................................................................................................................................7
+5.1 Leadership et engagement............................................................................................................................................................ 7
+5.1.1 Organe de gouvernance et direction ............................................................................................................... 7
+5.1.2 Culture de conformité .................................................................................................................................................. 8
+5.1.3 Gouvernance de la fonction de conformité ............................................................................................... 8
+5.2 Politique de conformité ................................................................................................................................................................... 8
+5.3 Rôles, responsabilités et autorités ......................................................................................................................................... 9
+5.3.1 Organe de gouvernance et direction ............................................................................................................... 9
+5.3.2 Fonction de conformité ...........................................................................................................................................10
+5.3.3 Encadrement (Management) .............................................................................................................................11
+5.3.4 Personnel .............................................................................................................................................................................11
+6 Planification ...........................................................................................................................................................................................................11
+6.1 Actions à mettre en oeuvre face aux risques et opportunités ......................................................................11
+6.2 Objectifs de conformité et planification des actions pour les atteindre .............................................12
+6.3 Planification des changements ..............................................................................................................................................12
+7 Support ........................................................................................................................................................................................................................13
+7.1 Ressources ...............................................................................................................................................................................................13
+7.2 Compétences ..........................................................................................................................................................................................13
+7.2.1 Généralités .........................................................................................................................................................................13
+7.2.2 Processus de recrutement ....................................................................................................................................13
+7.2.3 Formation ............................................................................................................................................................................13
+7.3 Sensibilisation ......................................................................................................................................................................................14
+7.4 Communication ...................................................................................................................................................................................14
+7.5 Informations documentées .......................................................................................................................................................15
+7.5.1 Généralités .........................................................................................................................................................................15
+7.5.2 Création et mise à jour des informations documentées .............................................................15
+7.5.3 Maîtrise des informations documentées ..................................................................................................16
+8 Réalisation des activités opérationnelles ................................................................................................................................16
+8.1 Planification et maîtrise opérationnelles ......................................................................................................................16
+8.2 Établissement des dispositifs de maîtrise ....................................................................................................................17
+8.3 Signalement des inquiétudes ...................................................................................................................................................17
+8.4 Processus d’enquête ........................................................................................................................................................................17
+9 Évaluation des performances ...............................................................................................................................................................17
+9.1 Surveillance, mesure, analyse et évaluation ...............................................................................................................17
+9.1.1 Généralités .........................................................................................................................................................................17
+9.1.2 Sources de retour d’informations sur les performances de conformité .......................18
+9.1.3 Mise en place des indicateurs ............................................................................................................................18
+9.1.4 Mécanisme de rapports (reporting) de conformité ........................................................................18
+9.1.5 Conservation d’éléments probants ...............................................................................................................18
+© ISO 2021 – Tous droits réservés iii
+Sommaire Page
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+9.2 Audit interne ..........................................................................................................................................................................................19
+9.2.1 Généralités .........................................................................................................................................................................19
+9.2.2 Programme d’audit interne .................................................................................................................................19
+9.3 Revue de direction ............................................................................................................................................................................19
+9.3.1 Généralités .........................................................................................................................................................................19
+9.3.2 Données d’entrée de la revue de direction .............................................................................................19
+9.3.3 Résultats de la revue de direction ..................................................................................................................20
+10 Amélioration ..........................................................................................................................................................................................................20
+10.1 Amélioration continue ...................................................................................................................................................................20
+10.2 Non-conformité et actions correctives ............................................................................................................................20
+Annexe A (informative) Recommandations relatives à l’utilisation du présent document .....................22
+Bibliographie ...........................................................................................................................................................................................................................44
+iv © ISO 2021 – Tous droits réservés
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+Avant-propos
+L’ISO (Organisation internationale de normalisation) est une fédération mondiale d’organismes
+nationaux de normalisation (comités membres de l’ISO). L’élaboration des Normes internationales est
+en général confiée aux comités techniques de l’ISO. Chaque comité membre intéressé par une étude
+a le droit de faire partie du comité technique créé à cet effet. Les organisations internationales,
+gouvernementales et non gouvernementales, en liaison avec l’ISO participent également aux travaux.
+L’ISO collabore étroitement avec la Commission électrotechnique internationale (IEC) en ce qui
+concerne la normalisation électrotechnique.
+Les procédures utilisées pour élaborer le présent document et celles destinées à sa mise à jour sont
+décrites dans les Directives ISO/IEC, Partie 1. Il convient, en particulier de prendre note des différents
+critères d’approbation requis pour les différents types de documents ISO. Le présent document a été
+rédigé conformément aux règles de rédaction données dans les Directives ISO/IEC, Partie 2 (voir www
+.iso .org/ directives).
+L’attention est attirée sur le fait que certains des éléments du présent document peuvent faire l’objet de
+droits de propriété intellectuelle ou de droits analogues. L’ISO ne saurait être tenue pour responsable
+de ne pas avoir identifié de tels droits de propriété et averti de leur existence. Les détails concernant
+les références aux droits de propriété intellectuelle ou autres droits analogues identifiés lors de
+l’élaboration du document sont indiqués dans l’Introduction et/ou dans la liste des déclarations de
+brevets reçues par l’ISO (voir www .iso .org/ brevets).
+Les appellations commerciales éventuellement mentionnées dans le présent document sont données
+pour information, par souci de commodité, à l’intention des utilisateurs et ne sauraient constituer un
+engagement.
+Pour une explication de la nature volontaire des normes, la signification des termes et expressions
+spécifiques de l’ISO liés à l’évaluation de la conformité, ou pour toute information au sujet de l’adhésion
+de l’ISO aux principes de l’Organisation mondiale du commerce (OMC) concernant les obstacles
+techniques au commerce (OTC), voir www .iso .org/ avant -propos.
+Le présent document a été élaboré par le comité technique ISO/TC 309, Gouvernance des organisations.
+Cette première édition de l’ISO 37301 annule et remplace l’ISO 19600:2014, qui a fait l’objet d’une
+révision technique.
+Les principales modifications par rapport à l’ISO 19600:2014 sont les suivantes:
+— le présent document contient désormais des exigences et recommandations supplémentaires pour
+la mise en oeuvre basées sur ces exigences;
+— le présent document suit les exigences de l’ISO pour une structure harmonisée des normes de
+systèmes de management.
+Il convient que l’utilisateur adresse tout retour d’information ou toute question concernant le présent
+document à l’organisme national de normalisation de son pays. Une liste exhaustive desdits organismes
+se trouve à l’adresse www .iso .org/ fr/ members .html.
+© ISO 2021 – Tous droits réservés v
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+Introduction
+Les organismes qui aspirent à garantir leur réussite sur le long terme doivent établir et entretenir une
+culture de conformité, en prenant en compte les besoins et attentes des parties intéressées. Le dispositif
+de conformité ne constitue donc pas seulement un prérequis, mais également une opportunité pour un
+organisme qui souhaite se développer de façon durable.
+La (mise/maintien en) conformité est un processus continu et le résultat d’un organisme qui exécute
+ses obligations. Le meilleur moyen de permettre l’instauration durable d’un dispositif de conformité
+est de l’intégrer à la culture de l’organisme ainsi que dans les attendus de l’organisme en matière de
+comportement et conduite du personnel. Tout en gardant son indépendance, il est préférable que la
+gestion du dispositif de conformité soit intégrée aux autres processus de l’organisme ainsi qu’à ses
+exigences et procédures opérationnelles.
+L’existence d’un système de management de conformité, à l’échelle d’un organisme dans son ensemble,
+permet à ce dernier de démontrer son engagement vis-à-vis du respect de la législation en vigueur,
+y compris les exigences réglementaires, les codes industriels et les normes organisationnelles, ainsi
+que les normes de bonne gouvernance, les meilleures pratiques communément admises, l’éthique et les
+attentes des parties intéressées.
+La démarche de (mise/maintien en) conformité d’un organisme est orientée par un leadership qui
+applique ses valeurs fondamentales et les principes communément admis de bonne gouvernance,
+d’éthique et communautaires. Intégrer la (mise/maintien en) conformité dans le comportement des
+personnes qui travaillent pour un organisme dépend avant tout d’une mission et d’une exemplarité à
+tous les niveaux et de valeurs claires pour cet organisme, ainsi que de la reconnaissance et de la mise
+en oeuvre de mesures pour promouvoir une attitude de conformité. Si cela n’est pas le cas à tous les
+niveaux d’un organisme, un risque de défaut de conformité existe.
+Dans plusieurs juridictions, pour déterminer la sanction appropriée à prononcer en cas de violation
+des lois en vigueur, les tribunaux ont tenu compte de l’engagement de l’organisme pour la (mise/
+maintien en) conformité soutenu par son système de management de conformité. Par conséquent, les
+autorités réglementaires/de régulation et les instances judiciaires peuvent également tirer parti du
+présent document comme référence.
+Les organismes sont de plus en plus convaincus du fait qu’en appliquant des valeurs engageantes et
+une gestion appropriée de conformité, elles peuvent préserver leur intégrité et éviter ou de réduire
+le plus possible les cas de manquement aux obligations de conformité de l’organisme. L’intégrité et
+l’effectivité du dispositif de conformité sont donc des éléments clés pour une gestion saine et diligente
+de l’organisme. La (mise/maintien en) conformité contribue également au comportement socialement
+responsable des organismes.
+L’un des objectifs du présent document est d’assister les organismes dans l’élaboration et la diffusion
+d’une culture positive de conformité, en considérant qu’il convient qu’une gestion efficace et saine des
+risques de conformité soit perçue comme étant une opportunité à saisir en raison des divers bénéfices
+qu’il procure à l’organisme, comme:
+— l’amélioration des opportunités commerciales et de la viabilité économique/sociale/
+environnementale;
+— la protection et l’amélioration de la réputation et de la crédibilité d’un organisme;
+— la prise en compte des attentes des parties intéressées;
+— la démonstration de l’engagement d’un organisme vis-à-vis de la gestion effective de ses risques de
+conformité de manière efficace;
+— l’accroissement de la confiance des tierces parties dans la capacité de l’organisme à atteindre des
+objectifs sur le long terme;
+vi © ISO 2021 – Tous droits réservés
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+— la réduction au minimum de la violation ou de la menace de violation des lois, des coûts afférents
+et de l’atteinte à la réputation qui en découlent.
+Le présent document spécifie des exigences relatives aux systèmes de management de conformité
+et fournit des recommandations et pratiques recommandées. Les exigences et les recommandations
+fournies dans le présent document se veulent flexibles et leur mise en oeuvre peut être différente selon
+la taille et le niveau de maturité du système de management de conformité de l’organisme et selon le
+contexte, la nature et la complexité des activités de l’organisme et de ses objectifs.
+Le présent document est à même d’améliorer les exigences de conformité dans d’autres systèmes de
+management et d’aider un organisme à améliorer la gestion dans son ensemble de toutes ses obligations
+de conformité.
+La Figure 1 donne une vue d’ensemble des éléments les plus courants d’un système de management de
+conformité.
+© ISO 2021 – Tous droits réservés vii
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+Figure 1 — Éléments d’un système de management de conformité
+Dans le présent document, les formes verbales suivantes sont utilisées:
+— «doit» indique une exigence;
+— «il convient de/que» indique une recommandation;
+— «peut/il est admis» («may» en anglais) indique une autorisation;
+— «peut/il est possible» («can» en anglais) indique une possibilité ou une capacité.
+viii © ISO 2021 – Tous droits réservés
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+Les informations sous forme de «NOTE» sont fournies pour clarifier l’exigence associée ou en faciliter la
+compréhension.
+L’Annexe A donne des recommandations relatives à l’utilisation du présent document.
+© ISO 2021 – Tous droits réservés ix
+
+
+NF ISO 373012021-10
+Systèmes de management de la conformité — Exigences et
+recommandations pour la mise en oeuvre
+1 Domaine d’application
+Le présent document spécifie des exigences et fournit des recommandations pour l’établissement,
+le développement, la mise en oeuvre, l’évaluation, la tenue à jour et l’amélioration d’un système de
+management de conformité efficace au sein d’un organisme.
+Le présent document s’applique à tous les types d’organismes, indépendamment du type, de la taille et
+de la nature de ses activités, qu’il appartienne au secteur public, privé ou à but non lucratif.
+L’ensemble des exigences spécifiées dans le présent document qui font référence à un organe de
+gouvernance s’appliquent à la direction lorsque l’organe de gouvernance d’un organisme n’est pas
+distinct de la direction.
+2 Références normatives
+Le présent document ne contient aucune référence normative.
+3 Termes et définitions
+Pour les besoins du présent document, les termes et définitions suivants s’appliquent.
+L’ISO et l’IEC tiennent à jour des bases de données terminologiques destinées à être utilisées en
+normalisation, consultables aux adresses suivantes:
+— ISO Online browsing platform: disponible à l’adresse https:// www .iso .org/ obp
+— IEC Electropedia: disponible à l’adresse https:// www .electropedia .org/
+3.1
+organisme
+personne ou groupe de personnes ayant un rôle avec les responsabilités, l’autorité et les relations lui
+permettant d’atteindre ses objectifs (3.6)
+Note 1 à l'article: Le concept d’organisme englobe sans s’y limiter, les travailleurs indépendants, les compagnies,
+les sociétés, les firmes, les entreprises, les administrations, les partenariats, les organisations caritatives ou les
+institutions, ou bien une partie ou une combinaison des entités précédentes, à responsabilité limitée ou ayant un
+autre statut, de droit public ou privé.
+Note 2 à l'article: Si l’organisme fait partie d’une entité plus grande, le terme «organisme» se réfère uniquement
+à la partie de l’entité plus grande qui est couverte par le périmètre du système de management de conformité.
+3.2
+partie intéressée (terme préféré)
+partie prenante (terme admis)
+personne ou organisme (3.1) qui peut soit influer sur une décision ou une activité, soit être influencé(e)
+ou s’estimer influencé(e) par une décision ou une activité
+NORME INTERNATIONALE ISO 37301:2021(F)
+© ISO 2021 – Tous droits réservés 1
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+3.3
+direction
+personne ou groupe de personnes qui oriente et dirige un organisme (3.1) au plus haut niveau
+Note 1 à l'article: La direction a le pouvoir de déléguer son autorité et de fournir des ressources au sein de
+l’organisme.
+Note 2 à l'article: Si le périmètre du système de management (3.4) ne couvre qu’une partie de l’organisme, alors la
+direction s’adresse à ceux qui gouvernent et contrôlent cette partie de l’organisme.
+Note 3 à l'article: Pour les besoins du présent document, le terme «direction» fait référence au plus haut niveau de
+direction exécutive.
+3.4
+système de management
+ensemble d’éléments corrélés ou en interaction d’un organisme (3.1), utilisés pour établir des politiques
+(3.5) et des objectifs (3.6), ainsi que des processus (3.8) de façon à atteindre lesdits objectifs
+Note 1 à l'article: Un système de management peut traiter d’un seul ou de plusieurs domaines.
+Note 2 à l'article: Les éléments du système de management comprennent la structure, les rôles et responsabilités,
+la planification et le fonctionnement de l’organisme.
+3.5
+politique
+intentions et orientations d’un organisme (3.1), telles qu’elles sont officiellement formulées par sa
+direction (3.3)
+Note 1 à l'article: Une politique peut également être officiellement formulée par l’organe de gouvernance (3.21)
+d’un organisme.
+3.6
+objectif
+résultat à atteindre
+Note 1 à l'article: Un objectif peut être stratégique, tactique ou opérationnel.
+Note 2 à l'article: Les objectifs peuvent se rapporter à différents domaines (tels que finance, ventes et marketing,
+achats, santé, sécurité, et environnement). Ils peuvent s’appliquer, par exemple, à l’organisme dans son ensemble
+ou à un projet, un produit, un service ou un processus (3.8).
+Note 3 à l'article: Un objectif peut être exprimé de différentes manières, par exemple par un résultat escompté,
+un besoin, un critère opérationnel, en tant qu’objectif de conformité (3.26) ou par l’utilisation d’autres termes
+ayant la même signification (par exemple finalité, but ou cible).
+Note 4 à l'article: Dans le contexte des systèmes de management (3.4) de conformité, les objectifs de conformité
+sont fixés par l’organisme (3.1), en cohérence avec sa politique (3.5) de conformité, en vue d’obtenir des résultats
+spécifiques.
+3.7
+risque
+effet de l’incertitude sur l’atteinte des objectifs (3.6)
+Note 1 à l'article: Un effet est un écart, positif ou négatif, par rapport à une attente.
+Note 2 à l'article: L’incertitude est l’état, même partiel, de manque d’information qui entrave la compréhension ou
+la connaissance d’un événement, de ses conséquences ou de sa vraisemblance.
+Note 3 à l'article: Un risque est souvent caractérisé par référence à des événements potentiels (tels que définis
+dans le Guide ISO 73) et à des conséquences également potentielles (telles que définies dans le Guide ISO 73), ou
+par référence à une combinaison des deux.
+2 © ISO 2021 – Tous droits réservés
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+Note 4 à l'article: Un risque est souvent exprimé en termes de combinaison des conséquences d’un événement
+(y compris des changements de circonstances) et de la vraisemblance de son occurrence (telle que définie dans
+le Guide ISO 73).
+3.8
+processus
+ensemble d’activités corrélées ou en interaction qui transforme des éléments d’entrée en résultat
+Note 1 à l'article: Le résultat d’un processus est appelé «résultat», «produit» ou «service» en fonction du contexte
+de référence.
+3.9
+compétence
+aptitude à mettre en pratique des connaissances et des savoir-faire pour obtenir les résultats escomptés
+3.10
+information documentée
+information devant être maîtrisée et tenue à jour par un organisme (3.1) ainsi que le support sur lequel
+elle figure
+Note 1 à l'article: Les informations documentées peuvent se présenter sous n’importe quel format et sur tous
+supports et peuvent provenir de toute source.
+Note 2 à l'article: Les informations documentées peuvent se rapporter:
+— au système de management (3.4), y compris les processus (3.8) connexes;
+— aux informations créées en vue du fonctionnement de l’organisme (documentation);
+— aux preuves des résultats obtenus (enregistrements).
+3.11
+performance
+résultat mesurable
+Note 1 à l'article: Les performances peuvent être liées à des résultats quantitatifs ou qualitatifs.
+Note 2 à l'article: Les performances peuvent concerner le management d’activités, de processus (3.8), de produits,
+de services, de systèmes ou d’organismes (3.1).
+3.12
+amélioration continue
+activité récurrente menée pour améliorer les performances (3.11)
+3.13
+efficacité
+niveau de réalisation des activités planifiées et d’obtention des résultats escomptés
+3.14
+exigence
+besoin ou attente qui sont formulés, généralement implicites ou obligatoires
+Note 1 à l'article: «Généralement implicite» signifie qu’il est habituel ou de pratique commune pour l’organisme
+(3.1) et les parties intéressées (3.2) que le besoin ou l’attente à prendre en considération soit implicite.
+Note 2 à l'article: Une exigence spécifiée est une exigence formulée, par exemple une information documentée
+(3.10).
+3.15
+conformité
+satisfaction d’une exigence (3.14)
+© ISO 2021 – Tous droits réservés 3
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+3.16
+non-conformité
+non-satisfaction d’une exigence (3.14)
+Note 1 à l'article: Une non-conformité n’est pas nécessairement un défaut de conformité (3.27).
+3.17
+action corrective
+action visant à éliminer la ou les causes d’une non-conformité (3.16) et à éviter qu’elle ne réapparaisse
+3.18
+audit
+processus (3.8) méthodique et indépendant permettant d’obtenir des preuves et de les évaluer de
+manière objective pour déterminer dans quelle mesure les critères d’audit sont satisfaits
+Note 1 à l'article: Un audit peut être interne (de première partie) ou externe (de seconde ou tierce partie (3.30)),
+et il peut être combiné (s’il associe deux domaines ou plus).
+Note 2 à l'article: Un audit interne est réalisé par l’organisme (3.1) lui-même ou par une partie externe pour
+le compte de celui-ci.
+Note 3 à l'article: Les termes «preuves d’audit» et «critères d’audit» sont définis dans l’ISO 19011.
+Note 4 à l'article: L’indépendance peut être démontrée par l’absence de responsabilité vis-à-vis de l’activité à
+auditer ou l’absence de divergence et de conflit d’intérêts.
+3.19
+mesure
+processus (3.8) visant à déterminer une valeur
+3.20
+surveillance
+détermination de l’état d’un système, d’un processus (3.8) ou d’une activité
+Note 1 à l'article: Pour déterminer cet état, il peut être nécessaire de vérifier, de superviser ou d’observer d’un
+point de vue critique.
+3.21
+organe de gouvernance
+personne ou groupe de personnes qui détient la responsabilité et l’autorité ultimes des activités, de
+la gouvernance et des politiques (3.5) d’un organisme (3.1), à qui la direction (3.3) rend compte de ses
+décisions et par laquelle/lequel celle-ci est tenue responsable
+Note 1 à l'article: Tous les organismes, particulièrement les petits organismes, ne disposeront pas d’un organe de
+gouvernance distinct de la direction.
+Note 2 à l'article: Un organe de gouvernance peut notamment comprendre un conseil d’administration, des
+comités du conseil, un conseil de surveillance, des administrateurs ou des superviseurs.
+3.22
+personnel
+individus placés dans une relation reconnue comme étant une relation de travail dans la législation
+nationale ou dans la pratique, ou dans toute relation contractuelle dont l’existence dépend de l’organisme
+(3.1)
+3.23
+fonction de conformité
+personne ou groupe de personnes qui détient la responsabilité et l’autorité vis-à-vis du fonctionnement
+du système de management (3.4) de conformité (3.26)
+Note 1 à l'article: De préférence, la supervision du système de management de conformité sera attribuée à un seul
+individu.
+4 © ISO 2021 – Tous droits réservés
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+3.24
+risque de conformité
+vraisemblance d’occurrence et les conséquences d’un défaut de conformité (3.27) aux obligations de
+conformité (3.25) de l’organisme (3.1)
+3.25
+obligations de conformité
+exigences (3.14) auxquelles un organisme (3.1) doit obligatoirement se conformer, ainsi que celles
+auxquelles un organisme choisit volontairement de se conformer
+3.26
+(mise/maintien en) conformité
+compliance (terme admis)
+exécution de toutes les obligations de conformité (3.25) que l’organisme (3.1) est tenu de respecter
+Note 1 à l'article: La «(mise/maintien en) conformité» se rapporte parfois au système de management et aux
+éléments qui le composent (obligations, risques, politique, objectifs, processus et procédures, fonction, etc.),
+au défaut, à des comportements, à des règles, à des performances ou à des rapports (reporting), à la gestion,
+etc. aboutissant ou visant la «(mise/maintien en) conformité» – lorsque le terme est utilisé dans ce sens, dans le
+présent document, il convient de l’associer à une certaine forme de qualificatif sous la forme «[x] de conformité».
+3.27
+défaut de conformité
+manquement à une ou plusieurs obligations de conformité (3.25)
+3.28
+culture de conformité
+valeurs, éthique, convictions et conduite (3.29) qui existent au sein d’un organisme (3.1) et interagissent
+avec les structures organisationnelles et les dispositifs de maîtrise de l’organisme pour permettre
+l’adoption de comportements nécessaires à la (mise/maintien en) conformité (3.26)
+3.29
+conduite
+comportements et pratiques qui influent sur les résultats pour les clients, employés, fournisseurs,
+marchés et communautés
+3.30
+tierce partie
+personne ou organe indépendant(e) de l’organisme (3.1)
+Note 1 à l'article: Tous les associés métiers sont des tierces parties, mais toutes les tierces parties ne sont pas
+des associés métiers.
+3.31
+procédure
+manière spécifiée de réaliser une activité ou un processus (3.8)
+[SOURCE: ISO 9000:2015, 3.4.5]
+4 Contexte de l’organisme
+4.1 Connaissance de l’organisme et contexte
+L’organisme doit déterminer les enjeux externes et internes pertinents par rapport à sa finalité, et
+qui influent sur sa capacité à atteindre le ou les résultats attendus de son système de management de
+conformité.
+© ISO 2021 – Tous droits réservés 5
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+À cette fin, l’organisme doit prendre en compte un vaste éventail de facteurs d’enjeu, notamment, sans
+s’y limiter:
+— modèle économique, y compris la stratégie, la nature, la taille, la portée ainsi que la complexité et la
+pérennité des activités et opérations de l’organisme;
+— nature et étendue des relations métiers avec des tierces parties;
+— contexte légal et réglementaire;
+— situation économique;
+— contextes sociaux, culturels et environnementaux;
+— structures organisationnelles, politiques, processus, procédures et ressources internes, y compris
+les technologies;
+— sa culture de conformité.
+4.2 Compréhension des besoins et des attentes des parties intéressées
+L’organisme doit déterminer:
+— les parties intéressées qui sont pertinentes dans le cadre du système de management de conformité;
+— les exigences de ces parties intéressées;
+— les exigences à couvrir dans le cadre du système de management de conformité.
+4.3 Détermination du périmètre d’application du système de management
+de conformité
+L’organisme doit déterminer les limites et l’applicabilité du système de management de conformité afin
+d’établir son périmètre d’application.
+NOTE Le périmètre du système de management de conformité vise à clarifier les principaux risques de
+conformité auxquels l’organisme fait face ainsi que les limites géographiques ou organisationnelles, ou les deux,
+dans lesquelles le système de management de conformité s’appliquera, en particulier si l’organisme fait partie
+d’une entité plus grande.
+Lorsque l’organisme établit ce périmètre, il doit prendre en compte:
+— les enjeux externes et internes auxquels il est fait référence en 4.1;
+— les exigences auxquelles il est fait référence en 4.2, 4.5 et 4.6.
+Le périmètre d’application doit être disponible sous la forme d’une information documentée.
+4.4 Système de management de conformité
+L’organisme doit établir, mettre en oeuvre, tenir à jour et améliorer en continu un système de
+management de conformité, y compris les processus nécessaires et leurs interactions, en accord avec
+les exigences du présent document.
+Le système de management de conformité doit refléter les valeurs, la stratégie, les objectifs et les
+risques de conformité de l’organisme, en tenant compte du contexte de l’organisme (voir 4.1).
+4.5 Obligations de conformité
+L’organisme doit systématiquement identifier les obligations de conformité applicables découlant de
+ses activités, produits et services, et évaluer leur impact sur ses opérations.
+6 © ISO 2021 – Tous droits réservés
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+L’organisme doit disposer de processus pour:
+a) identifier les obligations de conformité nouvelles et modifiées afin d’assurer une (mise/maintien
+en) conformité continue;
+b) évaluer l’impact des changements identifiés et mettre en oeuvre tout changement nécessaire dans
+la gestion des obligations de conformité.
+L’organisme doit tenir à jour des informations documentées sur ses obligations de conformité.
+4.6 Appréciation du risque de conformité
+L’organisme doit apprécier le risque de conformité: identifier, analyser et évaluer ses risques de
+conformité.
+L’organisme doit identifier les risques de conformité liés à ses obligations de conformité à ses activités,
+à ses produits, à ses services et les aspects pertinents pour le fonctionnement de ses opérations.
+L’organisme doit apprécier les risques de conformité relatifs aux processus externalisés et réalisés par
+des tierces parties.
+Les risques de conformité doivent être appréciés périodiquement et dès que des changements
+significatifs de situation ou du contexte se produisent.
+L’organisme doit conserver des informations documentées sur l’appréciation des risques de conformité
+et sur les actions planifiées pour traiter ses risques de conformité.
+5 Leadership
+5.1 Leadership et engagement
+5.1.1 Organe de gouvernance et direction
+L’organe de gouvernance et la direction doivent démontrer leur leadership et engagement vis-à-vis du
+système de management de conformité en:
+— s’assurant que la politique et les objectifs sont établis pour le système de management de conformité
+et qu’ils sont compatibles avec l’orientation stratégique de l’organisme;
+— s’assurant que les exigences liées au système de management de conformité sont intégrées aux
+processus métiers de l’organisme;
+— s’assurant que les ressources requises pour le système de management de conformité sont
+disponibles;
+— communiquant sur l’importance de disposer d’un système de management de conformité efficace et
+de se conformer aux exigences liées à ce système;
+— veillant à ce que le système de management de conformité atteigne le ou les résultats attendus;
+— orientant et soutenant les personnes pour qu’elles contribuent à l’efficacité du système de
+management de conformité;
+— promouvant l’amélioration continue;
+— soutenant les autres rôles pertinents afin de démontrer leur implication dans leurs domaines
+respectifs.
+NOTE Dans le présent document, il convient d’interpréter le terme «métier» au sens large, c’est-à-dire
+comme se référant aux activités liées à al finalité de l’organisme.
+© ISO 2021 – Tous droits réservés 7
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+L’organe de gouvernance et la direction doivent:
+— établir et faire respecter les valeurs fondamentales de l’organisme;
+— s’assurer que des politiques, processus et procédures sont élaborés et mis en oeuvre afin d’atteindre
+les objectifs de conformité;
+— s’assurer qu’ils sont informés sur les questions de conformité, en temps utile, en cas de défaut de
+conformité, et s’assurer que les mesures appropriées sont prises;
+— s’assurer que l’engagement de conformité est maintenu et que le défaut de conformité et les
+comportements non respectueux des règles de conformité sont traités de manière appropriée;
+— s’assurer que les responsabilités de conformité sont incluses dans les descriptions de postes, le cas
+échéant;
+— désigner une fonction de conformité (voir 5.3.2);
+— s’assurer qu’un dispositif de signalement et de gestion des inquiétudes conformément à 8.3 est
+établi.
+5.1.2 Culture de conformité
+L’organisme doit développer, entretenir et promouvoir une culture de conformité à tous les niveaux de
+l’organisme.
+L’organe de gouvernance, la direction et le personnel d’encadrement doivent démontrer un engagement
+actif, visible, cohérent et continu, s’imposant à tous dans l’ensemble de l’organisme, en faveur de
+comportements et de conduite individuelle souhaités.
+La direction doit encourager les comportements qui engendrent et soutiennent la (mise/maintien en)
+conformité, et doit empêcher et ne pas tolérer les comportements qui la compromettent.
+5.1.3 Gouvernance de la fonction de conformité
+L’organe de gouvernance et la direction doivent s’assurer que les principes suivants sont mis en oeuvre:
+— accès direct de la fonction de conformité à l’organe de gouvernance;
+— indépendance de la fonction de conformité;
+— autorité et compétence appropriées de la fonction de conformité.
+NOTE 1 L’accès direct peut inclure: ligne hiérarchique directe avec l’organe de gouvernance, soumission de
+rapports (reporting) périodiques à l’organe de gouvernance et participation à ses réunions.
+NOTE 2 Indépendance signifie absence de toute interférence ou pression illégitime, ou les deux, avec la
+fonction de conformité.
+5.2 Politique de conformité
+L’organe de gouvernance et la direction doivent établir une politique de conformité qui:
+a) est appropriée à la finalité de l’organisme;
+b) fournit un cadre pour l’établissement d’objectifs de conformité;
+c) inclut l’engagement de satisfaire aux exigences applicables;
+d) inclut l’engagement pour l’amélioration continue du système de management de conformité.
+8 © ISO 2021 – Tous droits réservés
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+La politique de conformité doit:
+— correspondre aux valeurs, à la stratégie et aux objectifs de l’organisme;
+— exiger la (mise/maintien en) conformité aux obligations de conformité de l’organisme;
+— intégrer et décliner les principes de gouvernance de la fonction de conformité conformément à 5.1.3;
+— citer la fonction de conformité et la décrire;
+— souligner les conséquences du manquement à des obligations de conformité, politiques de conformité,
+processus et procédures de conformité de l’organisme;
+— encourager le signalement d’inquiétudes et interdire toute forme de représailles;
+— être écrite en langage clair de sorte que tout le personnel puisse facilement comprendre les principes
+et l’intention de l’organisme;
+— être mise en oeuvre et appliquée de manière appropriée;
+— être présentée sous la forme d’une information documentée;
+— être communiquée au sein de l’organisme;
+— être disponible vis-à-vis des parties intéressées, le cas échéant.
+5.3 Rôles, responsabilités et autorités
+5.3.1 Organe de gouvernance et direction
+L’organe de gouvernance et la direction doivent s’assurer que les responsabilités et autorités des rôles
+concernés sont attribuées et communiquées au sein de l’organisme.
+L’organe de gouvernance et la direction doivent confier la responsabilité et l’autorité pour:
+a) s’assurer que le système de management de conformité est conforme aux exigences du présent
+document;
+b) rendre compte de la performance du système de management de conformité à l’organe de
+gouvernance et à la direction.
+L’organe de gouvernance doit:
+— s’assurer que la direction est évaluée sur la base de l’atteinte d’objectifs de conformité;
+— superviser la pratique de la direction sur le fonctionnement du système de management de
+conformité.
+La direction doit:
+— allouer les ressources appropriées et adéquates pour établir, développer, mettre en oeuvre, évaluer,
+tenir à jour et améliorer le système de management de conformité;
+— s’assurer de la réalisation effective d’un mécanisme de rapports (reporting) réguliers sur les
+performances de conformité;
+— s’assurer de l’alignement entre les objectifs stratégiques et les objectifs opérationnels, et les
+obligations de conformité;
+— établir et tenir à jour des mécanismes de responsabilisation comprenant des mesures disciplinaires
+et leurs conséquences;
+© ISO 2021 – Tous droits réservés 9
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+— s’assurer de l’intégration des résultats de performance de conformité aux évaluations professionnelles
+des performances du personnel.
+5.3.2 Fonction de conformité
+La fonction de conformité doit être responsable du fonctionnement du système de management
+de conformité, ce qui inclut les points suivants:
+— de faciliter l’identification des obligations de conformité;
+— de documenter l’appréciation des risques de conformité (voir 4.6);
+— d’aligner le système de management de conformité par rapport aux objectifs de conformité;
+— de surveiller et de mesurer les performances de conformité;
+— d’analyser et d’évaluer les performances du système de management de conformité afin d’identifier
+tout besoin d’action corrective;
+— d’instaurer un mécanisme de rapports (reporting) de conformité et d’établir un référentiel
+documentaire relatif aux activités de conformité;
+— de s’assurer que le système de management de conformité est revu à intervalles planifiés
+(voir 9.2 et 9.3);
+— de mettre en place un système pour le signalement d’inquiétudes et de s’assurer que ces dernières
+sont prises en compte.
+La fonction de conformité doit exercer une supervision pour s’assurer que:
+— les responsabilités permettant d’atteindre les obligations de conformité identifiées sont attribuées
+de manière appropriée dans l’ensemble de l’organisme;
+— les obligations de conformité sont intégrées aux politiques, aux processus et procédures de
+conformité;
+— l’ensemble du personnel concerné est formé de manière adéquate;
+— des indicateurs de performance de conformité sont établis.
+La fonction de conformité doit fournir:
+— l’accès au personnel de l’organisme aux ressources sur les politiques, les processus et procédures
+de conformité;
+— des conseils sur les aspects organisationnels pour la (mise/maintien en) conformité.
+NOTE Les devoirs spécifiques de la fonction de conformité ne dégagent pas le reste du personnel de ses
+responsabilités de conformité.
+L’organisme doit s’assurer que la fonction de conformité a accès:
+— aux décideurs les plus élevés dans la hiérarchie pour permettre, au plus tôt, la prise de décision;
+— à tous les niveaux de l’organisme;
+— à l’ensemble du personnel, aux informations documentées et aux données nécessaires;
+— à des conseils d’experts sur les lois, règlements, codes et normes organisationnelles applicables.
+10 © ISO 2021 – Tous droits réservés
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+5.3.3 Encadrement (Management)
+Le personnel d’encadrement doit être chargé de l’exécution opérationnelle de la (mise/maintien en)
+conformité dans son périmètre de responsabilité en:
+— collaborant avec la fonction de conformité et en manifestant son appui, et en incitant le personnel
+à faire de même;
+— s’assurant que l’ensemble du personnel sous son autorité respecte les obligations, les politiques,
+les processus et les procédures de conformité de l’organisme;
+— identifiant et partageant les risques de conformité liés à ses activités;
+— intégrant les obligations de conformité dans les pratiques métiers de l’organisme et les procédures
+existantes dans ses domaines de responsabilité;
+— participant et en soutenant les activités de formation relatives à la (mise/maintien en) conformité;
+— sensibilisant le personnel aux obligations de conformité et l’orientant vers des formations qui
+développent les compétences;
+— encourageant et soutenant son personnel à signaler ses inquiétudes et en empêchant toute forme
+de représailles;
+— participant activement au traitement et à la résolution d’incidents de conformité et des avis de
+conformité, le cas échéant;
+— s’assurant que, une fois que le besoin d’effectuer une correction est identifié, l’action corrective
+appropriée est prescrite et mise en oeuvre.
+5.3.4 Personnel
+L’ensemble du personnel doit:
+— adhérer aux obligations, aux politiques, aux processus et procédures de conformité de l’organisme;
+— signaler les inquiétudes, les problèmes et défaillances de conformité;
+— prendre part à une formation le cas échéant.
+6 Planification
+6.1 Actions à mettre en oeuvre face aux risques et opportunités
+Dans le cadre de la planification de son système de management de conformité, l’organisme doit tenir
+compte des enjeux mentionnés en 4.1 et des exigences mentionnées en 4.2, et déterminer les risques et
+opportunités qu’il est nécessaire de prendre en compte pour:
+— donner l’assurance que le système de management de conformité peut atteindre le ou les résultats
+escomptés;
+— prévenir ou réduire les effets indésirables;
+— s’inscrire dans une dynamique d’amélioration continue.
+Dans le cadre de la planification de son système de management de conformité, l’organisme doit tenir
+compte:
+— des objectifs de conformité (voir 6.2);
+— des obligations de conformité identifiées (voir 4.5);
+© ISO 2021 – Tous droits réservés 11
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+— des résultats de l’appréciation des risques de conformité (voir 4.6).
+L’organisme doit planifier:
+a) les actions à mettre en oeuvre face aux risques et opportunités;
+b) la manière:
+1) d’intégrer et de mettre en oeuvre ces actions au sein des processus du système de management
+de conformité;
+2) d’évaluer l’efficacité de ces actions.
+6.2 Objectifs de conformité et planification des actions pour les atteindre
+L’organisme doit établir des objectifs de conformité, aux fonctions et niveaux concernés.
+Les objectifs de conformité doivent:
+a) être en cohérence avec la politique de conformité;
+b) être mesurables (si réalisable);
+c) tenir compte des exigences applicables;
+d) être surveillés;
+e) être communiqués;
+f) être mis à jour en tant que de besoin;
+g) être tenus à jour sous la forme d’une information documentée.
+Lorsque l’organisme planifie la façon dont ses objectifs de conformité seront atteints, il doit déterminer:
+— ce qui sera fait;
+— les ressources qui seront nécessaires;
+— qui sera responsable;
+— les échéances;
+— la façon dont les résultats seront évalués.
+6.3 Planification des changements
+Lorsque l’organisme décide qu’il est nécessaire de modifier le système de management de conformité,
+les modifications doivent être réalisées de manière planifiée.
+L’organisme doit tenir compte:
+— de la finalité des modifications et leurs conséquences potentielles;
+— de la conception et de l’efficacité opérationnelle du système de management de conformité;
+— de la disponibilité des ressources adéquates;
+— de l’attribution ou de la réattribution des responsabilités et autorités.
+12 © ISO 2021 – Tous droits réservés
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+7 Support
+7.1 Ressources
+L’organisme doit identifier et fournir les ressources nécessaires à l’établissement, la mise en oeuvre,
+la tenue à jour et l’amélioration continue du système de management de conformité.
+7.2 Compétences
+7.2.1 Généralités
+L’organisme doit:
+— déterminer les compétences nécessaires de la ou des personnes effectuant, sous son autorité,
+un travail qui a une incidence sur les performances de conformité;
+— s’assurer que ces personnes sont compétentes sur la base d’une formation initiale ou professionnelle
+ou d’une expérience appropriée;
+— le cas échéant, mener des actions pour acquérir les compétences nécessaires et évaluer l’efficacité
+de ces actions.
+Des informations documentées appropriées doivent être disponibles comme preuves desdites
+compétences.
+NOTE Les actions envisageables peuvent notamment inclure la formation, l’encadrement ou la réaffectation
+du personnel en activité ou le recrutement, direct ou en sous-traitance, de personnes compétentes.
+7.2.2 Processus de recrutement
+Concernant l’ensemble de son personnel, l’organisme doit développer, établir, mettre en oeuvre et tenir
+un jour des processus de sorte que:
+a) les conditions de recrutement stipulent que le personnel doit exécuter les obligations de conformité,
+respecter les politiques, les processus et procédures de conformité de l’organisme;
+b) après un délai raisonnable après le début de la prise effective du poste, le personnel reçoit un
+exemplaire de la politique de conformité, ou d’une formation spécifique sur celle-ci, ou dispose d’un
+moyen lui permettant d’y accéder;
+c) des mesures disciplinaires appropriées puissent être prises à l’encontre du personnel qui n’exécute
+pas les obligations de conformité, les politiques, les processus et procédures de conformité de
+l’organisme.
+Dans le cadre de ces processus de recrutement, l’organisation doit prendre en compte l’exposition de
+son personnel ou de certains rôles (fonctions) à des risques de conformité, et appliquer des procédures
+de diligence raisonnable (due diligence) requises avant toute embauche, avant toute mutation et avant
+toute promotion.
+L’organisation doit mettre en oeuvre un processus qui prévoit un examen périodique des objectifs
+de performance, les primes de performance et autres incitations, afin de vérifier que des mesures
+appropriées sont en place pour éviter d’encourager le non-respect des règles.
+7.2.3 Formation
+L’organisme doit former régulièrement le personnel concerné, au moment de son embauche et à des
+intervalles planifiés déterminés par l’organisme.
+© ISO 2021 – Tous droits réservés 13
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+La formation doit être:
+a) en adéquation avec les rôles (fonctions) et les risques de conformité auxquels le personnel est
+exposé;
+b) évaluée en termes d’efficacité;
+c) revue régulièrement.
+En tenant compte des risques de conformité identifiés, l’organisme doit en outre mettre en oeuvre des
+procédures qui prévoient la sensibilisation et la formation aux mécanismes de conformité pour les
+tierces parties qui agissent pour le compte de l’organisme, et qui peuvent représenter un risque de
+conformité pour l’organisme.
+Des enregistrements de formation doivent être conservés sous la forme d’informations documentées.
+7.3 Sensibilisation
+Le personnel effectuant un travail sous l’autorité de l’organisme doit:
+— être sensibilisées à la politique de conformité;
+— avoir conscience de leur contribution à l’efficacité du système de management de conformité,
+y compris aux effets bénéfiques d’une amélioration des performances de conformité;
+— avoir conscience des répercussions et des conséquences de toute non-satisfaction aux exigences
+du système de management de conformité;
+— avoir connaissance des moyens et des procédures pour le signalement d’inquiétudes (voir 8.3);
+— être en capacité de faire le lien entre la politique de conformité et les obligations de conformité
+pertinentes pour leur rôle (fonction);
+— comprendre l’importance de soutenir la culture de conformité.
+7.4 Communication
+L’organisme doit déterminer les besoins de communication interne et externe pertinents pour le
+système de management de conformité, y compris:
+a) sur quels sujets communiquer;
+b) à quels moments communiquer;
+c) avec qui communiquer;
+d) comment communiquer.
+L’organisme doit:
+— tenir compte des aspects de diversité culturelle et des obstacles potentiels lors de la détermination
+de ses besoins de communication;
+— s’assurer que les avis des parties intéressées sont pris en compte dans l’établissement de son ou de
+ses processus de communication;
+— lors de l’établissement de son ou de ses processus de communication:
+— inclure des communications sur sa culture de conformité, ses objectifs de conformité et ses
+obligations de conformité;
+14 © ISO 2021 – Tous droits réservés
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+— s’assurer que les messages concernant la (mise/maintien en) conformité communiqués
+sont fiables et cohérents avec les informations générées au sein du système de management
+de conformité;
+— répondre aux communications pertinentes sur son système de management de conformité;
+— conserver des informations documentées comme preuves de ses communications, le cas échéant;
+— communiquer en interne des informations pertinentes sur son système de management de
+conformité aux divers niveaux et fonctions de l’organisme, notamment les changements apportés
+au système de management de conformité, le cas échéant;
+— s’assurer que son ou ses processus de communication permettent au personnel de contribuer
+à l’amélioration continue du système de management de conformité;
+— s’assurer, par le biais de son ou ses processus de communication, que l’ensemble du personnel ait
+conscience qu’il peut saisir le dispositif de signalement des inquiétudes (voir 8.3);
+— communiquer en externe des informations pertinentes sur son système de management de
+conformité, comme établi par le ou les processus de communication de l’organisme, et inclure des
+communications sur sa culture de conformité, ses objectifs de conformité et ses obligations de
+conformité.
+7.5 Informations documentées
+7.5.1 Généralités
+Le système de management de conformité de l’organisme doit inclure:
+a) les informations documentées exigées par le présent document;
+b) les informations documentées que l’organisme juge nécessaires à l’efficacité du système de
+management de conformité.
+NOTE L’étendue des informations documentées dans le cadre d’un système de management de conformité
+peut différer selon l’organisme en fonction de:
+— la taille de l’organisme et de son type d’activités, de processus, de produits et de services;
+— la complexité des processus et de leurs interactions;
+— la compétence des personnes.
+7.5.2 Création et mise à jour des informations documentées
+Lors de la création et de la mise à jour des informations documentées, l’organisme doit s’assurer que
+sont appropriés:
+— l’identification et la description des informations documentées (leur titre, date, auteur, numéro
+de référence par exemple);
+— leur format (langue, version logicielle, graphiques, par exemple) et support (papier, électronique,
+par exemple);
+— la revue effectuée (pour en déterminer la pertinence et l’adéquation) et leur approbation.
+© ISO 2021 – Tous droits réservés 15
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+7.5.3 Maîtrise des informations documentées
+Les informations documentées exigées par le système de management de conformité et par le présent
+document doivent être maîtrisées pour s’assurer:
+a) qu’elles sont disponibles et conviennent à l’utilisation au moment et à l’instant où elles sont
+nécessaires;
+b) qu’elles sont convenablement protégées (par exemple, de toute perte de confidentialité, utilisation
+inappropriée ou perte d’intégrité).
+Pour maîtriser les informations documentées, l’organisme doit mettre en oeuvre les activités suivantes,
+quand elles sont applicables:
+— distribution, accès, récupération et utilisation;
+— stockage et protection, y compris préservation de la lisibilité;
+— maîtrise des modifications (par exemple, contrôle des versions);
+— conservation et élimination.
+Les informations documentées d’origine externe que l’organisme juge nécessaires à la planification et
+au fonctionnement du système de management de conformité doivent être identifiées comme il convient
+et maîtrisées.
+NOTE L’accès peut impliquer une décision relative à l’autorisation de consulter les informations documentées
+uniquement, ou l’autorisation et l’autorité de consulter et modifier les informations documentées.
+8 Réalisation des activités opérationnelles
+8.1 Planification et maîtrise opérationnelles
+L’organisme doit planifier, mettre en oeuvre et maîtriser les processus nécessaires pour satisfaire aux
+exigences et réaliser les actions déterminées à l’Article 6, en:
+— établissant des critères pour ces processus;
+— mettant en oeuvre la maîtrise de ces processus conformément aux critères.
+Des informations documentées doivent être disponibles dans une mesure suffisante pour avoir
+l’assurance que les processus ont été réalisés comme prévu.
+L’organisme doit maîtriser les modifications prévues, analyser les conséquences des modifications
+imprévues et, si nécessaire, mener des actions pour limiter tout effet négatif.
+L’organisme doit s’assurer que les processus, produits ou services externalisés, qui sont pertinents dans
+le cadre du système de management de conformité, sont maîtrisés.
+NOTE Le fait qu’un organisme externalise des opérations ne le dégage pas de ses responsabilités légales ou
+de ses obligations de conformité.
+L’organisme doit s’assurer que les processus réalisés par des tierces parties sont maîtrisés et surveillés.
+16 © ISO 2021 – Tous droits réservés
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+8.2 Établissement des dispositifs de maîtrise
+L’organisme doit mettre en oeuvre des dispositifs de maîtrise pour gérer ses obligations de conformité
+ainsi que les risques de conformité. Pour garantir en continu l’effectivité des dispositifs de maîtrise,
+celles-ci doivent être périodiquement surveillées, revues et mises à l’épreuve.
+NOTE L’évaluation des dispositifs de maîtrise consiste à mesurer leur réalisation effective telle que définie
+ou leur efficacité quant à la réduction de l’impact ou de la vraisemblance du risque associé.
+8.3 Signalement des inquiétudes
+L’organisme doit établir, mettre en oeuvre et tenir à jour un dispositif pour encourager et permettre aux
+personnes de signaler de bonne foi (sur des motifs qui les ont raisonnablement poussées à le croire)
+une tentative, un cas avéré ou un cas présumé de non-respect de la politique de conformité ou de
+manquement à une ou des obligations de conformité.
+Ce processus doit:
+— être visible et accessible dans l’ensemble de l’organisme;
+— traiter les signalements de manière confidentielle;
+— accepter les signalements anonymes;
+— permettre aux personnes à l’origine de signalements de se protéger des représailles;
+— permettre au personnel d’obtenir des conseils.
+L’organisme doit s’assurer que l’ensemble de son personnel est informé de l’existence de procédures
+de signalement, de ses droits et des protections dont il bénéficie et qu’il est en mesure de les mettre
+en oeuvre.
+8.4 Processus d’enquête
+L’organisme doit développer, établir, mettre en oeuvre et tenir un jour des processus permettant
+d’apprécier, d’évaluer, d’étudier et de clôturer les signalements sur les cas présumés ou avérés de défaut
+de conformité. Ces processus doivent garantir une prise de décision juste et impartiale.
+Les processus d’enquête doivent être réalisés par du personnel compétent de manière indépendante et
+sans conflit d’intérêts.
+L’organisme doit utiliser les résultats des enquêtes pour améliorer le système de management de
+conformité, le cas échéant (voir l’Article 10).
+L’organisme doit régulièrement rendre compte du nombre et des résultats des enquêtes à l’organe de
+gouvernance ou à la direction.
+L’organisme doit conserver des informations documentées sur les enquêtes.
+9 Évaluation des performances
+9.1 Surveillance, mesure, analyse et évaluation
+9.1.1 Généralités
+L’organisme doit surveiller le système de management de conformité pour s’assurer de l’atteinte des
+objectifs de conformité.
+© ISO 2021 – Tous droits réservés 17
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+L’organisme doit déterminer:
+— ce qu’il est nécessaire de surveiller et mesurer;
+— les méthodes de surveillance, de mesure, d’analyse et d’évaluation, selon le cas, pour assurer la
+validité des résultats;
+— quand la surveillance et la mesure doivent être effectuées;
+— quand les résultats de la surveillance et de la mesure doivent être analysés et évalués.
+Des informations documentées doivent être disponibles comme preuves desdits résultats.
+L’organisme doit évaluer la performance de conformité, ainsi que l’efficacité du système de management
+de conformité.
+9.1.2 Sources de retour d’informations sur les performances de conformité
+L’organisme doit établir, mettre en oeuvre, évaluer et tenir à jour des processus pour obtenir des
+retours d’informations sur ses performances de conformité, en provenance de plusieurs sources.
+Les informations doivent faire l’objet d’une analyse et d’une évaluation critique afin d’identifier les
+causes profondes d’un défaut de conformité, s’assurer que des actions appropriées sont entreprises et
+reprendre ces informations dans l’appréciation périodique des risques exigée en 4.6.
+9.1.3 Mise en place des indicateurs
+L’organisme doit élaborer, mettre en place et tenir à jour des indicateurs appropriés qui l’aideront
+à mesurer l’atteinte de ses objectifs de conformité et à quantifier ses performances de conformité.
+9.1.4 Mécanisme de rapports (reporting) de conformité
+L’organisme doit établir, mettre en oeuvre et tenir à jour des processus relatifs à la remontée
+d’informations sur la (mise/maintien en) conformité en s’assurant que:
+a) des critères appropriés sont définis pour la remontée d’informations;
+b) des échéances pour la production régulière de rapports (reporting) sont établies;
+c) le mécanisme de rapports (reporting) est en place pour faciliter les remontées d’informations
+«ad hoc»;
+d) le mécanisme et les processus sont mis en oeuvre pour s’assurer de l’exactitude et de l’exhaustivité
+des informations;
+e) des informations exactes et exhaustives sont fournies aux fonctions (rôles) ou niveaux concernés de
+l’organisme afin qu’ils puissent entreprendre, si opportun, des actions préventives ou correctives
+ou de remédiation.
+Tout rapport (reporting) émis par la fonction de conformité à l’intention de l’organe de gouvernance ou
+de la direction doit être protégé de manière adéquate contre toute altération.
+9.1.5 Conservation d’éléments probants
+Des éléments précis et à jour des activités de conformité de l’organisation doivent être conservés pour
+faciliter le processus de surveillance et de revue et démontrer la conformité au système de management
+de conformité.
+18 © ISO 2021 – Tous droits réservés
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+9.2 Audit interne
+9.2.1 Généralités
+L’organisme doit réaliser des audits internes à des intervalles planifiés pour fournir des informations
+permettant de déterminer si le système de management de conformité:
+a) est conforme:
+— aux propres exigences de l’organisme concernant le système de management de conformité;
+— aux exigences du présent document;
+b) est efficacement mis en oeuvre et tenu à jour.
+9.2.2 Programme d’audit interne
+L’organisme doit planifier, établir, mettre en oeuvre et tenir à jour un ou des programmes d’audit,
+couvrant notamment la fréquence, les méthodes, les responsabilités, les exigences de planification et le
+compte-rendu.
+Lors de l’établissement d’un ou de programmes d’audit interne, l’organisme doit tenir compte de
+l’importance des processus concernés et des résultats des audits précédents.
+L’organisme doit:
+a) définir les critères d’audit et le périmètre de chaque audit;
+b) sélectionner des auditeurs et réaliser des audits pour assurer l’objectivité et l’impartialité du
+processus d’audit;
+c) veiller à ce que les résultats des audits soient transmis aux personnels d’encadrement concernés et
+à la direction.
+NOTE 1 La direction concernée peut inclure la fonction de conformité, la direction et l’organe de gouvernance.
+Des informations documentées doivent être disponibles comme preuves de la mise en oeuvre du ou des
+programmes d’audit et des résultats d’audit.
+NOTE 2 Des recommandations pour l’audit des systèmes de management sont données dans l’ISO 19011.
+9.3 Revue de direction
+9.3.1 Généralités
+À des intervalles planifiés, la direction doit procéder à la revue du système de management de
+conformité mis en place par l’organisme, afin de s’assurer qu’il est toujours approprié, adapté et efficace.
+9.3.2 Données d’entrée de la revue de direction
+La revue de direction doit inclure:
+a) l’état d’avancement des actions décidées à l’issue des revues de direction précédentes;
+b) les modifications des enjeux externes et internes pertinents pour le système de management
+de conformité;
+c) les modifications des besoins et attentes des parties intéressées pertinentes pour le système
+de management de conformité;
+© ISO 2021 – Tous droits réservés 19
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+d) les informations sur la performance de conformité, y compris les tendances concernant:
+— les non-conformités, les défauts de conformité et les actions correctives;
+— les résultats de la surveillance et de la mesure;
+— les résultats d’audits;
+e) les opportunités d’amélioration continue.
+La revue de direction doit prendre en compte:
+— l’adéquation de la politique de conformité;
+— l’indépendance de la fonction de conformité;
+— le degré auquel les objectifs de conformité ont été atteints;
+— l’adéquation des ressources;
+— l’adéquation de l’évaluation des risques de conformité;
+— l’efficacité des dispositifs de maîtrise existants et des indicateurs de performance;
+— les informations provenant des personnes qui signalent des inquiétudes et les informations
+communiquées par les parties intéressées, y compris les retours d’informations (voir 9.1.2) et les
+réclamations;
+— les enquêtes (voir 8.4);
+— l’efficacité du système de signalement.
+9.3.3 Résultats de la revue de direction
+Les résultats de la revue de direction doivent inclure les décisions relatives aux opportunités
+d’amélioration continue et aux éventuels changements à apporter au système de management de
+conformité.
+Des informations documentées doivent être disponibles comme preuves des résultats des revues
+de direction.
+10 Amélioration
+10.1 Amélioration continue
+L’organisme doit améliorer en continu la pertinence, l’adéquation et l’efficacité du système de
+management de conformité.
+10.2 Non-conformité et actions correctives
+Lorsqu’une non-conformité ou un défaut de conformité se produit, l’organisme doit:
+a) réagir à la non-conformité ou au défaut de conformité, et le cas échéant:
+1) agir pour la maîtriser et la corriger;
+20 © ISO 2021 – Tous droits réservés
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+2) faire face aux conséquences;
+b) évaluer s’il est nécessaire de mener une action pour éliminer la ou les causes de la non-conformité
+ou du défaut de conformité, ou les deux, afin qu’il/elle ne se reproduise pas ou n’apparaisse pas
+ailleurs, en:
+1) effectuant la revue de la non-conformité ou du défaut de conformité, ou des deux;
+2) recherchant et analysant les causes de la non-conformité ou du défaut de conformité, ou des
+deux;
+3) recherchant si des non-conformités à d’autres exigences ou des défauts de conformité
+similaires, ou les deux, existent ou pourraient éventuellement se produire;
+c) mettre en oeuvre toutes les actions requises;
+d) examiner l’efficacité de toute action corrective mise en oeuvre;
+e) modifier, si nécessaire, le système de management de conformité.
+Les actions correctives doivent être appropriées aux conséquences des non-conformités ou des défauts
+de conformité rencontrés, ou les deux.
+Des informations documentées doivent être disponibles comme preuves:
+— de la nature des non-conformités ou des défauts de conformité, ou les deux, et de toute action menée
+ultérieurement;
+— des résultats de toute action corrective.
+© ISO 2021 – Tous droits réservés 21
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+Annexe A
+(informative)
+Recommandations relatives à l’utilisation du présent document
+A.1 Contexte et domaine d’application
+A.1.1 Généralités
+La visée des recommandations de la présente annexe est d’indiquer les approches et les types d’actions
+qu’un organisme peut mettre en place lors de la mise en oeuvre de son système de management de
+conformité. Ces recommandations ne se veulent ni exhaustives ni normatives. Rien n’impose non plus
+à un organisme de mettre en oeuvre l’ensemble des suggestions des présentes recommandations pour
+disposer d’un système de management de conformité qui satisfait aux exigences du présent document.
+Il convient que les étapes que l’organisme met en place soient raisonnables eu égard à la nature et
+à l’étendue des risques de conformité auxquels l’organisme est exposé afin d’exécuter ses obligations de
+conformité.
+Un organisme peut choisir de mettre en oeuvre ce système de management de conformité sous la forme
+d’un système séparé. Toutefois, ce dernier peut être idéalement mis en oeuvre conjointement avec
+ses autres systèmes de management, se rapportant aux risques, à la lutte contre la corruption, à la
+qualité, à l’environnement, à la sécurité de l’information et à la responsabilité sociétale, pour ne citer
+que quelques exemples. Dans ces cas, l’organisme peut se référer à l’ISO 31000, l’ISO 37001, l’ISO 9001,
+l’ISO 14001 et l’ISO/IEC 27001, ainsi que l’ISO 26000.
+A.1.2 Domaine d’application
+Les organismes de toute taille, de toute complexité et de tout secteur peuvent appliquer le présent
+document pour créer un système de management de conformité, en suivant ses exigences. Cela leur
+permettra de comprendre leur contexte, leurs opérations métiers, leurs obligations et les risques de
+conformité qui en résultent, et les assistera dans la mise en oeuvre d’étapes raisonnables pour satisfaire
+à leurs obligations. Chacune des exigences du présent document doit être respectée. Toutefois, la
+présente annexe est simplement donnée à titre de recommandation.
+En pratique, il est souvent plus facile de mettre en oeuvre un système de management de conformité
+fidèle au présent document dans les organismes de petite taille, car leur complexité organisationnelle est
+moindre. Les organismes de moyenne et grande taille amélioreront leurs pratiques organisationnelles
+en utilisant les principes des exigences du présent document.
+Le présent document fait référence à l’organe de gouvernance et à la direction, et définit ce que ces
+termes signifient dans divers contextes et dans divers lieux. Le présent document peut être utilisé
+par tous les organismes, si un organisme n’utilise pas ces termes, considérer l’opportunité de leur
+utilisation: les exigences ou instructions s’appliqueront à la personne ou au groupe de personnes qui a
+l’autorité et la responsabilité au niveau le plus élevé de l’organisme.
+A.2 Références normatives
+Le présent document ne comprend aucune référence normative. Les utilisateurs peuvent se référer à la
+bibliographie pour de plus amples informations ainsi qu’aux Normes internationales pertinentes pour
+la (mise/maintien en) conformité.
+22 © ISO 2021 – Tous droits réservés
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+A.3 Termes et définitions
+Le présent document adopte la «structure de niveau supérieur» (HLS) élaborée par l’ISO pour améliorer
+l’alignement entre ses diverses Normes internationales sur les systèmes de management. La structure
+HLS définit l’ordre des articles, la terminologie et les définitions communes, ainsi que le texte de base
+identique qui forment le noyau central des normes de systèmes de management de l’ISO (NSM). Cela
+signifie que certaines définitions peuvent être utilisées d’une manière inhabituelle. Les définitions
+fournies peuvent offrir une clarification lors de l’utilisation du présent document.
+Cette approche commune relative aux NSM accroît la valeur de telles normes pour les utilisateurs.
+Elle est en particulier utile pour les organismes qui choisissent de mettre en oeuvre un seul système
+de management (parfois intitulé «intégré») qui peut satisfaire simultanément à deux NSM ou plus.
+Les organismes qui n’ont pas adopté de NSM ni de cadre de management (gestion) de conformité
+peuvent aisément adopter le présent document pour s’en servir sous forme d’orientations autonomes au
+sein de leur organisme.
+De plus amples informations sur les NSM et la structure HLS sont disponibles à l’adresse: https:// www
+.iso .org/ management -system -standards .html.
+A.4 Contexte de l’organisme
+A.4.1 Connaissance de l’organisme et contexte
+Le but du présent article est de permettre aux organismes de disposer d’une compréhension élevée
+(par exemple stratégique) des enjeux importants pouvant avoir une incidence sur leur système de
+management de conformité. Les connaissances ainsi acquises sont par la suite utilisées pour orienter
+l’approche en matière de planification, de mise en oeuvre, de fonctionnement et d’amélioration du
+système de management de conformité.
+Il s’agit d’un mécanisme consistant à passer en revue toutes les informations disponibles sur
+l’organisme: ce qu’il fait, où, comment et pourquoi. Les enjeux internes et externes sont évalués en
+termes d’incidence sur l’organisme, dans le cadre de ses obligations de conformité.
+Le facteur d’enjeu le plus évident de ses obligations de conformité provient des contextes légal et
+réglementaire dans lesquels un organisme opère. Des obligations ou des risques peuvent toutefois
+découler d’autres facteurs, comme suggéré par le présent document. Il convient qu’un organisme tienne
+également compte des tendances futures pertinentes qui peuvent avoir une incidence.
+Il convient de prendre en considération les facteurs internes d’enjeu. Des exemples sont inclus dans le
+présent document. Cette liste n’est pas exhaustive. D’autres facteurs peuvent être pertinents pour un
+organisme.
+A.4.2 Compréhension des besoins et des attentes des parties intéressées
+Il convient que les organismes comprennent les besoins et les attentes des personnes ou organismes
+qui peuvent influencer le système de management de conformité ou être influencés ou se considérer
+comme influencés par le système de management de conformité.
+Certains revêtent un caractère obligatoire, car ils sont intégrés à des exigences explicites, par exemple,
+la loi, les réglementations, les autorisations et licences d’exploiter, et l’action gouvernementale ou les
+actions en justice. Il se peut qu’il existe d’autres exigences explicites et applicables non incluses ici.
+Les autres besoins et attentes d’une partie intéressée se convertissent en obligations lorsqu’ils sont
+spécifiés et que l’organisme décide de les adopter de manière volontaire en signant un accord ou un
+contrat. Dès que l’organisme les définit, ils deviennent des obligations de conformité.
+Les parties intéressées externes incluent par exemple:
+— les gouvernements et les agences gouvernementales;
+© ISO 2021 – Tous droits réservés 23
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+— les autorités réglementaires/de régulation;
+— les clients;
+— les sous-traitants;
+— les fournisseurs;
+— les tierces parties de type intermédiaire;
+— les propriétaires, les actionnaires et les investisseurs;
+— les organisations non gouvernementales;
+— la société et les groupes communautaires;
+— les associés commerciaux.
+Les parties intéressées internes incluent par exemple:
+— l’organe de gouvernance;
+— le personnel d’encadrement;
+— le personnel;
+— les fonctions internes telles que celles en charge de la gestion du risque, du contrôle interne, de
+l’audit interne, des ressources humaines.
+A.4.3 Détermination du périmètre d’application du système de management
+de conformité
+La détermination du périmètre d’application du système de management de conformité permet aux
+organismes d’établir les limites physiques et organisationnelles auxquelles le système de management
+de conformité s’appliquera. Ce faisant, l’organisme a la liberté et la souplesse de choisir de mettre
+le système de management de conformité en oeuvre dans l’ensemble de l’organisme, dans une unité
+spécifique ou au sein d’une ou de plusieurs fonctions de l’organisme.
+En règle générale, un système de management de conformité sera mis en oeuvre dans l’ensemble de
+l’organisme et, dans le cas d’un groupe, dans l’ensemble des entités du groupe afin d’éviter les doublons
+en matière de comportements et de conduite éthique et individuelle souhaités, nécessaire à la (mise/
+maintien en) conformité.
+Il convient que le périmètre d’application soit raisonnable et proportionné, en tenant compte de la
+nature et de l’étendue des risques de conformité auxquels fait face l’organisme.
+Lors de la définition du périmètre d’application du système de management de conformité et lors de
+la détermination des exigences que l’organisme adoptera, la compréhension du contexte et celle des
+exigences des parties intéressées pertinentes sont à prendre en considération.
+A.4.4 Système de management de conformité
+Un système de management de conformité est un cadre qui intègre des structures organisationnelles,
+des politiques, des processus et procédures essentiels pour atteindre les résultats de conformité
+désirés, et contribue à la prévention et la détection des défauts de conformité, et la réponse à apporter
+à ces dernières.
+En général, le cadre dédié à un système de management de conformité est structurel. Il s’agit de
+l’infrastructure nécessaire pour concevoir le système en question. Il doit donc être rendu opérationnel
+grâce à la mise en oeuvre de politiques, processus et de procédures. Il doit par conséquent être tenu à
+jour et faire l’objet d’une amélioration continue.
+24 © ISO 2021 – Tous droits réservés
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+De nombreux éléments composent un système de management de conformité. Certains éléments
+seront conçus pour encourager les comportements souhaités, tandis que d’autres le seront pour éviter
+tout comportement inapproprié. D’autres éléments seront destinés aux seules fins de surveiller les
+performances de conformité de l’organisme ou d’alerter en cas d’état de défaut de conformité.
+Le système de management de conformité reconnaîtra que des erreurs peuvent bel et bien se produire
+et disposera de processus permettant de garantir la mise en oeuvre d’une réponse appropriée.
+Une réponse appropriée inclura la rectification des processus, des systèmes et des parties concernées.
+Il convient que le système de management de conformité se base sur les principes de bonne gouvernance,
+de proportionnalité, d’intégrité, de transparence, de responsabilité et de durabilité.
+Il convient que le système de management de conformité soit documenté.
+A.4.5 Obligations de conformité
+Il convient que l’organisme prenne comme base ses obligations de conformité lors de l’établissement,
+du développement, de la mise en oeuvre, de l’évaluation, de la tenue à jour et de l’amélioration de son
+système de management de conformité.
+Les exigences auxquelles un organisme doit obligatoirement se conformer peuvent inclure:
+— lois et réglementations;
+— autorisations, licences d’exploiter ou autres formes d’autorisation;
+— prescriptions, règles ou recommandations émis par les autorités réglementaires/de régulation;
+— décisions de justice ou de tribunaux administratifs;
+— traités, conventions et protocoles.
+Les exigences auxquelles un organisme choisit volontairement de se conformer peuvent inclure:
+— accords avec des groupes communautaires ou des organisations non gouvernementales;
+— accords avec des pouvoirs publics et des clients institutionnels;
+— exigences organisationnelles, telles que des politiques et des procédures;
+— principes volontaires ou codes de pratique;
+— engagements volontaires en matière de labellisation ou d’environnement;
+— obligations découlant d’accords contractuels conclus avec l’organisme;
+— normes organisationnelles et industrielles pertinentes.
+Il convient que l’organisme identifie les obligations de conformité par départements, fonctions et
+différentes catégories d’activités organisationnelles afin de déterminer qui est concerné par lesdites
+obligations de conformité.
+Les processus pour obtenir des informations concernant les changements au niveau de la législation
+et autres obligations de conformité peuvent inclure:
+— être destinataire des bulletins d’information légale et réglementaire;
+— être membre de groupes professionnels;
+— s’abonner aux services d’informations appropriés;
+— prendre part à des forums et séminaires sectoriels;
+— visiter régulièrement les sites Internet des autorités réglementaires;
+© ISO 2021 – Tous droits réservés 25
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+— organiser des rencontres avec les autorités réglementaires;
+— faire appel aux services de conseillers juridiques;
+— surveiller les sources des obligations de conformité (par exemple déclarations réglementaires,
+décisions de justice).
+Il convient d’adopter une approche comme celle fondée sur le risque, c’est-à-dire que les organismes
+commencent par identifier l’obligation de conformité la plus importante/pertinente pour leurs activités,
+puis se concentrent les autres obligations de conformité (principe de Pareto).
+Lorsque cela est approprié, il convient que l’organisme établisse et tienne à jour un document unique
+(tel qu’un registre ou un journal) qui définit l’ensemble de ses obligations de conformité et qu’il dispose
+d’un processus de mise à jour régulière du document.
+Outre la définition des obligations de conformité, il convient que le document inclut, sans s’y limiter:
+— l’impact des obligations de conformité;
+— la gestion des obligations de conformité;
+— les dispositifs de maîtrise liés aux obligations de conformité;
+— l’appréciation des risques.
+A.4.6 Appréciation du risque de conformité
+L’appréciation du risque de conformité constitue la base de la mise en oeuvre du système de management
+de conformité et de l’affectation des ressources et processus appropriés et adéquats pour la gestion des
+risques de conformité identifiés.
+Les risques de conformité peuvent être caractérisés par la vraisemblance d’occurrence et les
+conséquences d’un défaut de conformité aux obligations de conformité et à la politique de conformité de
+l’organisme.
+Les risques de conformité comprennent les risques de conformité inhérents et les risques de conformité
+résiduels. Les risques de conformité inhérents font référence à l’ensemble des risques de conformité
+auxquels un organisme est exposé de manière non maîtrisée avant toute (sans aucune) mesure
+de traitement. Les risques de conformité résiduels sont les risques de conformité qui ne sont pas
+efficacement maîtrisés par (subsistant après) les mesures de traitement existantes d’un organisme.
+Il convient que l’organisme analyse les risques de conformité en étudiant les causes profondes et
+les sources du défaut de conformité ainsi que leurs conséquences, tout en incluant la vraisemblance
+d’occurrence de ses ramifications. Des préjudices corporels et écologiques, une perte économique, une
+atteinte à la réputation, des changements administratifs et une responsabilité civile et pénale figurent
+parmi les conséquences envisageables.
+L’identification des risques de conformité inclut l’identification des sources des risques de conformité et
+la définition des situations relatives aux risques de conformité. Il convient que les organismes identifient
+les sources des risques de conformité au sein de leurs divers départements, fonctions et catégories
+d’activités organisationnelles conformément aux responsabilités des départements, aux responsabilités
+liées aux différents postes et aux différents types d’activités organisationnelles. Il convient que
+l’organisme identifie régulièrement les sources des risques de conformité et définisse les situations
+relatives aux risques de conformité qui correspondent à chaque source de risque de conformité pour
+élaborer une liste des sources des risques de conformité ainsi qu’une liste des situations relatives aux
+risques de conformité.
+L’appréciation des risques implique de comparer le niveau du risque des états de non-conformité qui est
+acceptable pour l’organisme avec le niveau du risque défini dans la politique de conformité.
+26 © ISO 2021 – Tous droits réservés
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+Il convient de procéder périodiquement à une nouvelle appréciation des risques des états de nonconformité
+ainsi que dans les cas suivants:
+— activités, produits ou services nouveaux ou modifiés;
+— changement de structure ou de stratégie de l’organisme;
+— changements externes notables, tels que situation économique et financière, conditions du marché,
+responsabilités et relations avec les clients;
+— changements apportés aux obligations de conformité;
+— fusions et acquisitions;
+— défaut(s) de conformité (même un seul cas de défaut de conformité peut constituer un changement
+significatif de circonstances et des manquements).
+L’étendue et le niveau de détail de l’appréciation du risque de conformité dépendent de la situation
+du risque, du contexte, de la taille et des objectifs de l’organisme, et peuvent varier pour des facteurs
+spécifiques (par exemple environnemental, financier, social).
+L’approche basée sur le risque pour la gestion de conformité ne signifie pas que pour des situations
+présentant un risque de conformité faible, celui-ci est accepté par l’organisme. Cette approche permet
+à l’organisme de centrer tout particulièrement l’attention et les ressources sur les risques plus que
+faibles (plutôt élevés) en priorité, et, in fine, de couvrir l’ensemble des risques de conformité. L’ensemble
+des risques/situations de conformité identifiés font l’objet d’une surveillance et d’un traitement.
+Lors de la réalisation d’une appréciation des risques (voir l’ISO 31000 pour obtenir des
+recommandations), il convient de porter attention aux techniques appropriées (comme détaillé dans
+l’IEC 31010).
+A.5 Leadership
+A.5.1 Leadership et engagement
+A.5.1.1 Organe de gouvernance et direction
+Une (mise/maintien en) conformité réelle nécessite un engagement actif de la part de l’organe de
+gouvernance et de la direction qui se transmet à l’ensemble de l’organisme.
+Il est essentiel pour le système de management de conformité que l’organe de gouvernance et la
+direction démontrent de manière claire et visible leur engagement pour l’atteinte des objectifs du
+système de management de conformité.
+Les défauts de conformité peuvent avoir une incidence négative sur les activités de l’organisme, telle
+qu’une atteinte à sa réputation, la perte d’une licence d’exploitation, la perte d’opportunités, ainsi que
+des coûts significatifs. Il convient par conséquent que l’organe gouvernance et la direction reconnaissent
+l’importance stratégique d’une gestion efficace de conformité.
+Le document mentionne plusieurs façons dont le leadership peut s’inspirer pour démontrer son
+engagement, la façon la plus élémentaire consistant à soutenir de manière active et visible l’établissement
+et la tenue à jour du système de management de conformité.
+Le niveau d’engagement est indiqué par le degré auquel:
+— l’organe de gouvernance et tous les niveaux de management démontrent activement leur
+engagement pour établir, développer, mettre en oeuvre, évaluer, tenir à jour et améliorer un système
+de management de conformité efficace et réactif grâce à leurs actions et à leurs décisions;
+— la politique de conformité est formellement approuvée par l’organe de gouvernance;
+© ISO 2021 – Tous droits réservés 27
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+— la direction prend la responsabilité de s’assurer que l’engagement de conformité au sein de
+l’organisme est entièrement tenu;
+— tous les niveaux de management véhiculent de manière cohérente un message (démontré par des
+paroles et des actes) indiquant clairement au personnel que l’organisme exécutera ses obligations
+de conformité;
+— l’engagement de conformité est largement communiqué à l’ensemble du personnel et des parties
+intéressées concernées sous forme d’énoncés clairs et convaincants soutenus par des actions;
+— la fonction de conformité dispose de personnel doté de compétences appropriées, ainsi que d’un
+niveau d’autorité et d’indépendance qui traduit l’importance d’une conformité efficace, et rend
+directement compte à l’organe de gouvernance;
+— des ressources adéquates sont allouées pour établir, développer, mettre en oeuvre, évaluer, tenir
+à jour et améliorer une solide culture de conformité au travers d’activités et de formations de
+sensibilisation destinées à l’ensemble du personnel et des parties intéressées concernées;
+— les politiques, procédures et processus reflètent non seulement les exigences légales, mais également
+les codes à adhésion volontaire et les valeurs fondamentales de l’organisme;
+— l’organisme attribue et exige une responsabilisation du personnel d’encadrement de (mise/maintien
+en) conformité à tous les niveaux de l’organisme;
+— une revue régulière du système de management de conformité est réalisée (il est recommandé
+de procéder au moins annuellement);
+— les performances de conformité de l’organisme sont continuellement améliorées;
+— les actions correctives sont mises en oeuvre de manière opportune;
+— l’organe de gouvernance et la direction respectent le système de management de conformité
+de l’organisme.
+A.5.1.2 Culture de conformité
+Les facteurs qui soutiendront le développement d’une culture de conformité peuvent inclure:
+— ensemble clair de valeurs publiées;
+— perception active et visible de la mise en pratique et du respect de ces valeurs par le personnel
+d’encadrement;
+— cohérence dans la façon de traiter les défauts de conformité, indépendamment du poste occupé;
+— encadrement, assistance et conduite par l’exemple;
+— évaluation appropriée avant embauche du personnel potentiel sur des fonctions critiques, incluant
+des diligences raisonnables (due diligence);
+— programme d’intégration ou d’orientation mettant l’accent sur la (mise/maintien en) conformité et
+sur les valeurs de l’organisme;
+— formation continue sur tous les sujets de conformité, y compris des mises à jour de la formation
+à l’ensemble du personnel et des parties intéressées concernées;
+— communication continue sur les enjeux de conformité;
+— systèmes d’appréciation des performances tenant compte de l’évaluation du comportement de
+conformité et des primes de performance tenant en compte de l’atteinte des résultats clés de
+performance de conformité;
+28 © ISO 2021 – Tous droits réservés
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+— reconnaissance visible des réalisations en matière de gestion de conformité et de résultats de
+conformité;
+— prise rapide et proportionnée de mesures disciplinaires en cas de non-exécution intentionnelle ou
+par négligence des obligations de conformité;
+— lien clair entre la stratégie de l’organisme et les rôles (fonctions) individuels, mettant l’accent sur
+l’importance essentielle de la (mise/maintien en) conformité dans la réalisation des résultats de
+l’organisme;
+— communication transparente et appropriée sur la (mise/maintien en) conformité, en interne et
+en externe.
+La preuve de l’existence d’une culture de conformité est donnée par le degré auquel:
+— les éléments ci-dessus sont mis en oeuvre;
+— les parties intéressées (notamment le personnel) pensent que les éléments ci-dessus ont été mis
+en oeuvre;
+— le personnel comprend la pertinence des obligations de conformité par rapport à ses propres
+activités et à celles de son unité de rattachement;
+— les actions correctives à mettre en oeuvre face aux défauts de conformité sont attribuées à un
+«propriétaire» et exécutées à tous les niveaux appropriés de l’organisme;
+— le rôle de la fonction de conformité et ses objectifs sont valorisés;
+— le personnel a les moyens de signaler ses inquiétudes concernant la conformité au niveau approprié
+de l’encadrement (management), y compris à la direction et à l’organe de gouvernance, et est
+encouragé à le faire.
+Il convient que l’organisme:
+a) évalue sa culture de conformité;
+b) demande l’avis de l’ensemble de son personnel pour déterminer s’il perçoit l’engagement de
+conformité de l’organe de gouvernance, de la direction et du personnel d’encadrement;
+c) établisse des plans d’action fondés sur les résultats des indicateurs relatifs à la culture de
+conformité.
+A.5.1.3 Gouvernance de la fonction de conformité
+La gouvernance de la fonction de conformité se fonde sur les principes fondamentaux suivants.
+La fonction de conformité dispose d’un accès direct à l’organe de gouvernance et à la direction. Elle peut
+contourner les autres fonctions de l’organisme si elle a besoin de le faire et communiquer directement
+avec la ou les personnes ayant le plus d’autorité pour intervenir. Cela bénéficie directement à l’organe
+de gouvernance et à la direction qui peuvent ainsi exercer leurs fonctions. Il convient que cet accès
+soit planifié et systématique. Par exemple, la fonction de conformité peut avoir un rapport direct avec
+le PDG et un rapport «en pointillé» avec le comité d’audit, le président du conseil d’administration ou
+l’ensemble de ce conseil.
+Il convient que la fonction de conformité soit indépendante, sans aucun conflit avec la structure
+organisationnelle ni d’autres éléments. Elle est libre d’agir sans interférence de la part du personnel
+d’encadrement.
+La fonction de conformité est habilitée. La fonction de conformité n’est pas un poste de premier niveau
+dont les décisions peuvent être annulées. Ses rapports et informations ne peuvent être altérés par des
+fonctions de plus haut niveau hiérarchique. La fonction de conformité peut diriger du personnel le
+© ISO 2021 – Tous droits réservés 29
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+cas échéant. Il convient que la fonction de conformité ait «voix au chapitre» pour défendre et signaler
+toute inquiétude.
+La fonction de conformité dispose de ressources adéquates pour soutenir l’organisme dans la
+réalisation des tâches nécessaires et dans les responsabilités relatives au système de management de
+conformité sans restrictions, y compris l’accès aux technologies permettant au système de management
+de conformité d’être exhaustif et de soutenir effectivement l’organisme dans l’atteinte de ses objectifs
+de conformité.
+A.5.2 Politique de conformité
+La politique de conformité définit les principes primordiaux et l’engagement d’action permettant
+à un organisme d’atteindre ses objectifs de conformité. Elle fixe le niveau de responsabilité et de
+performance requis, et définit les attentes en fonction desquelles les actions seront évaluées. Il convient
+que la politique soit adaptée aux obligations de conformité de l’organisme découlant de ses activités.
+Il convient que la politique de conformité soit approuvée par l’organe de gouvernance.
+Il convient que la politique de conformité spécifie:
+— l’application et le contexte du système de management de conformité par rapport à la taille, à la
+nature et à la complexité de l’organisme, et à son environnement opérationnel;
+— le degré auquel la (mise/maintien en) conformité sera intégrée avec d’autres fonctions telles que les
+fonctions de gouvernance, de gestion du risque, d’audit et juridique;
+— les principes selon lesquels les relations entre les parties intéressées internes et externes seront
+gérées.
+Il convient que la politique de conformité ne soit pas un document isolé, mais qu’elle puisse s’appuyer
+sur d’autres documents, y compris des politiques et processus opérationnels.
+Il convient que la politique de conformité soit traduite en d’autres langues si nécessaire.
+Il convient que la politique de conformité soit adaptée aux obligations de conformité de l’organisme
+découlant de son périmètre d’application et de ses activités.
+Dans le cadre de l’élaboration de la politique de conformité, il convient de tenir compte:
+a) des obligations spécifiques internationales, régionales ou locales;
+b) de la stratégie, des objectifs, de la culture et de l’approche de gouvernance de l’organisme;
+c) de la structure de l’organisme;
+d) de la nature et du niveau de risque de conformité plus que faible (plutôt élevé);
+e) des normes, codes, politiques et procédures internes adoptés;
+f) des normes sectorielles.
+La politique de conformité peut comprendre:
+— un énoncé de mission;
+— un énoncé général relatif à la politique;
+— les stratégies de gestion et de l’attribution des responsabilités et des ressources;
+— les procédures classiques de conformité;
+— les audits, le devoir de diligence raisonnable (due diligence) et la (mise/maintien en) conformité.
+30 © ISO 2021 – Tous droits réservés
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+A.5.3 Rôles, responsabilités et autorités
+A.5.3.1 Organe de gouvernance et direction
+L’implication active d’un organe de gouvernance et la fonction de supervision assurée par ce dernier font
+partie intégrante de l’effectivité d’un système de management de conformité. Cela contribue à s’assurer
+que le personnel comprend parfaitement la politique de conformité et les procédures opérationnelles
+de conformité de l’organisme ainsi que la manière dont celles-ci s’appliquent à son propre travail et qu’il
+s’acquitte efficacement de ses obligations de conformité.
+Pour qu’un système de management de conformité soit efficace, l’organe de gouvernance et la direction
+doivent donner l’exemple, en exprimant leur adhésion et en soutenant activement et de manière visible
+la (mise/maintien en) conformité et le système de management de conformité.
+Nombre d’organismes, selon leur taille, ont également une personne qui assume la responsabilité
+globale de la gestion de conformité, parfois en plus d’autres attributions ou fonctions, ceci incluant des
+comités existants, une ou plusieurs unités organisationnelles ou des éléments externalisés confiés à des
+experts dans le domaine de (mise/maintien en) conformité.
+Il convient que la direction encourage des comportements qui engendrent et soutiennent la (mise/
+maintien en) conformité, et qu’elle empêche et ne tolère pas les comportements qui la compromettent.
+Il convient que la direction s’assure:
+— de mettre en phase l’engagement de conformité de l’organisme avec ses valeurs, ses objectifs et sa
+stratégie afin de positionner la (mise/maintien en) conformité de manière adéquate;
+— d’inciter tous les employés à admettre l’importance d’atteindre les objectifs de conformité pour
+lesquels ils sont responsables ou tenus de rendre des comptes;
+— de créer un environnement qui incite à faire part des défauts de conformité et dès lors qu’un
+personnel communique de telles informations, il ne fera pas l’objet de représailles;
+— que la (mise/maintien en) conformité est intégrée dans la culture globale de l’organisme et dans les
+initiatives de changement au niveau de la culture de l’organisme;
+— d’identifier un défaut de conformité et d’agir promptement pour le corriger ou le traiter;
+— que les objectifs et les buts opérationnels n’affectent pas les comportements de conformité.
+Il convient que la direction procède à une revue des performances du système de management de
+conformité à intervalles planifiés (par exemple, chaque trimestre ou chaque mois) en s’appuyant sur les
+indicateurs clés de performance (KPI) ainsi que d’autres informations clés pour garantir que le système
+de management de conformité atteint ses objectifs.
+L’effectivité d’un système de management de conformité exige un engagement de la part de la direction,
+à travers l’établissement de normes et l’exercice d’une supervision raisonnable. Il convient que la
+direction soit informée du contenu et du fonctionnement du système de management de conformité,
+et que l’organisme dispose de processus adéquats pour l’effectivité du système de management de
+conformité.
+A.5.3.2 Fonction de conformité
+De nombreux organismes ont une personne dédiée (par exemple un responsable conformité) en charge
+de la gestion quotidienne de la conformité, alors que certains organismes ont un comité de conformité
+pluridisciplinaire chargé de coordonner la (mise/maintien en) conformité au sein de l’organisme.
+Il convient que la fonction de conformité travaille de concert avec la direction.
+Les organismes n’auront pas tous une fonction de conformité dédiée; certains affecteront cette fonction
+à un poste déjà existant ou l’externaliseront. Lors de l’externalisation, il convient que les organismes
+considèrent de ne pas affecter l’intégralité de la fonction de conformité à des tierces parties. Même s’ils
+© ISO 2021 – Tous droits réservés 31
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+externalisent une partie de la fonction, il convient qu’ils exercent un contrôle et une supervision des
+tierces parties.
+Lors de l’attribution de la responsabilité pour le système de management de conformité, il convient de
+s’assurer que la fonction de conformité démontre:
+— son intégrité et son engagement de conformité;
+— une communication efficace et un savoir-faire influent;
+— son aptitude et sa disposition à accepter des avis et des recommandations;
+— sa compétence adéquate dans la conception, la mise en oeuvre et la tenue à jour de systèmes de
+management de conformité;
+— son assurance, sa connaissance du métier et son expérience dans les nouvelles initiatives et les
+remises en question;
+— son approche stratégique et proactive de (mise/maintien en) conformité;
+— sa disponibilité suffisante en termes de temps pour satisfaire aux besoins de son rôle.
+Il convient que la fonction de conformité ait de l’autorité, du statut et de l’indépendance. Autorité signifie
+que la fonction de conformité se voit attribuer suffisamment de pouvoirs par l’organe de gouvernance
+et la direction. Statut signifie que le reste du personnel est susceptible d’écouter et de respecter son
+opinion. Indépendant signifie que la fonction de conformité n’est, autant que possible, pas impliquée
+personnellement dans des activités exposées à des risques de conformité.
+Il convient que la fonction de conformité soit libre de tout conflit d’intérêts pour remplir son rôle.
+A.5.3.3 Encadrement (management)
+Il convient que les responsabilités de la direction ne soient pas perçues comme une manière de dégager
+les autres niveaux d’encadrement (management) de leurs responsabilités de (mise/maintien en)
+conformité, vu que tous les personnels d’encadrement ont un rôle à jouer en ce qui concerne le système
+de management de conformité. Il est donc important que leurs responsabilités respectives soient
+clairement définies et incluses dans leur description de poste.
+Les responsabilités de (mise/maintien en) conformité du personnel d’encadrement varieront
+nécessairement en fonction des niveaux d’autorité, d’influence et d’autres facteurs, tels que la nature
+et la taille de l’organisme. Cependant, certaines responsabilités sont susceptibles d’être communes à de
+nombreux organismes.
+A.5.3.4 Personnel
+L’exécution des obligations de conformité est attendue de la part de l’ensemble du personnel.
+Il convient que l’ensemble du personnel s’assure qu’il a conscience de ses responsabilités de (mise/
+maintien en) la conformité et qu’il les assume de manière effective. Dans ce cadre, il sera épaulé par
+les éléments du système de management de conformité, tels que la formation, les politiques et les
+procédures, et le code de conduite.
+Il convient que le personnel soit proactif dans sa contribution aux informations et aux améliorations qui
+peuvent soutenir les performances du système de management de conformité.
+32 © ISO 2021 – Tous droits réservés
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+A.6 Planification
+A.6.1 Actions à mettre en oeuvre face aux risques et opportunités
+La planification relative au système de management de conformité revêt un caractère stratégique,
+tandis que la planification opérationnelle concerne la planification et la maîtrise opérationnelles.
+La finalité de la planification est d’anticiper les scénarios et conséquences potentiels, et est donc en tant
+que telle préventive. En fonction des résultats de l’appréciation des risques de conformité, il convient
+que l’organisme planifie la manière de gérer les effets non désirés avant qu’ils se produisent ainsi que
+la manière de bénéficier de conditions ou circonstances favorables pouvant soutenir l’efficacité du
+système de management de conformité.
+Il convient que la planification comprenne également la détermination de la manière d’intégrer les
+actions considérées comme étant nécessaires ou bénéfiques pour le système de management de
+conformité au sein des activités et processus métiers. Cette intégration peut être réalisée par la
+définition d’objectifs, la mise en oeuvre d’une maîtrise opérationnelle ou d’autres dispositifs de maîtrise
+spécifiques (par exemple, mise à disposition de ressources, compétence). Il convient que les mesures
+relatives à l’évaluation de l’efficacité du système de management de conformité soient également
+planifiées. Cela peut inclure une surveillance, des techniques de mesure, un audit interne ou une revue
+de direction.
+A.6.2 Objectifs de conformité et planification des actions pour les atteindre
+Il convient que les objectifs soient spécifiés de sorte qu’ils permettent aux résultats d’être mesurés.
+Exemple d’un objectif de conformité: dispenser une formation relative à la conformité à l’ensemble
+du personnel concerné une fois par an au moins.
+Il convient que les actions nécessaires pour atteindre les objectifs («quoi»), les délais associés («quand»)
+et la personne responsable («qui») soient déterminés. Il convient que l’état et l’avancée des objectifs
+soient surveillés, enregistrés, évalués et mis à jour de manière périodique, le cas échéant.
+A.7 Support
+A.7.1 Ressources
+Les ressources comprennent les ressources financières, humaines et techniques, ainsi que l’accès à des
+avis externes et un savoir-faire spécialisé, à une infrastructure organisationnelle, au perfectionnement
+professionnel, à l’évolution technologique et à des références récentes sur la gestion de conformité et les
+obligations légales.
+A.7.2 Compétences
+A.7.2.1 Généralités
+Le terme «compétence» s’entend par la capacité à mettre en pratique des connaissances et un savoirfaire
+pour obtenir les résultats escomptés. La compétence exige des connaissances, de l’expérience et
+du savoir-faire de sorte que la personne puisse réaliser sa fonction de manière effective. Il convient que
+l’organisme détermine pour l’ensemble du personnel l’expertise et les connaissances nécessaires afin
+de remplir ses tâches pour que l’organisme puisse mettre à disposition de ses clients ses produits et
+services. Il convient que l’organisme établisse des preuves de compétence (par exemple, descriptions de
+postes, lettres de mission) qui peuvent être étudiées lors du pourvoi de postes.
+Il convient que des mesures (par exemple, formation) soient prises pour garantir que les compétences
+existantes sont tenues à jour et que de nouvelles sont acquises. Il convient que les compétences, ainsi
+que les mesures entreprises pour tenir à jour ou acquérir ces compétences, soient documentées de
+manière adéquate.
+© ISO 2021 – Tous droits réservés 33
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+A.7.2.2 Processus de recrutement
+Avant l’embauche de personnel ou la promotion du personnel existant, il convient que l’organisme fasse
+une diligence raisonnable (due diligence), telle que la vérification des références ou des expériences
+antérieures.
+A.7.2.3 Formation
+L’organe de gouvernance, le personnel d’encadrement et le personnel sont soumis à des obligations de
+conformité, et il convient qu’ils les remplissent efficacement. L’acquisition des compétences peut se faire
+de plusieurs manières, y compris le savoir-faire et les connaissances acquis grâce à la formation initiale,
+à la formation et à l’expérience professionnelle.
+L’objectif d’un programme de formation est de s’assurer que l’ensemble du personnel est compétent
+et capable de s’acquitter de sa tâche en cohérence avec la culture de conformité de l’organisme et son
+engagement de conformité.
+Une formation conçue et exécutée de manière appropriée peut fournir un moyen efficace permettant au
+personnel de faire part de risques de conformité qui n’avaient pas été identifiés auparavant.
+Il convient que la formation soit:
+— basée, le cas échéant, sur les écarts entre les connaissances et les compétences de l’employé;
+— suffisamment souple pour présenter des techniques variées permettant de s’adapter aux différents
+besoins des organismes et du personnel;
+— conçue, développée et dispensée par du personnel expérimenté et qualifié;
+— dispensée dans la langue locale, le cas échéant;
+— appréciée et évaluée régulièrement en termes d’efficacité.
+Il est possible qu’une formation interactive constitue la meilleure méthode de formation si le défaut de
+conformité est susceptible d’avoir de graves conséquences.
+Il convient que l’organisme dispense une formation dans le domaine où la conduite inadéquate s’est
+produite.
+Il convient d’envisager pour la (mise/maintien en) conformité une nouvelle formation dans les cas
+suivants:
+— changement de poste ou de responsabilités;
+— changement au niveau des politiques, processus et procédures internes;
+— changement dans la structure organisationnelle;
+— changement des obligations de conformité, en particulier des exigences légales et des exigences des
+parties intéressées;
+— changement au niveau des activités, des produits ou des services;
+— problème mis en lumière lors de suivis, d’audits, de revues, de réclamations et de défaut de
+conformité, y compris les retours d’informations des parties intéressées.
+A.7.3 Sensibilisation
+La sensibilisation implique de garantir que les politiques de conformité sont comprises, accessibles et
+disponibles pour l’ensemble du personnel.
+34 © ISO 2021 – Tous droits réservés
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+La sensibilisation peut être atteinte par des méthodes qui incluent, sans s’y limiter:
+— la formation (en présentiel ou en ligne);
+— la communication de la part de la direction;
+— des documents de référence facilement accessibles et simples à comprendre;
+— des mises à jour régulières sur les enjeux de conformité.
+La communication sur l’engagement de conformité:
+— permet de sensibiliser et de motiver le personnel pour qu’il adhère au système de management
+de conformité;
+— incite les employés à faire des suggestions qui facilitent l’amélioration continue des performances
+de conformité.
+A.7.4 Communication
+Il convient qu’une approche pratique de la communication externe, ciblant toutes les parties intéressées,
+soit adoptée conformément à la politique de l’organisme.
+Les parties intéressées peuvent inclure les autorités réglementaires/de régulation, les clients,
+les sous-traitants, les fournisseurs, les investisseurs, les services d’urgence, les organismes non
+gouvernementaux et autres tierces parties.
+Il convient que l’organisme alloue des ressources appropriées et désigne des personnes disposant
+des connaissances pertinentes pour coordonner et faciliter les interactions avec les autorités
+réglementaires/de régulation.
+Les méthodes de communication peuvent inclure des sites Web et des courriels, des communiqués
+de presse, des annonces publicitaires et des bulletins d’information, des rapports annuels (ou autres
+rapports périodiques), des discussions informelles, des journées portes ouvertes, des groupes de
+discussion, des dialogues sectoriels, une implication dans des événements communautaires et des
+lignes d’assistance téléphonique. Ces approches peuvent faciliter la compréhension et l’acceptation de
+l’engagement de conformité d’un organisme.
+Il convient que les communications soient fidèles aux principes de transparence, d’adéquation,
+de crédibilité, de réactivité, d’accessibilité et de clarté.
+A.7.5 Informations documentées
+A.7.5.1 Généralités
+Les informations documentées peuvent inclure:
+— la politique et les procédures de conformité de l’organisme;
+— les objectifs, les buts, la structure et le contenu du système de management de conformité;
+— l’attribution des rôles et des responsabilités de conformité;
+— un registre des obligations de conformité pertinentes;
+— des registres des risques de conformité et l’établissement des priorités de traitement basé sur le
+processus d’appréciation des risques de conformité;
+— un registre de défauts de conformité, quasi-défauts de conformité et enquêtes;
+— des programmes annuels de conformité;
+© ISO 2021 – Tous droits réservés 35
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+— les dossiers relatifs au personnel incluant, sans toutefois s’y limiter, les dossiers de formation;
+— le processus d’audit, le calendrier des audits et les enregistrements d’audit associés.
+Les informations documentées peuvent inclure des sujets se rapportant à des exigences réglementaires
+concernant la communication d’informations. Les informations documentées peuvent comprendre
+toutes sortes de supports (électroniques et non électroniques).
+A.7.5.2 Création et mise à jour des informations documentées
+Il convient que les informations documentées soient mises à jour pour refléter les changements internes
+et externes afin de garantir qu’elles sont actualisées.
+A.7.5.3 Maîtrise des informations documentées
+Des informations documentées peuvent être élaborées dans le but d’obtenir un avis juridique et peuvent
+donc être couvertes par le secret professionnel.
+A.8 Réalisation des activités opérationnelles
+A.8.1 Planification et maîtrise opérationnelles
+Un système de management de conformité bien conçu comprend des mesures (par exemple, politiques,
+processus, procédures) qui donnent corps et effet à une culture de conformité. Ces dernières abordent
+les risques identifiés dans le cadre du processus d’appréciation des risques de conformité et visent à les
+réduire.
+Un élément de base de la maîtrise opérationnelle est un code de conduite qui définit, entre autres, le
+plein engagement de l’organisme envers des obligations de conformité pertinentes. Il convient qu’un
+code de conduite s’applique à l’ensemble du personnel et que ce dernier y ait accès. Il convient que les
+mesures de conformité, fondées sur le code de conduite et en découlant, soient intégrées aux activités
+quotidiennes de l’organisme afin d’encourager une culture de conformité.
+Une maîtrise opérationnelle est exigée pour les situations relatives aux processus métier dans lesquels
+l’absence d’une telle maîtrise pourrait entraîner un écart par rapport à la politique de conformité ou
+une non-exécution des obligations de conformité. Ces situations peuvent être liées à l’ensemble des
+situations, activités ou processus métiers (par exemple, la production, l’installation, l’entretien, la
+maintenance) ou encore les sous-traitants ou les fournisseurs.
+Le degré de maîtrise peut varier en fonction de plusieurs facteurs tels que l’importance ou la complexité
+des fonctions réalisées, les conséquences potentielles des défauts de conformité ou l’assistance
+technique impliquée ou disponible.
+Lorsque la maîtrise opérationnelle échoue, des actions sont nécessaires pour gérer tout résultat ou effet
+indésirable.
+Si les activités de l’organisme s’appuient sur le recours à des tierces parties ou à des processus
+externalisés, il convient que ce dernier exerce un devoir de diligence raisonnable (due diligence) afin
+de s’assurer que cela n’affectera pas son niveau de rigueur en termes de normes et d’engagement de
+conformité. Les tierces parties sont par exemple liées à la mise à disposition de produits et services,
+ainsi qu’à la distribution de produits. Il convient que l’organisme s’assure que les accords de niveau
+de service (ANS) appropriés spécifiant les obligations de conformité du prestataire de services soient
+conclus.
+Un processus d’externalisation bien conçu prend en considération les points suivants:
+— devoir initial et continu de diligence raisonnable (due diligence);
+— mise en oeuvre de dispositifs de maîtrise appropriés;
+36 © ISO 2021 – Tous droits réservés
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+— surveillance continue;
+— revue appropriée des accords juridiques/contractuels;
+— prise en considération des ANS;
+— recours à des parties tierces certifiées conformément au présent document.
+Lors de l’établissement d’un contrat avec des parties tierces, il convient que l’organisme mette en oeuvre
+des dispositifs de maîtrise permettant de garantir que les aspects relatifs aux achats, aux opérations,
+aux pratiques commerciales et autres aspects non financiers de ses activités soient correctement gérés.
+En fonction de la taille de l’organisme et de la transaction, les dispositifs de maîtrise relatifs aux achats,
+aux opérations, aux pratiques commerciales et autres aspects non financiers mis en oeuvre par un
+organisme peuvent réduire les risques de conformité.
+A.8.2 Établissement des dispositifs de maîtrise
+L’effectivité et l’efficacité des dispositifs de maîtrise sont nécessaires pour s’assurer que les obligations
+de conformité de l’organisme sont exécutées et que les défauts de conformité sont évités (prévention),
+détectés (détection) et corrigés (remédiation). Il convient que les dispositifs de maîtrise soient
+définis avec suffisamment de rigueur pour faciliter l’exécution des obligations de conformité qui sont
+spécifiques aux activités et à l’environnement opérationnel de l’organisme. Il convient, autant que
+possible, que ces dispositifs de maîtrise soient intégrés dans les processus habituels de l’organisme.
+Les dispositifs de maîtrise peuvent inclure:
+— des politiques, des processus, des procédures et des instructions de travail/documents opératoires
+clairs, pratiques et faciles à suivre;
+— un mécanisme de rapports (reporting) et des notifications de remontée d’anomalies;
+— des approbations;
+— une claire séparation des rôles et des responsabilités;
+— des traitements automatisés;
+— des programmes annuels de conformité;
+— des systèmes d’évaluation professionnelle du personnel;
+— des évaluations et des audits de conformité;
+— un engagement de la direction et un comportement exemplaire démontrés, et autres mesures pour
+promouvoir le comportement de conformité;
+— une communication active, transparente et fréquente sur le comportement attendu du personnel
+(normes et valeurs, codes de conduite).
+Dans le cadre de l’élaboration des dispositifs de maîtrise visant à soutenir la gestion de conformité,
+il convient de tenir compte:
+— de l’intégration des obligations de conformité dans les procédures, y compris dans les systèmes
+informatiques, les formulaires, le mécanisme de rapports (reporting), les contrats et autres
+documents légaux;
+— de la cohérence avec les fonctions des autres lignes de maîtrise au sein de l’organisme;
+— de la surveillance et du suivi régulier d’indicateurs;
+— de l’évaluation et de l’établissement de rapports (reporting) (y compris la supervision du personnel
+d’encadrement) pour s’assurer que les employés respectent les procédures;
+© ISO 2021 – Tous droits réservés 37
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+— des dispositifs de maîtrise spécifiques pour identifier, communiquer et remonter les cas des défauts
+de conformité ainsi que les risques associés.
+A.8.3 Signalement des inquiétudes
+Le cas échéant, il convient que les informations remontent à la direction et à l’organe de gouvernance,
+y compris aux comités concernés.
+Même lorsque cela n’est pas exigé par la réglementation locale, il convient que les organismes
+considèrent l’élaboration d’un dispositif d’alerte pour permettre l’anonymat ou la confidentialité, dans
+le cadre duquel les personnels de l’organisme peuvent signaler un défaut de conformité sans peur de
+représailles, ou obtenir des conseils.
+Pour de plus amples recommandations sur les systèmes de management des alertes, voir l’ISO 37002.
+A.8.4 Processus d’enquête
+Un système de management de conformité se caractérise entre autres par un mécanisme efficace
+permettant de mener en temps utile une enquête approfondie et minutieuse sur toute allégation ou
+suspicion de conduite inadéquate de la part de l’organisme, de son personnel ou des tierces parties
+concernées. Cela inclut la documentation de la réponse de l’organisme, y compris les mesures
+disciplinaires ou correctives (de remédiation) prises et les révisions du système de management de
+conformité à la lumière des leçons tirées.
+Un mécanisme d’enquête efficace identifie les causes profondes d’une conduite inadéquate, des
+vulnérabilités du système de management de conformité et des lacunes en matière de responsabilité,
+y compris au niveau des responsables, de la direction et de l’organe de gouvernance. Une analyse
+minutieuse des causes profondes aborde l’étendue et l’ampleur du défaut de conformité, le nombre
+de personnels concernés et leur niveau, et la gravité, la durée ainsi que la fréquence du défaut de
+conformité.
+Il convient que les organismes s’assurent que les enquêtes sont justes et indépendantes. Il convient qu’ils
+considèrent, le cas échéant, la création de comités indépendants pour superviser l’enquête et garantir
+son exhaustivité et son indépendance.
+Il convient que l’organisme établisse un mécanisme de signalement sur les enquêtes qui incluent le
+niveau hiérarchique auquel les conclusions des enquêtes doivent être rapportées.
+NOTE Les organismes sont parfois tenus par la loi de signaler un défaut de conformité. Dans de tels cas, les
+autorités réglementaires/de régulation sont informées conformément aux réglementations applicables ou selon
+ce qui a été autrement convenu.
+Même si des organismes ne sont pas tenus par la loi de signaler un défaut de conformité, ils peuvent
+envisager de faire une déclaration volontaire du défaut de conformité aux autorités réglementaires/de
+régulation afin d’atténuer les conséquences du défaut de conformité.
+A.9 Évaluation des performances
+A.9.1 Surveillance, mesure, analyse et évaluation
+A.9.1.1 Généralités
+La surveillance est un processus de collecte d’informations visant à évaluer l’efficacité du système de
+management de conformité et les performances de conformité de l’organisme.
+En général, la surveillance du système de management de conformité comprend:
+— l’efficacité de la formation;
+38 © ISO 2021 – Tous droits réservés
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+— l’efficacité des dispositifs de maîtrise (par exemple par analyse des résultats d’essai par
+échantillonnage);
+— l’attribution effective des responsabilités pour l’exécution des obligations de conformité;
+— la pertinence des obligations de conformité;
+— l’efficacité du traitement des défauts de conformité préalablement identifiés;
+— les cas où les mesures ou les points de contrôle de conformité ne sont pas effectués comme prévu;
+— des revues de la stratégie métier par rapport aux risques de conformité pour permettre une mise
+à jour appropriée.
+En général, la surveillance des performances de conformité comprend:
+— le défaut de conformité et les «quasi-défauts de conformité» (c’est-à-dire des défauts sans effet
+préjudiciable);
+— les cas où des obligations de conformité ne sont pas exécutées;
+— les cas où des objectifs de conformité ne sont pas atteints;
+— la position de la culture de conformité;
+— la mise en place d’indicateurs a priori et a posteriori.
+A.9.1.2 Sources de retour d’informations sur les performances de conformité
+Les sources incluent:
+— le personnel (par exemple par le biais de dispositifs d’alerte, de lignes d’assistance, de retours
+d’informations, de boîtes à suggestions);
+— les clients (par exemple par le biais d’un système de traitement des réclamations);
+— les tierces parties;
+— les fournisseurs;
+— les sous-traitants;
+— les autorités réglementaires/de régulation;
+— les enregistrements relatifs à la maîtrise des processus et rapports d’activités (sur support
+électronique ou support papier).
+Le retour d’information sur les performances de conformité peut comprendre:
+— des problèmes de conformité;
+— des inquiétudes;
+— des sujets de conformité émergents;
+— des changements organisationnels et réglementaires;
+— des commentaires sur l’efficacité et les performances de conformité.
+Il existe de nombreuses méthodes de collecte d’informations. Chaque méthode indiquée ci-dessous
+s’applique à des situations différentes et il convient de veiller à choisir, parmi la grande variété d’outils,
+ceux qui sont adaptés à la taille, à l’échelle, à la nature et à la complexité de l’organisme.
+© ISO 2021 – Tous droits réservés 39
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+La collecte d’informations peut inclure:
+— les rapports (reporting) d’information immédiate d’un défaut de conformité ad hoc dès lors que le
+défaut de conformité se produit ou qu’il est identifié;
+— les informations obtenues par le biais de lignes d’assistance, de réclamations et autres sources de
+retour d’informations, y compris les dispositifs d’alerte;
+— les discussions informelles, ateliers et groupes de discussion;
+— l’échantillonnage et les tests d’intégrité, tels qu’une «enquête client mystère»;
+— les résultats d’enquêtes de perception;
+— les observations directes, les entretiens formels, les visites et inspections d’usine;
+— les audits et revues;
+— les questions des parties intéressées, les demandes de formation et le retour d’information fournis
+durant la formation (en particulier ceux des employés).
+Il convient de mettre en place un système de classification, de stockage et de récupération des
+informations.
+Il convient que les systèmes de management des informations enregistrent à la fois les problèmes et les
+réclamations, et qu’ils permettent une classification et une analyse des informations en rapport avec la
+(mise/maintien en) conformité de l’organisme. Il convient que l’analyse tienne compte des problèmes
+systémiques et récurrents aux fins de rectification ou d’amélioration, dans la mesure où ces problèmes
+peuvent engendrer, pour l’organisme, des risques significatifs de conformité et susceptibles d’être plus
+difficiles à identifier.
+Les critères de classification des informations peuvent inclure:
+— la source;
+— le département;
+— la description du défaut de conformité;
+— les références des obligations;
+— les indicateurs;
+— la gravité;
+— l’impact réel ou potentiel.
+A.9.1.3 Mise en place des indicateurs
+Il convient que ce processus prenne en compte les résultats de l’évaluation des risques de conformité
+pour garantir que les indicateurs se rapportent aux caractéristiques pertinentes des risques de
+conformité de l’organisme. La question de savoir comment évaluer les performances de conformité
+peut se révéler compliquée à certains égards. Il n’en demeure pas moins qu’elle constitue une part
+essentielle de l’effectivité du système de management de conformité. En outre, les indicateurs requis
+varient selon le degré de maturité de l’organisme et selon le moment et l’étendue de la mise en oeuvre
+des programmes, qu’ils soient nouveaux ou mis à jour.
+Les indicateurs peuvent inclure:
+— le pourcentage d’employés effectivement formés;
+— la fréquence des contacts avec les organismes de réglementation;
+40 © ISO 2021 – Tous droits réservés
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+— l’utilisation de mécanismes de retour d’informations (y compris les commentaires sur la valeur des
+mécanismes par les utilisateurs).
+Les indicateurs réactifs peuvent comprendre:
+— les problèmes et les défauts de conformité identifiés, signalés par type, par domaine et par fréquence;
+— la conséquence du défaut de conformité, qui peut inclure une évaluation de l’impact résultant
+du dédommagement financier, des amendes et autres pénalités, du coût en termes de réparation,
+de réputation, ou du coût relatif au temps passé par les employés;
+— le temps passé pour signaler le défaut de conformité et entreprendre l’action corrective.
+Les indicateurs prédictifs peuvent inclure:
+— l’évolution dans le temps des risques de conformité plus que faibles (plutôt élevés) liés à l’atteinte
+des objectifs (chiffre d’affaires, santé et sécurité, réputation, etc.);
+— les tendances concernant les défauts de conformité (le taux de conformité prévu fondé sur la base
+des tendances historiques).
+A.9.1.4 Mécanisme de rapports (reporting) de conformité
+Bien que la remontée des problèmes systémiques et récurrents soit d’une très grande importance,
+un défaut de conformité exceptionnel peut être traité avec la même diligence s’il s’avère qu’elle est
+majeure ou intentionnelle. Une défaillance, même mineure, peut indiquer une importante faiblesse
+dans le processus actuel et dans le système de management de conformité. Si elle n’est pas dûment
+signalée, elle peut laisser penser qu’elle ne pose pas de problème alors qu’elle peut finir par constituer
+un problème systémique.
+Il convient que le mécanisme de rapports (reporting) de conformité inclut:
+— tout élément d’information que l’organisme est tenu de notifier à une autorité réglementaire/
+de régulation;
+— les changements au niveau des obligations de conformité, leur impact sur l’organisme et l’action
+proposée pour se conformer aux nouvelles obligations;
+— la mesure des performances de conformité, y compris le défaut de conformité et l’amélioration
+continue;
+— le nombre et les détails des éventuels défauts de conformité et une analyse de ceux-ci;
+— les actions correctives entreprises;
+— les informations sur l’efficacité, les réalisations et les tendances du système de management de
+conformité;
+— les contacts et l’évolution des relations avec les autorités réglementaires/de régulation;
+— les résultats des audits, ainsi que des activités de surveillance;
+— la surveillance de l’exécution complète des plans d’action, en particulier ceux qui découlent
+de rapports d’audit ou d’exigences réglementaires, ou les deux.
+Il convient que la politique de conformité insiste sur la communication immédiate d’informations sur
+des sujets importants qui pourraient survenir en dehors des échéances prévues pour l’établissement
+régulier des rapports (reporting).
+© ISO 2021 – Tous droits réservés 41
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+A.9.1.5 Conservation des éléments probants
+Il convient que la conservation des éléments probants comprenne l’enregistrement et le classement des
+problèmes de conformité et des défauts de conformité supposés, ainsi que les mesures prises pour les
+traiter efficacement.
+Il convient que ces éléments soient conservés de manière à ce qu’ils demeurent lisibles, facilement
+identifiables et récupérables.
+Il convient de protéger ces éléments contre tout(e) ajout, retrait, modification, utilisation non autorisée
+ou dissimulation.
+Les éléments probants du système de management de conformité de l’organisme peuvent inclure:
+— les informations sur les performances de conformité, y compris les rapports de conformité;
+— les détails des défauts de conformité et des actions correctives et préventives;
+— les résultats des revues et des audits du système de management de conformité et les actions
+entreprises.
+A.9.2 Audit interne
+Il convient que les fonctions d’audit, qu’elles soient internes ou externes, soient libres de tout conflit
+d’intérêts et indépendantes afin de remplir leur rôle (fonction).
+Voir l’ISO 19011 pour des informations sur la réalisation d’un audit d’un système de management.
+A.9.3 Revue de direction
+Il convient que la revue de direction contienne également des recommandations sur:
+— la nécessité d’apporter des modifications à la politique de conformité et ses objectifs, systèmes,
+structure et personnel associés;
+— la nécessité d’apporter des modifications aux processus de conformité afin d’assurer l’intégration
+effective avec les pratiques et systèmes opérationnels;
+— les domaines à surveiller pour d’éventuels défauts de conformité ultérieurs;
+— les actions correctives à engager pour remédier au défaut de conformité;
+— les écarts ou déficiences dans les dispositifs de conformité actuels et les initiatives à plus long terme
+concernant l’amélioration continue;
+— la reconnaissance d’un comportement exemplaire de conformité au sein de l’organisme.
+Il convient qu’un exemplaire des résultats documentés et de toutes recommandations découlant de la
+revue de direction soit transmis à l’organe de gouvernance.
+A.10 Amélioration
+A.10.1 Amélioration continue
+L’efficacité d’un système de management de conformité se caractérise par le fait qu’il soit en capacité
+de s’améliorer et d’évoluer de manière continue. L’environnement et les activités internes et externes de
+l’organisme évoluent au fil du temps, de la même façon que la nature de ses clients et de ses obligations
+de conformité applicables.
+42 © ISO 2021 – Tous droits réservés
+
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+Il convient que l’adéquation et l’efficacité du système de management de conformité soient évaluées de
+manière continue et régulière par le biais de plusieurs méthodes, par exemple, par des revues ou audits
+internes.
+Il convient que l’organisme établisse des mesures pour procéder à la revue de son système de
+management de conformité et garantir qu’il reste actuel et adapté à la finalité prévue. Lors de la
+détermination de l’étendue et des échéances des actions qui soutiennent l’amélioration continue,
+il convient que l’organisme considère son contexte, les facteurs économiques et autres circonstances
+pertinentes.
+Certains organismes interrogent leurs employés pour apprécier la culture de conformité et évaluer
+la robustesse des dispositifs de maîtrise. D’autres sources d’information pour l’amélioration continue
+peuvent être les conclusions d’enquêtes clients, le signalement d’inquiétudes, la surveillance régulière,
+les audits périodiques ou les revues de direction.
+Il convient que l’organisme prenne en considération les résultats et éléments de sortie de telles
+évaluations pour déterminer si un besoin ou une opportunité de modifier le système de management de
+conformité existe.
+Afin de s’assurer que l’intégrité du système de management de conformité et son efficacité sont
+garanties, il convient que les modifications apportées à des éléments individuels du système de
+management tiennent compte de la dépendance et de l’impact de telles modifications sur l’efficacité du
+système de management dans son ensemble.
+Lors de la modification de son système de management de conformité, il convient que l’organisme
+considère les implications que ces modifications ont sur le système de management de conformité, sur
+ses opérations, sur la disponibilité de ses ressources, sur les appréciations des risques de conformité,
+sur ses obligations de conformité et sur ses processus d’amélioration continue.
+A.10.2 Non-conformité et actions correctives
+L’incapacité d’empêcher ou de détecter un défaut de conformité «exceptionnel» ne signifie pas
+nécessairement que le système de management de conformité n’est pas suffisamment efficace pour
+prévenir ou détecter un défaut de conformité.
+Les informations obtenues lors de l’analyse d’une non-conformité ou d’un défaut de conformité peuvent
+être utilisées pour envisager:
+— une évaluation de la performance du produit et des services;
+— une amélioration ou une nouvelle conception des produits et services;
+— des modifications aux pratiques et procédures organisationnelles;
+— une nouvelle formation des employés;
+— une réévaluation de la nécessité d’informer les parties intéressées;
+— une transmission au plus tôt d’information avertissant d’un défaut de conformité potentiel;
+— une nouvelle conception ou une nouvelle revue des dispositifs de maîtrise;
+— une amélioration des étapes de notification et de remontée des informations (internes et externes);
+— la communication des faits relatifs au défaut de conformité et la position de l’organisme concernant
+le défaut de conformité.
+Il convient que l’organisme identifie les causes profondes du non-respect de politiques ou de procédures,
+ou les deux, qui ont contribué à la conduite inadéquate et mette à jour la politique et la procédure à la
+lumière des leçons tirées.
+
+© ISO 2021 – Tous droits réservés 43
+
+NF ISO 373012021-10
+ISO 37301:2021(F)
+Bibliographie
+[1] ISO 9000, Systèmes de management de la qualité — Principes essentiels et vocabulaire
+[2] ISO 9001, Systèmes de management de la qualité — Exigences
+[3] ISO 14001, Systèmes de management environnemental — Exigences et lignes directrices pour son
+utilisation
+[4] ISO 19011, Lignes directrices pour l'audit des systèmes de management
+[5] ISO 22000, Systèmes de management de la sécurité des denrées alimentaires — Exigences pour tout
+organisme appartenant à la chaîne alimentaire
+[6] ISO 26000, Lignes directrices relatives à la responsabilité sociétale
+[7] ISO/IEC 27001, Technologies de l'information — Techniques de sécurité — Systèmes de management
+de la sécurité de l'information — Exigences
+[8] ISO 31000, Management du risque — Lignes directrices
+[9] IEC 31010, Management du risque — Techniques d'appréciation du risque
+[10] ISO 37000, Recommandations pour la gouvernance des organismes
+[11] ISO 37001, Systèmes de management anti-corruption — Exigences et recommandations de mise en
+oeuvre
+[12] ISO 37002, Systèmes de management des alertes — Lignes directrices
+[13] Guide ISO 73, Management du risque — Vocabulaire
+44
+
