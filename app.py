@@ -266,22 +266,12 @@ def find_common_measures(all_measures):
     return common_measures
 
 def render_measures_with_checkboxes(measures_dict, refs_dict):
-    if 'checked_measures' not in st.session_state:
-        st.session_state.checked_measures = {}
-
-    def on_change(key):
-        st.session_state.checked_measures[key] = not st.session_state.checked_measures.get(key, False)
-
-    search = st.text_input("🔍 Filtrer les mesures", key="measure_filter")
+    # Gestion de l'état
+    if 'measures_state' not in st.session_state:
+        st.session_state.measures_state = {}
     
-    # Create a stable unique key for each measure
-    for category, measures in measures_dict.items():
-        for i, measure in enumerate(measures, 1):
-            key = f"{category}-{i}-{hash(measure)}"
-            if key not in st.session_state.checked_measures:
-                st.session_state.checked_measures[key] = False
-    
-    selected_count = sum(st.session_state.checked_measures.values())
+    search = st.text_input("🔍 Filtrer les mesures", key="measure_search")
+    selected_count = sum(st.session_state.measures_state.values())
     st.write(f"📋 Mesures sélectionnées : {selected_count}")
 
     for category, category_name in [('D', 'Détection'), ('R', 'Réduction'), ('A', 'Acceptation'), ('F', 'Refus'), ('T', 'Transfert')]:
@@ -290,26 +280,25 @@ def render_measures_with_checkboxes(measures_dict, refs_dict):
             measures = [m for m in measures if search.lower() in m.lower()]
 
         if measures:
-            container = st.container()
-            container.markdown(f"### {category_name}")
-            
-            for i, measure in enumerate(measures, 1):
-                key = f"{category}-{i}-{hash(measure)}"
-                col1, col2 = container.columns([4, 1])
-                with col1:
-                    col1.checkbox(
-                        measure,
-                        key=key,
-                        value=st.session_state.checked_measures.get(key, False),
-                        on_change=on_change,
-                        args=(key,)
-                    )
-
-def toggle_measure(key):
-    if key in st.session_state:
-        st.session_state[key] = not st.session_state[key]
-    else:
-        st.session_state[key] = True
+            with st.container():
+                st.markdown(f"### {category_name}")
+                
+                for i, measure in enumerate(measures, 1):
+                    measure_key = f"{category}-{i}"
+                    
+                    # Initialisation de l'état si nécessaire
+                    if measure_key not in st.session_state.measures_state:
+                        st.session_state.measures_state[measure_key] = False
+                    
+                    col1, col2 = st.columns([4, 1])
+                    with col1:
+                        checked = st.checkbox(
+                            measure,
+                            value=st.session_state.measures_state[measure_key],
+                            key=f"checkbox_{measure_key}"
+                        )
+                        st.session_state.measures_state[measure_key] = checked
+                        st.markdown(f"*Réf: {refs_dict.get(measure_key, '-')}*")
 
 def main():
    # Initialisation
