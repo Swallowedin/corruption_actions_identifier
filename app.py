@@ -269,7 +269,15 @@ def render_measures_with_checkboxes(measures_dict, refs_dict):
     if 'checked_measures' not in st.session_state:
         st.session_state.checked_measures = {}
 
-    search = st.text_input("🔍 Filtrer les mesures", key=f"measure_filter")
+    search = st.text_input("🔍 Filtrer les mesures", key="measure_filter")
+    
+    # Create a stable unique key for each measure
+    for category, measures in measures_dict.items():
+        for i, measure in enumerate(measures, 1):
+            key = f"{category}-{i}-{hash(measure)}"
+            if key not in st.session_state.checked_measures:
+                st.session_state.checked_measures[key] = False
+    
     selected_count = sum(st.session_state.checked_measures.values())
     st.write(f"📋 Mesures sélectionnées : {selected_count}")
 
@@ -284,21 +292,14 @@ def render_measures_with_checkboxes(measures_dict, refs_dict):
             
             for i, measure in enumerate(measures, 1):
                 key = f"{category}-{i}-{hash(measure)}"
-                if key not in st.session_state.checked_measures:
-                    st.session_state.checked_measures[key] = False
-                    
                 col1, col2 = container.columns([4, 1])
                 with col1:
-                    if col1.checkbox(
+                    checkbox = col1.checkbox(
                         measure,
                         key=key,
                         value=st.session_state.checked_measures[key]
-                    ):
-                        st.session_state.checked_measures[key] = True
-                    else:
-                        st.session_state.checked_measures[key] = False
-                    
-                    col1.markdown(f"*Réf: {refs_dict.get(f'{category}-{i}', '-')}*")
+                    )
+                    st.session_state.checked_measures[key] = checkbox
 
 def toggle_measure(key):
     st.session_state['checked_measures'][key] = not st.session_state['checked_measures'].get(key, False)
