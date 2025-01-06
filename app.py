@@ -265,13 +265,12 @@ def find_common_measures(all_measures):
     
     return common_measures
 
-def render_measures_with_checkboxes(measures_dict, refs_dict):
-    # Gestion de l'état
+def render_measures_with_checkboxes(measures_dict, refs_dict, key_prefix=''):
     if 'measures_state' not in st.session_state:
-        st.session_state.measures_state = {}
+        st.session_state.measures_state = defaultdict(bool)
     
-    search = st.text_input("🔍 Filtrer les mesures", key="measure_search")
-    selected_count = sum(st.session_state.measures_state.values())
+    search = st.text_input("🔍 Filtrer les mesures", key=f"{key_prefix}_search")
+    selected_count = len([k for k, v in st.session_state.measures_state.items() if v])
     st.write(f"📋 Mesures sélectionnées : {selected_count}")
 
     for category, category_name in [('D', 'Détection'), ('R', 'Réduction'), ('A', 'Acceptation'), ('F', 'Refus'), ('T', 'Transfert')]:
@@ -280,25 +279,16 @@ def render_measures_with_checkboxes(measures_dict, refs_dict):
             measures = [m for m in measures if search.lower() in m.lower()]
 
         if measures:
-            with st.container():
-                st.markdown(f"### {category_name}")
-                
-                for i, measure in enumerate(measures, 1):
-                    measure_key = f"{category}-{i}"
-                    
-                    # Initialisation de l'état si nécessaire
-                    if measure_key not in st.session_state.measures_state:
-                        st.session_state.measures_state[measure_key] = False
-                    
-                    col1, col2 = st.columns([4, 1])
-                    with col1:
-                        checked = st.checkbox(
-                            measure,
-                            value=st.session_state.measures_state[measure_key],
-                            key=f"checkbox_{measure_key}"
-                        )
-                        st.session_state.measures_state[measure_key] = checked
-                        st.markdown(f"*Réf: {refs_dict.get(measure_key, '-')}*")
+            st.markdown(f"### {category_name}")
+            for i, measure in enumerate(measures, 1):
+                measure_id = f"{category}_{i}_{key_prefix}"
+                st.checkbox(
+                    measure,
+                    value=st.session_state.measures_state[measure_id],
+                    key=measure_id,
+                    on_change=lambda: st.session_state.measures_state.update({measure_id: not st.session_state.measures_state[measure_id]})
+                )
+                st.markdown(f"*Réf: {refs_dict.get(f'{category}-{i}', '-')}*")
 
 def main():
    # Initialisation
