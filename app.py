@@ -266,20 +266,48 @@ def find_common_measures(all_measures):
     return common_measures
 
 def render_measures_with_checkboxes(measures_dict, refs_dict):
-    if 'checked_measures' not in st.session_state:
-        st.session_state['checked_measures'] = {}
-    
-    for category, category_name in [('D', 'Détection'), ('R', 'Réduction'), ('A', 'Acceptation'), ('F', 'Refus'), ('T', 'Transfert')]:
-        st.markdown(f"### {category_name}")
-        for i, measure in enumerate(measures_dict.get(category, []), 1):
-            checkbox_key = f"{category}-{i}-{measure}"
-            checked = st.checkbox(
-                measure,
-                key=checkbox_key,
-                value=st.session_state['checked_measures'].get(checkbox_key, False),
-                on_change=lambda k=checkbox_key: toggle_measure(k)
-            )
-            st.markdown(f"*Référence: {refs_dict.get(f'{category}-{i}', 'Pas de référence')}*")
+   """Affiche les mesures avec cases à cocher et filtrage"""
+   if 'checked_measures' not in st.session_state:
+       st.session_state['checked_measures'] = {}
+
+   # Filtrage des mesures
+   search = st.text_input("🔍 Filtrer les mesures", key="measure_filter")
+
+   # Compteur de mesures sélectionnées
+   selected_count = sum(1 for v in st.session_state['checked_measures'].values() if v)
+   st.write(f"📋 Mesures sélectionnées : {selected_count}")
+
+   # Affichage par catégorie 
+   for category, category_name in [
+       ('D', 'Détection'),
+       ('R', 'Réduction'),
+       ('A', 'Acceptation'),
+       ('F', 'Refus'),
+       ('T', 'Transfert')
+   ]:
+       measures = measures_dict.get(category, [])
+       if search:
+           measures = [m for m in measures if search.lower() in m.lower()]
+
+       if measures:
+           with st.expander(f"### {category_name}", expanded=True):
+               for i, measure in enumerate(measures, 1):
+                   col1, col2 = st.columns([4, 1])
+                   checkbox_key = f"{category}-{i}-{measure}"
+                   
+                   with col1:
+                       st.checkbox(
+                           measure,
+                           key=checkbox_key,
+                           value=st.session_state['checked_measures'].get(checkbox_key, False),
+                           on_change=toggle_measure,
+                           args=(checkbox_key,)
+                       )
+                       st.markdown(f"*Réf: {refs_dict.get(f'{category}-{i}', '-')}*")
+                   
+                   with col2:
+                       if st.session_state['checked_measures'].get(checkbox_key, False):
+                           st.markdown("✅")
 
 def toggle_measure(key):
     st.session_state['checked_measures'][key] = not st.session_state['checked_measures'].get(key, False)
@@ -296,7 +324,7 @@ def main():
     """)
     
     # Layout en colonnes
-    col1, col2 = st.columns([1, 2])
+    col1, col2 = st.columns([1, 3])
     
     with col1:
         # Sélection de la famille de processus
