@@ -470,14 +470,14 @@ def main():
 
     # Sidebar référentiel ISO
     with st.sidebar:
-    with st.expander("📘 Référentiel ISO 37301", expanded=False):
-        for section, details in iso_references.get('sections', {}).items():
-            with st.expander(f"Section {section}"):
-                st.write(f"**{details.get('titre', '')}**")
-                st.write(details.get('description', ''))
-                st.markdown("**Objectifs :**")
-                for obj in details.get('objectifs', []):
-                    st.markdown(f"- {obj}")
+        with st.expander("📘 Référentiel ISO 37301", expanded=False):
+            for section, details in iso_references.get('sections', {}).items():
+                with st.expander(f"Section {section}"):
+                    st.write(f"**{details.get('titre', '')}**")
+                    st.write(details.get('description', ''))
+                    st.markdown("**Objectifs :**")
+                    for obj in details.get('objectifs', []):
+                        st.markdown(f"- {obj}")
 
 if __name__ == "__main__":
     main()
