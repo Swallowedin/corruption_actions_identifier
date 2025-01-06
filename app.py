@@ -3,6 +3,9 @@ import pandas as pd
 from openai import OpenAI
 import io
 from collections import defaultdict
+import yaml
+import streamlit as st
+from streamlit_extras.switch_page_button import switch_page
 
 # Configuration de la page
 st.set_page_config(page_title="Générateur de Mesures de Remédiation", layout="wide")
@@ -138,6 +141,10 @@ STANDARDS = {
         "Pilotage": ["Évaluations", "Suivi"]
     }
 }
+
+def load_iso_references():
+    with open('iso_37301_references.yaml', 'r') as file:
+        return yaml.safe_load(file)
 
 def generate_measures(risk, process):
     """Génère des mesures via GPT avec références aux standards"""
