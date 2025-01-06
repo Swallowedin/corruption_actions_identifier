@@ -311,36 +311,6 @@ def toggle_measure(key):
     else:
         st.session_state[key] = True
 
-def render_measures_with_checkboxes(measures_dict, refs_dict):
-    search = st.text_input("🔍 Filtrer les mesures", key="measure_filter")
-    
-    # Count selected measures
-    selected_count = sum(1 for k, v in st.session_state.items() if isinstance(k, str) and k.startswith("measure_") and v)
-    st.write(f"📋 Mesures sélectionnées : {selected_count}")
-
-    for category, category_name in [('D', 'Détection'), ('R', 'Réduction'), ('A', 'Acceptation'), ('F', 'Refus'), ('T', 'Transfert')]:
-        measures = measures_dict.get(category, [])
-        if search:
-            measures = [m for m in measures if search.lower() in m.lower()]
-
-        if measures:
-            st.markdown(f"### {category_name}")
-            
-            for i, measure in enumerate(measures, 1):
-                key = f"measure_{category}_{i}"
-                if key not in st.session_state:
-                    st.session_state[key] = False
-                
-                col1, col2 = st.columns([4, 1])
-                with col1:
-                    st.checkbox(
-                        measure,
-                        key=key,
-                        on_change=toggle_measure,
-                        args=(key,)
-                    )
-                    st.markdown(f"*Réf: {refs_dict.get(f'{category}-{i}', '-')}*")
-
 def main():
    # Initialisation
    if 'selected_measures' not in st.session_state:
