@@ -269,6 +269,9 @@ def render_measures_with_checkboxes(measures_dict, refs_dict):
     if 'checked_measures' not in st.session_state:
         st.session_state.checked_measures = {}
 
+    def on_change(key):
+        st.session_state.checked_measures[key] = not st.session_state.checked_measures.get(key, False)
+
     search = st.text_input("🔍 Filtrer les mesures", key="measure_filter")
     
     # Create a stable unique key for each measure
@@ -294,12 +297,13 @@ def render_measures_with_checkboxes(measures_dict, refs_dict):
                 key = f"{category}-{i}-{hash(measure)}"
                 col1, col2 = container.columns([4, 1])
                 with col1:
-                    checkbox = col1.checkbox(
+                    col1.checkbox(
                         measure,
                         key=key,
-                        value=st.session_state.checked_measures[key]
+                        value=st.session_state.checked_measures.get(key, False),
+                        on_change=on_change,
+                        args=(key,)
                     )
-                    st.session_state.checked_measures[key] = checkbox
 
 def toggle_measure(key):
     st.session_state['checked_measures'][key] = not st.session_state['checked_measures'].get(key, False)
