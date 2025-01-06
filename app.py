@@ -4,6 +4,7 @@ from openai import OpenAI
 import io
 from collections import defaultdict
 import yaml
+from collections import defaultdict
 
 # Configuration de la page
 st.set_page_config(page_title="Générateur de Mesures de Remédiation", layout="wide")
