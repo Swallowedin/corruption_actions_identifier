@@ -265,12 +265,12 @@ def find_common_measures(all_measures):
     
     return common_measures
 
-def render_measures_with_checkboxes(measures_dict, refs_dict, key_prefix=''):
+def render_measures_with_checkboxes(measures_dict, refs_dict):
     if 'measures_state' not in st.session_state:
         st.session_state.measures_state = defaultdict(bool)
-    
-    search = st.text_input("🔍 Filtrer les mesures", key=f"{key_prefix}_search")
-    selected_count = len([k for k, v in st.session_state.measures_state.items() if v])
+
+    search = st.text_input("🔍 Filtrer les mesures", key="search")
+    selected_count = sum(1 for v in st.session_state.measures_state.values() if v)
     st.write(f"📋 Mesures sélectionnées : {selected_count}")
 
     for category, category_name in [('D', 'Détection'), ('R', 'Réduction'), ('A', 'Acceptation'), ('F', 'Refus'), ('T', 'Transfert')]:
@@ -281,13 +281,14 @@ def render_measures_with_checkboxes(measures_dict, refs_dict, key_prefix=''):
         if measures:
             st.markdown(f"### {category_name}")
             for i, measure in enumerate(measures, 1):
-                measure_id = f"{category}_{i}_{key_prefix}"
+                state_key = f"{category}_{i}_{hash(measure)}"
                 st.checkbox(
                     measure,
-                    value=st.session_state.measures_state[measure_id],
-                    key=measure_id,
-                    on_change=lambda: st.session_state.measures_state.update({measure_id: not st.session_state.measures_state[measure_id]})
+                    key=state_key,
+                    value=bool(st.session_state.measures_state.get(state_key, False))
                 )
+                if state_key not in st.session_state:
+                    st.session_state[state_key] = False
                 st.markdown(f"*Réf: {refs_dict.get(f'{category}-{i}', '-')}*")
 
 def main():
