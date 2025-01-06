@@ -4,8 +4,6 @@ from openai import OpenAI
 import io
 from collections import defaultdict
 import yaml
-import streamlit as st
-from streamlit_extras.switch_page_button import switch_page
 
 # Configuration de la page
 st.set_page_config(page_title="Générateur de Mesures de Remédiation", layout="wide")
