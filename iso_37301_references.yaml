@@ -1,11 +1,18 @@
 document:
   title: NF ISO 37001
+  date: MARS 2017
+  source: www.afnor.org
+  usage_restrictions:
+    fr: Ce document est à usage exclusif et non collectif des clients AFNOR. Toute mise en réseau, reproduction et rediffusion, sous quelque forme que ce soit, même partielle, sont strictement interdites.
+    en: This document is intended for the exclusive and non collective use of AFNOR customers. All network exploitation, reproduction and re-dissemination, even partial, whatever the form (hardcopy or other media), is strictly prohibited.
+  classification_index: X 50-104
+  ICS: 03.100.02
   description:
     fr: Systèmes de management anti-corruption - Exigences et recommandations de mise en œuvre
     en: Anti-bribery management systems - Requirements with guidance for use
     de: Anti-Korruptions - Managementsysteme
   homologation: Norme française homologuée par décision du Directeur Général d'AFNOR.
-  correspondence: Le présent document s'inspire de la Norme internationale ISO 37001:2016
+  correspondence: Le présent document reproduit intégralement la Norme internationale ISO 37001:2016
   summary:
     fr: Le présent document définit des exigences et fournit des préconisations pour l'établissement, la mise en œuvre, la tenue à jour, la revue et l'amélioration d'un système de management anti-corruption. Le système peut être autonome ou intégré à un système de management global.
     en: This document defines requirements and provides guidance for establishing, implementing, maintaining, reviewing and improving an anti-bribery management system. The system can be stand-alone or can be integrated into an overall management system.
