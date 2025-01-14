@@ -1,429 +1,706 @@
-metadata:
-  reference: "NF ISO 37301:2021-10"
-  title: "Systemes de management de la conformite - Exigences et recommandations pour la mise en oeuvre"
-  alternate_titles:
-    english: "Compliance management systems - Requirements with guidance for use"
-    german: "Compliance-Managementsysteme - Anforderungen mit Leitlinien zur Anwendung"
-  type: "Norme francaise"
-  homologation: 
-    date: "septembre 2021"
-    authority: "Directeur General d'AFNOR"
-  replaces: "NF ISO 19600, de mai 2015"
-  correspondence: "Le present document reproduit integralement la Norme internationale ISO 37301:2021"
-
-resume:
-  description: >
-    Le present document specifie des exigences et fournit un cadre directeur pour
-    l'etablissement, le developpement, la mise en oeuvre, l'evaluation, la tenue a jour et
-    l'amelioration d'un systeme de management de la conformite efficace au sein
-    d'un organisme.
-  application: >
-    Le present document s'applique a tous les types d'organismes, independamment du
-    type, de la taille et de la nature de ses activites, qu'il appartienne au secteur public,
-    prive ou a but non lucratif.
-  governance: >
-    L'ensemble des exigences specifiees dans le present document qui font reference
-    a un organe de gouvernance s'appliquent a la direction lorsque l'organe de
-    gouvernance d'un organisme n'est pas distinct de la direction.
-
-descripteurs:
-  thesaurus:
-    - entreprise
-    - gestion 
-    - conformation
-    - ethique sociale
-    - specification
-    - caracteristique de fonctionnement
-    - planification
+document:
+  title: NF ISO 37001
+  description:
+    fr: Systèmes de management anti-corruption - Exigences et recommandations de mise en œuvre
+    en: Anti-bribery management systems - Requirements with guidance for use
+    de: Anti-Korruptions - Managementsysteme
+  homologation: Norme française homologuée par décision du Directeur Général d'AFNOR.
+  correspondence: Le présent document s'inspire de la Norme internationale ISO 37001:2016
+  summary:
+    fr: Le présent document définit des exigences et fournit des préconisations pour l'établissement, la mise en œuvre, la tenue à jour, la revue et l'amélioration d'un système de management anti-corruption. Le système peut être autonome ou intégré à un système de management global.
+    en: This document defines requirements and provides guidance for establishing, implementing, maintaining, reviewing and improving an anti-bribery management system. The system can be stand-alone or can be integrated into an overall management system.
+  descriptors:
+    - gestion
     - processus
-    - gestion de processus
+    - exigence
+    - organisation
+    - planification
+    - risque
+    - personnel
     - qualification
-    - echange d'information
-    - mise en oeuvre
-    - estimation
-    - efficacite
-    - controle par mesures
-    - audit de qualite
-    - verification periodique
-
-modifications:
-  precedent: "Par rapport au document remplace, revision de la norme."
-
-norme:
-  definition: >
-    La norme est destinee a servir de base dans les relations entre partenaires
-    economiques, scientifiques, techniques et sociaux.
-  application: >
-    La norme par nature est d'application volontaire. Referencee dans un contrat, elle
-    s'impose aux parties. Une reglementation peut rendre d'application obligatoire tout ou
-    partie d'une norme.
-  elaboration: >
-    La norme est un document elabore par consensus au sein d'un organisme de
-    normalisation par sollicitation des representants de toutes les parties interessees.
-    Son adoption est precedee d'une enquete publique.
-
-sections:
-  section_1:
-    id: "1"
-    title: "Domaine d'application"
-    content: >
-      Le present document specifie des exigences et fournit des recommandations pour l'etablissement,
-      le developpement, la mise en oeuvre, l'evaluation, la tenue a jour et l'amelioration d'un systeme
-      de management de conformite efficace au sein d'un organisme.
-
-  section_2: 
-    id: "2"
-    title: "References normatives"
-    content: "Le present document ne contient aucune reference normative."
-
-  section_3:
-    id: "3" 
-    title: "Termes et definitions"
-    terms:
-      term_3_1:
-        id: "3.1"
-        name: "organisme"
-        definition: >
-          personne ou groupe de personnes ayant un role avec les responsabilites, l'autorite et les
-          relations lui permettant d'atteindre ses objectifs
-        notes:
-          - "Le concept d'organisme englobe sans s'y limiter, les travailleurs independants..."
-          - "Si l'organisme fait partie d'une entite plus grande..."
-
-      term_3_2:
-        id: "3.2"
-        name: "partie interessee"
-        alt_name: "partie prenante"
-        definition: >
-          personne ou organisme qui peut soit influer sur une decision ou une activite, soit etre influence(e)
-          ou s'estimer influence(e) par une decision ou une activite
-
-  section_4:
-    id: "4"
-    title: "Contexte de l'organisme"
-    subsections:
-      subsection_4_1:
-        id: "4.1"
-        title: "Connaissance de l'organisme et contexte"
-        requirements:
-          - "L'organisme doit determiner les enjeux externes et internes pertinents..."
-        factors:
-          - modele economique
-          - nature et etendue des relations metiers 
-          - contexte legal et reglementaire
-          - situation economique
-
-      subsection_4_2:
-        id: "4.2"
-        title: "Comprehension des besoins et des attentes des parties interessees"
-        requirements:
-          - "determiner les parties interessees pertinentes"
-          - "determiner leurs exigences"
-          - "determiner les exigences a couvrir"
-
-      subsection_4_3:
-        id: "4.3"
-        title: "Determination du perimetre d'application du systeme de management de conformite"
-        main_requirement: >
-          L'organisme doit determiner les limites et l'applicabilite du systeme de management de
-          conformite afin d'etablir son perimetre d'application.
-        considerations:
-          - "les enjeux externes et internes auxquels il est fait reference en 4.1"
-          - "les exigences auxquels il est fait reference en 4.2, 4.5 et 4.6"
-        note: >
-          Le perimetre du systeme de management de conformite vise a clarifier les principaux risques de
-          conformite auxquels l'organisme fait face ainsi que les limites geographiques ou organisationnelles.
-        documentation: >
-          Le perimetre d'application doit etre disponible sous la forme d'une information documentee.
-
-      subsection_4_4:
-        id: "4.4"
-        title: "Systeme de management de conformite"
-        requirements:
-          - >
-            L'organisme doit etablir, mettre en oeuvre, tenir a jour et ameliorer en continu un systeme
-            de management de conformite, y compris les processus necessaires et leurs interactions.
-          - >
-            Le systeme doit refleter les valeurs, la strategie, les objectifs et les risques de conformite
-            de l'organisme.
-
-      subsection_4_5:
-        id: "4.5"
-        title: "Obligations de conformite"
-        core_requirements:
-          - >
-            L'organisme doit systematiquement identifier les obligations de conformite applicables decoulant
-            de ses activites, produits et services.
-          - "evaluer leur impact sur ses operations"
-        process_requirements:
-          - "identifier les obligations nouvelles et modifiees"
-          - "evaluer l'impact des changements identifies"
-        documentation: >
-          L'organisme doit tenir a jour des informations documentees sur ses obligations de conformite.
-
-      subsection_4_6:
-        id: "4.6"
-        title: "Appreciation du risque de conformite"
-        requirements:
-          main: "L'organisme doit apprecier le risque de conformite"
-          identification: >
-            Identifier les risques lies aux obligations de conformite, activites, produits, services
-            et aspects pertinents.
-          external: >
-            Apprecier les risques relatifs aux processus externalises et realises par des tierces parties.
-          frequency: >
-            Les risques doivent etre apprecies periodiquement et des que des changements significatifs
-            se produisent.
-        documentation: >
-          Conserver des informations documentees sur l'appreciation des risques et les actions planifiees.
-
-  section_5:
-    id: "5"
-    title: "Leadership"
-    subsections:
-      subsection_5_1:
-        id: "5.1"
-        title: "Leadership et engagement"
-        subsections:
-          subsection_5_1_1:
-            id: "5.1.1"
-            title: "Organe de gouvernance et direction"
-            requirements:
-              - >
-                Assurer que la politique et les objectifs sont etablis et compatibles avec l'orientation
-                strategique
-              - "Integrer les exigences aux processus metiers"
-              - "Assurer la disponibilite des ressources"
-              - "Communiquer sur l'importance du systeme"
-              - "Veiller a l'atteinte des resultats"
-            additional_duties:
-              - "Etablir et faire respecter les valeurs fondamentales"
-              - "Elaborer et mettre en oeuvre les politiques et processus"
-              - "Assurer le suivi des questions de conformite"
-              - "Designer une fonction de conformite"
-
-          subsection_5_1_2:
-            id: "5.1.2"
-            title: "Culture de conformite"
-            requirements:
-              - "Developper et promouvoir une culture de conformite a tous les niveaux"
-              - >
-                Demontrer un engagement actif, visible et coherent en faveur des comportements
-                souhaites
-              - "Encourager les comportements positifs et empecher ceux qui compromettent la conformite"
-
-          subsection_5_1_3:
-            id: "5.1.3"
-            title: "Gouvernance de la fonction de conformite"
-            principles:
-              - "Acces direct a l'organe de gouvernance"
-              - "Independance de la fonction"
-              - "Autorite et competence appropriees"
-            notes:
-              - "L'acces direct inclut la ligne hierarchique et les rapports periodiques"
-              - "L'independance signifie l'absence d'interference ou de pression illegitime"
-
-  section_6:
-    id: "6"
-    title: "Planification"
-    subsections:
-      subsection_6_1:
-        id: "6.1"
-        title: "Actions a mettre en oeuvre face aux risques et opportunites"
-        requirements:
-          main: >
-            Dans le cadre de la planification de son systeme de management de conformite, l'organisme
-            doit tenir compte des enjeux mentionnes en 4.1 et des exigences mentionnees en 4.2, et
-            determiner les risques et opportunites qu'il est necessaire de prendre en compte pour:
-          objectives:
-            - donner l'assurance que le systeme de management de conformite peut atteindre le ou les resultats escomptes
-            - prevenir ou reduire les effets indesirables
-            - s'inscrire dans une dynamique d'amelioration continue
-          planning:
-            considerations:
-              - des objectifs de conformite
-              - des obligations de conformite identifiees
-              - des resultats de l'appreciation des risques de conformite
-            required_actions:
-              - les actions a mettre en oeuvre face aux risques et opportunites
-              - >
-                la maniere d'integrer et de mettre en oeuvre ces actions au sein des processus
-                du systeme de management de conformite
-              - d'evaluer l'efficacite de ces actions
-
-      subsection_6_2:
-        id: "6.2"
-        title: "Objectifs de conformite et planification des actions pour les atteindre"
-        requirements: >
-          L'organisme doit etablir des objectifs de conformite, aux fonctions et niveaux concernes.
-        objectives_requirements:
-          - etre en coherence avec la politique de conformite
-          - etre mesurables (si realisable)
-          - tenir compte des exigences applicables
-          - etre surveilles
-          - etre communiques
-          - etre mis a jour en tant que de besoin
-          - etre tenus a jour sous la forme d'une information documentee
-        planning_determination:
-          - ce qui sera fait
-          - les ressources qui seront necessaires
-          - qui sera responsable
-          - les echeances
-          - la facon dont les resultats seront evalues
-
-      subsection_6_3:
-        id: "6.3"
-        title: "Planification des changements"
-        main_requirement: >
-          Lorsque l'organisme decide qu'il est necessaire de modifier le systeme de management
-          de conformite, les modifications doivent etre realisees de maniere planifiee.
-        considerations:
-          - de la finalite des modifications et leurs consequences potentielles
-          - de la conception et de l'efficacite operationnelle du systeme de management de conformite
-          - de la disponibilite des ressources adequates
-          - de l'attribution ou de la reattribution des responsabilites et autorites
-
-  section_7:
-    id: "7"
-    title: "Support"  
-    subsections:
-      subsection_7_1:
-        id: "7.1"
-        title: "Ressources"
-        requirement: >
-          L'organisme doit identifier et fournir les ressources necessaires a l'etablissement,
-          la mise en oeuvre, la tenue a jour et l'amelioration continue du systeme de management
-          de conformite.
-
-      subsection_7_2:
-        id: "7.2"
-        title: "Competences"
-        subsections:
-          subsection_7_2_1:
-            id: "7.2.1"
-            title: "Generalites"
-            requirements:
-              - >
-                determiner les competences necessaires de la ou des personnes effectuant, sous son autorite,
-                un travail qui a une incidence sur les performances de conformite
-              - >
-                s'assurer que ces personnes sont competentes sur la base d'une formation initiale ou
-                professionnelle ou d'une experience appropriee 
-              - >
-                le cas echeant, mener des actions pour acquerir les competences necessaires et evaluer
-                l'efficacite de ces actions
-              - >
-                Des informations documentees appropriees doivent etre disponibles comme preuves desdites
-                competences.
-
-      subsection_7_3:
-        id: "7.3"
-        title: "Sensibilisation"
-        awareness_requirements: >
-          Le personnel effectuant un travail sous l'autorite de l'organisme doit:
-        requirements:
-          - etre sensibilise a la politique de conformite
-          - >
-            avoir conscience de leur contribution a l'efficacite du systeme de management de conformite,
-            y compris aux effets benefiques d'une amelioration des performances de conformite
-          - >
-            avoir conscience des repercussions et des consequences de toute non-satisfaction aux exigences
-            du systeme de management de conformite
-          - avoir connaissance des moyens et des procedures pour le signalement d'inquietudes
-
-  section_8:
-    id: "8"
-    title: "Realisation des activites operationnelles"
-    subsections:
-      subsection_8_1:
-        id: "8.1"
-        title: "Planification et maitrise operationnelles"
-        requirements:
-          main: >
-            L'organisme doit planifier, mettre en oeuvre et maitriser les processus necessaires
-            pour satisfaire aux exigences et realiser les actions determinees a l'Article 6, en:
-          actions:
-            - "etablissant des criteres pour ces processus"
-            - "mettant en oeuvre la maitrise de ces processus conformement aux criteres"
-        documentation: >
-          Des informations documentees doivent etre disponibles dans une mesure suffisante pour avoir
-          l'assurance que les processus ont ete realises comme prevu.
-
-      subsection_8_2:
-        id: "8.2"
-        title: "Etablissement des dispositifs de maitrise"
-        requirements:
-          main: >
-            L'organisme doit mettre en oeuvre des dispositifs de maitrise pour gerer ses obligations
-            de conformite ainsi que les risques de conformite.
-          continuous: >
-            Pour garantir en continu l'effectivite des dispositifs de maitrise, celles-ci doivent
-            etre periodiquement surveillees, revues et mises a l'epreuve.
-
-  section_9:
-    id: "9"
-    title: "Evaluation des performances"
-    subsections:
-      subsection_9_1:
-        id: "9.1"
-        title: "Surveillance, mesure, analyse et evaluation"
-        subsections:
-          subsection_9_1_1:
-            id: "9.1.1"
-            title: "Generalites"
-            requirements:
-              main: >
-                L'organisme doit surveiller le systeme de management de conformite pour s'assurer
-                de l'atteinte des objectifs de conformite.
-              determination:
-                - "ce qu'il est necessaire de surveiller et mesurer"
-                - >
-                  les methodes de surveillance, de mesure, d'analyse et d'evaluation, selon le cas,
-                  pour assurer la validite des resultats
-                - "quand la surveillance et la mesure doivent etre effectuees"
-
-      subsection_9_2:
-        id: "9.2"
-        title: "Audit interne"
-        subsections:
-          subsection_9_2_1:
-            id: "9.2.1"
-            title: "Generalites"
-            requirements: >
-              L'organisme doit realiser des audits internes a des intervalles planifies pour fournir
-              des informations permettant de determiner si le systeme de management de conformite:
-            conformity_check:
-              - >
-                est conforme aux propres exigences de l'organisme concernant le systeme de
-                management de conformite
-              - "est conforme aux exigences du present document"
-              - "est efficacement mis en oeuvre et tenu a jour"
-
-  section_10:
-    id: "10"
-    title: "Amelioration"
-    subsections:
-      subsection_10_1:
-        id: "10.1"
-        title: "Amelioration continue"
-        requirement: >
-          L'organisme doit ameliorer en continu la pertinence, l'adequation et l'efficacite
-          du systeme de management de conformite.
-
-      subsection_10_2:
-        id: "10.2"
-        title: "Non-conformite et actions correctives"
-        requirements:
-          main: >
-            Lorsqu'une non-conformite ou un defaut de conformite se produit, l'organisme doit:
-          actions:
-            a:
-              title: "reagir a la non-conformite ou au defaut de conformite"
-              actions:
-                - "agir pour la maitriser et la corriger"
-                - "faire face aux consequences"
-            b:
-              title: "evaluer s'il est necessaire de mener une action pour eliminer la ou les causes"
-              evaluation_steps:
-                - "effectuer la revue de la non-conformite ou du defaut de conformite"
-                - "rechercher et analyser les causes"
+    - information
+    - échange d'information
+    - document
+    - contrôle
+    - évaluation
+    - audit de qualité
+    - définition
+  table_of_contents:
+    - Avant-propos
+    - Introduction
+    - 1 Domaine d'application
+    - 2 Références normatives
+    - 3 Termes et définitions
+    - 4 Contexte de l'organisme
+    - 4.1 Compréhension de l'organisme et de son contexte
+    - 4.2 Compréhension des besoins et attentes des parties intéressées
+    - 4.3 Détermination du périmètre d'application du système de management anti-corruption
+    - 4.4 Système de management anti-corruption
+    - 4.5 Évaluation des risques de corruption
+    - 5 Leadership
+    - 5.1 Leadership et engagement
+    - 5.1.1 Organe de gouvernance
+    - 5.1.2 Direction
+    - 5.2 Politique anti-corruption
+    - 5.3 Rôles, responsabilités et autorités au sein de l'organisme
+    - 5.3.1 Rôles et responsabilités
+    - 5.3.2 Fonction de conformité anti-corruption
+    - 5.3.3 Délégation de la prise de décision
+    - 6 Planification
+    - 6.1 Actions à mettre en œuvre face aux risques et opportunités
+    - 6.2 Objectifs anti-corruption et planification des actions pour les atteindre
+    - 7 Support
+    - 7.1 Ressources
+    - 7.2 Compétences
+    - 7.2.1 Généralités
+    - 7.2.2 Processus relatif à l'emploi
+    - 7.3 Sensibilisation et formation
+    - 7.4 Communication
+    - 7.5 Informations documentées
+    - 7.5.1 Généralités
+    - 7.5.2 Création et mise à jour des informations documentées
+    - 7.5.3 Maîtrise des informations documentées
+    - 8 Réalisation des activités opérationnelles
+    - 8.1 Planification et maîtrise opérationnelles
+    - 8.2 Diligences raisonnables
+    - 8.3 Moyens de contrôle financiers
+    - 8.4 Moyens de contrôle non financiers
+    - 8.5 Mise en œuvre de moyens de contrôle anti-corruption par les entités sur lesquelles l'organisme exerce un contrôle et par les partenaires commerciaux
+    - 8.6 Engagements anti-corruption
+    - 8.7 Cadeaux, marques d'hospitalité, dons et avantages similaires
+    - 8.8 Gestion de l'inadéquation des moyens de contrôle anti-corruption
+    - 8.9 Signalement des inquiétudes
+    - 8.10 Enquête et traitement des cas de corruption
+    - 9 Évaluation des performances
+    - 9.1 Surveillance, mesure, analyse et évaluation
+    - 9.2 Audit interne
+    - 9.3 Revue de direction
+    - 9.3.1 Revue de direction (à son plus haut niveau)
+    - 9.4 Revue par la fonction de conformité anti-corruption
+    - 10 Amélioration
+    - 10.1 Non-conformité et actions correctives
+    - 10.2 Amélioration continue
+    - Annexe A (informative) Lignes directrices pour l'utilisation du présent document
+    - Bibliographie
+  introduction:
+    - L'ISO (Organisation internationale de normalisation) est une fédération mondiale d'organismes nationaux de normalisation (comités membres de l'ISO). L'élaboration des Normes internationales est en général confiée aux comités techniques de l'ISO. Chaque comité membre intéressé par une étude a le droit de faire partie du comité technique créé à cet effet. Les organisations internationales, gouvernementales et non gouvernementales, en liaison avec l'ISO participent également aux travaux. L'ISO collabore étroitement avec la Commission électrotechnique internationale (IEC) en ce qui concerne la normalisation électrotechnique.
+    - Les procédures utilisées pour élaborer le présent document et celles destinées à sa mise à jour sont décrites dans les Directives ISO/IEC, Partie 1. Il convient en particulier de prendre note des différents critères d'approbation requis pour les différents types de documents ISO. Le présent document a été rédigé conformément aux règles de rédaction données dans les Directives ISO/IEC, Partie 2 (voir www.iso.org/directives).
+    - L'attention est appelée sur le fait que certains des éléments du présent document peuvent faire l'objet de droits de propriété intellectuelle ou de droits analogues. L'ISO ne saurait être tenue pour responsable de ne pas avoir identifié de tels droits de propriété et averti de leur existence. Les détails concernant les références aux droits de propriété intellectuelle ou autres droits analogues identifiés lors de l'élaboration du document sont indiqués dans l'Introduction et/ou dans la liste des déclarations de brevets reçues par l'ISO (voir www.iso.org/brevets).
+    - Les appellations commerciales éventuellement mentionnées dans le présent document sont données pour information, par souci de commodité, à l'intention des utilisateurs et ne sauraient constituer un engagement.
+    - Pour une explication de la signification des termes et expressions spécifiques de l'ISO liés à l'évaluation de la conformité, ou pour toute information au sujet de l'adhésion de l'ISO aux principes de l'Organisation mondiale du commerce (OMC) concernant les obstacles techniques au commerce (OTC), voir le lien suivant: www.iso.org/iso/fr/avant-propos.html
+    - Le comité chargé de l'élaboration du présent document est le Comité de projet ISO/PC 278, Systèmes de management anti-corruption.
+    - La corruption est un phénomène répandu. Elle donne lieu à des préoccupations d'ordre social, moral, politique et économique sérieuses, entrave la bonne gouvernance, fait obstacle au développement et fausse la concurrence. Elle affaiblit la justice, mine les droits de l'homme et constitue un obstacle majeur à la lutte contre la pauvreté. Elle augmente également le coût des affaires, introduit des incertitudes dans les transactions commerciales, accroît le coût des biens et des services, amoindrit la qualité des produits et des services, des répercussions qui peuvent causer des décès ou des handicaps, décrédibiliser les institutions et interférer avec l'équité et le fonctionnement efficace des marchés.
+    - Les gouvernements ont fait des progrès dans la lutte contre la corruption grâce à la signature d'accords internationaux, tels que la Convention sur la lutte contre la corruption des agents publics étrangers dans les transactions commerciales internationales de l'Organisation de Coopération et de Développement Économique et la Convention des Nations Unies contre la corruption [4], et leur législation locale. Dans la plupart des pays, la corruption est considérée comme un délit pour les individus. Les autorités tendent par ailleurs de façon croissante à inclure des dispositions pour les personnes morales.
+    - Cependant, la loi seule ne suffit pas pour résoudre ce problème. Les organismes ont la responsabilité de contribuer de façon proactive à la lutte contre la corruption. Ils peuvent y parvenir au moyen d'un système de management anti-corruption, que le présent document vise à fournir, et en s'engageant à établir une culture d'intégrité, de transparence, d'ouverture et de conformité. La nature de la culture d'un organisme est un facteur essentiel à la réussite ou à l'échec d'un système de management anti-corruption.
+  terms_and_definitions:
+    - corruption: offre, promesse, don, acceptation ou sollicitation d'un avantage indu de toute valeur (financière ou non financière), directement ou indirectement, indépendamment du ou des lieux, en violation des lois applicables, pour inciter ou récompenser une personne à agir ou à ne pas agir dans le cadre de ses fonctions
+    - organisme: personne ou groupe de personnes ayant un rôle avec les responsabilités, l'autorité et les relations lui permettant d'atteindre ses objectifs
+    - partie intéressée: personne ou organisme qui peut soit influer sur une décision ou une activité, soit être influencé(e) ou s'estimer influencé(e) par une décision ou une activité
+    - exigence: besoin formulé et obligatoire
+    - système de management: ensemble d'éléments corrélés ou en interaction d'un organisme, utilisée pour établir des politiques, des objectifs et des processus de façon à atteindre lesdits objectifs
+    - direction: personne ou groupe de personnes qui oriente et dirige un organisme au plus haut niveau
+    - organe de gouvernance: groupe ou organe qui détient la responsabilité et l'autorité ultimes des activités, de la gouvernance et des politiques d'un organisme, à qui la direction rend compte de ses décisions et par lequel celle-ci est tenue responsable
+    - fonction de conformité anti-corruption: personne(s) qui détient(en)t la responsabilité et l'autorité du fonctionnement du système de management anti-corruption
+    - efficacité: niveau de réalisation des activités planifiées et d'obtention des résultats escomptés
+    - politique: intentions et orientations d'un organisme, telles qu'elles sont officiellement formulées par sa direction ou son organe de gouvernance
+    - objectif: résultat à atteindre
+    - risque: effet de l'incertitude sur l'atteinte des objectifs
+    - compétence: aptitude à mettre en pratique des connaissances et des savoir-faire pour obtenir les résultats escomptés
+    - information documentée: information devant être maîtrisée et tenue à jour par un organisme ainsi que le support sur lequel elle figure
+    - processus: ensemble d'activités corrélées ou en interaction qui transforme des éléments d'entrée en éléments de sortie
+    - performance: résultat mesurable
+    - externaliser: passer un accord selon lequel un organisme externe assure une partie de la fonction ou met en œuvre une partie du processus d'un organisme
+    - surveillance: détermination de l'état d'un système, d'un processus ou d'une activité
+    - mesure: processus visant à déterminer une valeur
+    - audit: processus méthodique, indépendant et documenté, permettant d'obtenir des preuves d'audit et de les évaluer de manière objective pour déterminer dans quelle mesure les critères d'audit sont satisfaits
+    - conformité: satisfaction d'une exigence
+    - non-conformité: non-satisfaction d'une exigence
+    - action corrective: action visant à éliminer la cause d'une non-conformité et à éviter qu'elle ne réapparaisse
+    - amélioration continue: activité récurrente menée pour améliorer les performances
+    - personnel: directeurs, agents, employés, contractuels ou personnel intérimaire et bénévoles de l'organisme
+    - partenaire commercial: partie externe avec qui l'organisme entretient, ou prévoit d'établir, une certaine forme de relation commerciale
+    - représentant public: personne exerçant une fonction législative, administrative ou judiciaire, en vertu d'une nomination, d'une élection ou d'une succession, ou toute personne exerçant une fonction publique, notamment pour une agence publique ou une entreprise publique, ou tout représentant ou agent d'un organisme public national ou international, ou tout candidat à un poste public
+    - tierce partie: personne ou organe indépendant(s) de l'organisme
+    - conflit d'intérêts: situation où les intérêts professionnels, financiers, familiaux, politiques ou personnels peuvent interférer avec le jugement des personnes dans le cadre de leurs fonctions au sein de l'organisme
+    - diligence raisonnable: processus permettant d'évaluer en détail la nature et l'étendue du risque de corruption et d'aider les organismes à prendre des décisions relatives à des transactions, des projets, des activités, des partenaires commerciaux et du personnel spécifiques
+  context_of_the_organization:
+    - understanding_organization_and_context: L'organisme doit déterminer les enjeux externes et internes pertinents par rapport à sa finalité, et qui influent sur sa capacité à atteindre le ou les objectifs de son système de management anti-corruption. Ces enjeux comprennent notamment les facteurs suivants:
+        - la taille, la structure et l'autorité déléguée de prise de décision de l'organisme
+        - les lieux et les secteurs dans lesquels l'organisme opère ou prévoit d'opérer
+        - la nature, l'échelle et la complexité des activités et des opérations de l'organisme
+        - le modèle économique de l'organisme
+        - les entités sur lesquelles l'organisme exerce un contrôle et les entités exerçant un contrôle sur l'organisme
+        - les partenaires commerciaux de l'organisme
+        - la nature et l'étendue des interactions avec les représentants publics
+        - les obligations et devoirs statutaires, réglementaires, contractuels et professionnels applicables
+    - understanding_needs_and_expectations_of_interested_parties: L'organisme doit déterminer:
+        - les parties intéressées qui sont pertinentes dans le cadre du système de management anticorruption
+        - les exigences de ces parties intéressées
+    - determining_scope_of_anti_corruption_management_system: L'organisme doit déterminer les limites et l'applicabilité du système de management anti-corruption afin d'établir son périmètre d'application. Lorsque l'organisme établit ce périmètre, il doit prendre en compte:
+        - les enjeux externes et internes auxquels il est fait référence
+        - les exigences auxquelles il est fait référence
+        - les résultats de l'évaluation des risques de corruption mentionnée
+  leadership:
+    - leadership_and_commitment:
+        - governing_body: Lorsque l'organisme dispose d'un organe de gouvernance, ce dernier doit démontrer son leadership et engagement vis-à-vis du système de management anti-corruption en:
+            - approuvant la politique anti-corruption de l'organisme
+            - s'assurant que la stratégie de l'organisme et sa politique anti-corruption sont harmonisées
+            - recevant et passant en revue les informations sur le contenu et le fonctionnement du système de management anti-corruption de l'organisme à des intervalles planifiés
+            - exigeant que les ressources adéquates et appropriées nécessaires au fonctionnement efficace du système de management anti-corruption sont allouées et affectées
+            - supervisant de façon raisonnable la mise en œuvre du système de management anti-corruption de l'organisme par la direction et son efficacité
+        - management: La direction doit démontrer son leadership et engagement vis-à-vis du système de management anticorruption en:
+            - s'assurant que le système de management anti-corruption, y compris la politique et les objectifs, est établi, mis en œuvre, tenu à jour et passé en revue pour prendre en compte de manière adéquate les risques de corruption de l'organisme
+            - s'assurant que les exigences liées au système de management anti-corruption sont intégrées aux processus de l'organisme
+            - déployant les ressources adéquates et appropriées pour le fonctionnement efficace du système de management anti-corruption
+            - communiquant en interne et en externe sur la politique anti-corruption
+            - communiquant en interne sur l'importance de disposer d'un système de management anticorruption efficace et de se conformer aux exigences liées à ce système
+            - s'assurant que le système de management anti-corruption est conçu de façon appropriée pour atteindre ses objectifs
+            - orientant et soutenant le personnel pour qu'il contribue à l'efficacité du système de management anti-corruption
+            - promouvant une culture anti-corruption appropriée au sein de l'organisme
+            - promouvant l'amélioration continue
+            - soutenant les autres rôles managériaux pertinents afin de démontrer leurs responsabilités vis-à-vis de la prévention et de la détection de la corruption dans leurs domaines respectifs
+            - encourageant l'utilisation des procédures de rapport des cas de corruption suspectés et avérés
+            - s'assurant qu'aucun membre du personnel ne subisse de représailles, de discrimination ou de sanctions disciplinaires pour avoir rapporté l'existence d'une violation ou d'une violation suspectée de la politique anti-corruption de l'organisme, de bonne foi ou sur des motifs qui font raisonnablement poussé à le croire, ou pour avoir refusé de prendre part à un acte de corruption, même si ce refus a pu entraîner une perte d'affaires pour l'organisme, sauf si la personne a pris part à la violation
+            - rendant compte à l'organe de gouvernance (s'il existe) du contenu et du fonctionnement du système de management anti-corruption et d'allégations de corruption sérieuse ou systématique à intervalles planifiés
+    - anti_corruption_policy: La direction doit établir, tenir à jour et passer en revue une politique anti-corruption qui:
+        - interdit la corruption
+        - impose le respect des lois anti-corruption applicables à l'organisme
+        - est appropriée à la finalité de l'organisme
+        - fournit un cadre pour l'établissement, la revue et l'atteinte des objectifs anti-corruption
+        - inclut l'engagement de satisfaire aux exigences du système de management anti-corruption
+        - encourage le signalement d'inquiétudes, de bonne foi ou sur des motifs qui ont raisonnablement poussé à le croire, en toute confiance et sans peur de représailles
+        - inclut l'engagement pour l'amélioration continue du système de management anti-corruption
+        - explique l'autorité et l'indépendance de la fonction de conformité anti-corruption
+        - détaille les conséquences du non-respect de la politique anti-corruption
+  roles_responsibilities_and_authorities:
+    - roles_and_responsibilities: La direction doit assumer la responsabilité globale de la mise en œuvre et de la conformité du système de management anti-corruption. La direction doit s'assurer que les responsabilités et autorités des rôles pertinents sont attribuées et communiquées à tous les niveaux de l'organisme. Les dirigeants, à tous les niveaux, doivent se charger d'imposer le respect et l'application des exigences du système de management anti-corruption au sein de leur service ou de leur fonction. L'organe de gouvernance (s'il existe), la direction et tout le personnel doivent comprendre, respecter et appliquer les exigences du système de management anti-corruption applicables à leur rôle au sein de l'organisme.
+    - anti_corruption_compliance_function: La direction doit attribuer la responsabilité et l'autorité à une fonction de conformité anticorruption pour:
+        - superviser la conception et la mise en œuvre du système de management anti-corruption
+        - fournir des conseils et préconisations au personnel à propos du système de management anticorruption et des problématiques associées à la corruption
+        - s'assurer que le système de management anti-corruption est conforme aux exigences du présent document
+        - rendre compte de la performance du système de management anti-corruption à l'organe de gouvernance (s'il existe) et à la direction, et à d'autres fonctions de conformité, le cas échéant
+      La fonction de conformité anti-corruption doit être dotée en ressources de façon appropriée et attribuée à une ou des personnes qui disposent de la compétence, du statut, de l'autorité et de l'indépendance appropriés. La fonction de conformité anti-corruption doit disposer d'un accès direct et immédiat à l'organe de gouvernance (s'il existe) et à la direction dans l'éventualité où un problème ou une inquiétude doit être signalé(e) concernant la corruption ou le système de management anti-corruption. La direction peut confier tout ou partie de la fonction de conformité anti-corruption à des personnes extérieures à l'organisme. Dans ce cas, la direction doit s'assurer qu'un personnel spécifique dispose des responsabilités et de l'autorité nécessaires sur les parties de la fonction déléguées en externe.
+    - delegation_of_decision_making: Lorsque la direction délègue au personnel l'autorité de la prise de décisions pour lesquelles il existe un risque de corruption plus que faible, l'organisme doit établir et tenir à jour un processus de prise de décision ou un ensemble de moyens de contrôle qui requiert que le processus de décision et le niveau d'autorité du ou des décisionnaires soient appropriés et exempts de conflits d'intérêts avérés ou potentiels. La direction doit s'assurer que ces processus sont passés en revue de façon périodique dans le cadre de son rôle et de sa responsabilité vis-à-vis de la mise en œuvre et de la conformité du système de management anti-corruption.
+  planning:
+    - actions_to_address_risks_and_opportunities: Dans le cadre de la planification de son système de management anti-corruption, l'organisme doit tenir compte des enjeux mentionnés, des exigences mentionnées, des risques identifiés et des opportunités d'amélioration qu'il est nécessaire de prendre en compte pour:
+        - assurer de façon raisonnable que le système de management anti-corruption atteint ses objectifs
+        - prévenir ou réduire les effets indésirables relatifs à la politique et aux objectifs anti-corruption
+        - surveiller l'efficacité du système de management anti-corruption
+        - s'inscrire dans une dynamique d'amélioration continue
+      L'organisme doit planifier:
+        - les actions à mettre en œuvre face à ces risques de corruption et opportunités d'amélioration
+        - la manière d'intégrer et de mettre en œuvre ces actions au sein des processus du système de management anti-corruption
+        - d'évaluer l'efficacité de ces actions
+    - anti_corruption_objectives_and_planning_actions: L'organisme doit établir les objectifs du système de management anti-corruption, aux fonctions et niveaux concernés. Les objectifs du système de management anti-corruption doivent:
+        - être en cohérence avec la politique anti-corruption
+        - être mesurables (si possible)
+        - tenir compte des facteurs mentionnés, des exigences mentionnées et des risques de corruption identifiés
+        - être atteignables
+        - être surveillés
+        - être communiqués conformément à la politique
+        - être mis à jour en tant que de besoin
+      L'organisme doit conserver des informations documentées sur les objectifs du système de management anti-corruption. Lorsque l'organisme planifie la façon dont les objectifs de son système de management anti-corruption seront atteints, il doit déterminer:
+        - ce qui sera fait
+        - les ressources qui seront nécessaires
+        - qui sera responsable
+        - à quel moment les objectifs seront atteints
+        - la façon dont les résultats seront évalués et rapportés
+        - qui infligera des sanctions ou pénalités
+  support:
+    - resources: L'organisme doit identifier et fournir les ressources nécessaires à l'établissement, la mise en œuvre, la tenue à jour et l'amélioration continue du système de management anti-corruption.
+    - competencies:
+        - general: L'organisme doit:
+            - déterminer les compétences nécessaires de la ou des personnes effectuant, sous son contrôle, un travail qui a une incidence sur les performances anti-corruption
+            - s'assurer que ces personnes sont compétentes sur la base d'une formation initiale ou professionnelle ou d'une expérience appropriées
+            - le cas échéant, mener des actions pour acquérir et tenir à jour les compétences nécessaires, et évaluer l'efficacité de ces actions
+            - conserver des informations documentées appropriées comme preuves desdites compétences
+        - employment_process:
+            - all_personnel: Pour l'ensemble de son personnel, l'organisme doit mettre en œuvre des procédures qui comprennent, par exemple:
+                - des conditions d'emploi qui stipulent que le personnel doit respecter la politique anti-corruption et le système de management anti-corruption, et qui donnent le droit à l'organisme de prendre des sanctions disciplinaires à l'encontre du personnel s'il ne les respecte pas
+                - après un délai raisonnable suivant le début de la prise de fonctions, la mise à disposition du personnel d'un exemplaire de la politique anti-corruption, ou d'un moyen lui permettant d'y accéder, et la formation relative à ladite politique
+                - la mise en place de procédures qui permettent à l'organisme de prendre les sanctions disciplinaires appropriées à l'encontre du personnel qui ne respecte pas la politique anti-corruption ou le système de management anti-corruption
+                - l'absence de représailles, de discrimination ou de sanction disciplinaire à l'égard du personnel pour:
+                    - avoir refusé de prendre part ou avoir décliné toute activité pour laquelle il a jugé de façon raisonnable qu'il existait un risque de corruption plus que faible qui n'avait pas été atténué par l'organisme
+                    - avoir formulé des inquiétudes ou rapporté des faits relatifs à une tentative de corruption, à un cas de corruption avéré ou à un cas de corruption suspecté, ou à une violation de la politique anti-corruption ou du système de management anti-corruption, de bonne foi ou sur des motifs qui font raisonnablement poussé à le croire, sauf si la personne a pris part à la violation
+            - high_risk_positions: Pour l'ensemble des postes exposés à un risque de corruption plus que faible, comme défini par l'évaluation des risques de corruption, et pour la fonction de conformité anti-corruption, l'organisme doit mettre en œuvre des procédures qui prévoient:
+                - que des diligences raisonnables soient exercées quant aux personnes préalablement à leur embauche et quant au personnel avant son transfert ou sa promotion par l'organisme, afin de s'assurer, dans la mesure du raisonnable, qu'il est approprié de les embaucher ou de les réaffecter et qu'il est raisonnable de penser qu'ils respecteront les exigences de la politique anti-corruption et du système de management anti-corruption
+                - que les primes de performance, les objectifs de performance et les autres éléments d'incitation en matière de rémunération soient passés en revue de façon périodique pour vérifier qu'il existe des mesures de prévention raisonnables pour éviter d'encourager la corruption
+                - que le personnel, la direction et l'organe de gouvernance (s'il existe) remplissent une déclaration, à intervalles raisonnables, proportionnée aux risques de corruption identifiés, pour confirmer leur conformité à la politique anti-corruption
+    - awareness_and_training: L'organisme doit sensibiliser et former son personnel de façon adéquate et appropriée aux mécanismes anti-corruption. Ladite formation doit aborder les problématiques suivantes, le cas échéant, en tenant compte des résultats de l'évaluation des risques de corruption:
+        - la politique anti-corruption, les procédures et le système de management anti-corruption de l'organisme, et l'obligation de s'y conformer
+        - le risque de corruption et les répercussions négatives pouvant découler de la corruption pour le personnel et pour l'organisme
+        - les circonstances de la survenance possible de la corruption dans le cadre des fonctions confiées et la façon d'identifier ces circonstances
+        - comment reconnaître les sollicitations ou offres de pots-de-vin et comment y faire face
+        - la façon dont le personnel peut prévenir et éviter la corruption, et reconnaître les indicateurs clés de risque de corruption
+        - la contribution du personnel à l'efficacité du système de management anti-corruption, y compris aux effets bénéfiques d'une amélioration des performances anti-corruption et des rapports de cas de corruption suspectés
+        - les répercussions et les conséquences potentielles d'un non-respect des exigences du système de management anti-corruption
+        - la façon de rapporter des préoccupations et la personne à contacter
+        - des informations sur les formations et ressources disponibles
+      Le personnel doit régulièrement être sensibilisé et formé aux mécanismes anti-corruption (à des intervalles planifiés, définis par l'organisme), en adéquation avec ses fonctions, les risques de corruption auxquels il est exposé et toute circonstance pouvant évoluer. Les programmes de sensibilisation et de formation doivent être mis à jour de façon périodique et autant de fois que nécessaire pour refléter toute nouvelle information pertinente. Pour prendre en compte les risques de corruption identifiés, l'organisme doit en outre mettre en œuvre des procédures qui prévoient la sensibilisation et la formation aux mécanismes anticorruption pour les partenaires commerciaux agissant pour le compte de l'organisme ou dans son intérêt, et qui pourraient représenter un risque de corruption plus que faible pour l'organisme. Ces procédures doivent identifier les partenaires commerciaux pour lesquels une sensibilisation et une formation sont nécessaires, le contenu et le format des formations. L'organisme doit conserver des informations documentées sur les procédures de formation, le contenu des formations, ainsi que la date et les participants.
+    - communication:
+        - L'organisme doit déterminer les besoins de communication interne et externe pertinents pour le système de management anti-corruption, y compris:
+            - sur quels sujets communiquer
+            - à quels moments communiquer
+            - avec qui communiquer
+            - comment communiquer
+            - qui communiquera
+            - les langues de communication
+        - La politique anti-corruption doit être mise à disposition de l'ensemble du personnel et des partenaires commerciaux de l'organisme, communiquée directement au personnel et aux partenaires commerciaux qui présentent des risques de corruption plus que faibles et publiée par le biais des canaux de communication interne et externe de l'organisme, le cas échéant.
+    - documented_information:
+        - general: Le système de management anti-corruption de l'organisme doit inclure:
+            - les informations documentées exigées par le présent document
+            - les informations documentées que l'organisme juge nécessaires à l'efficacité du système de management anti-corruption
+          L'étendue des informations documentées dans le cadre d'un système de management anti-corruption peut différer selon l'organisme en fonction de:
+            - la taille de l'organisme, de ses domaines d'activité et de ses processus, produits et services
+            - la complexité des processus et de leurs interactions
+            - la compétence du personnel
+          Les informations documentées peuvent être conservées séparément, comme faisant partie du système de management anti-corruption, ou dans le cadre d'autres systèmes de management (par exemple conformité, finance, ventes, audit).
+        - creation_and_update: Lors de la création et de la mise à jour, l'organisme doit veiller à assurer que:
+            - l'identification et la description des informations documentées (leur titre, date, auteur, numéro de référence par exemple)
+            - leur format (langue, version logicielle, graphiques, par exemple) et support (électronique, papier, par exemple)
+            - la revue effectuée (pour en déterminer la pertinence et l'adéquation) et leur approbation sont appropriées
+        - control: Les informations documentées exigées par le système de management anti-corruption et par le présent document doivent être maîtrisées pour assurer:
+            - qu'elles sont disponibles et conviennent à l'utilisation, quand et là où elles sont nécessaires
+            - qu'elles sont convenablement protégées (par exemple, de toute perte de confidentialité, utilisation inappropriée ou perte d'intégrité)
+          Pour maîtriser les informations documentées, l'organisme doit mettre en œuvre les activités suivantes, quand elles sont applicables:
+            - distribution, accès, récupération et utilisation
+            - stockage et protection, y compris préservation de la lisibilité
+            - maîtrise des modifications (par exemple, contrôle des versions)
+            - conservation et élimination
+          Les informations documentées d'origine externe que l'organisme juge nécessaires à la planification et au fonctionnement du système de management anti-corruption doivent être identifiées comme il convient et maîtrisées. L'accès peut impliquer une décision relative à l'autorisation de consulter les informations documentées uniquement, ou l'autorisation et l'autorité de consulter et modifier les informations documentées.
+  operational_activities:
+    - planning_and_operational_control: L'organisme doit planifier, mettre en œuvre, revoir et maîtriser les processus nécessaires pour satisfaire aux exigences du système de management anti-corruption et réaliser les actions déterminées, en:
+        - établissant des critères pour ces processus
+        - mettant en œuvre la maîtrise de ces processus conformément aux critères
+        - conservant des informations documentées dans une mesure suffisante pour avoir l'assurance que les processus ont été réalisés comme prévu
+      Ces processus doivent comprendre les moyens de contrôle spécifiques auxquels il est fait référence. L'organisme doit maîtriser les modifications prévues, analyser les conséquences des modifications imprévues et, si nécessaire, mener des actions pour limiter tout effet négatif. Il doit s'assurer que les processus externalisés sont maîtrisés.
+    - due_diligence: Lorsque l'évaluation des risques de corruption, telle que décrite, a identifié un risque de corruption plus que faible relatif à:
+        - des catégories spécifiques de transactions, projets ou activités
+        - des relations actuelles ou planifiées avec des catégories spécifiques de partenaires commerciaux
+        - des catégories spécifiques de personnel occupant certains postes
+      l'organisme doit apprécier la nature et l'étendue du risque de corruption relatif aux transactions, projets, activités, partenaires commerciaux et personnel spécifiques entrant dans ces catégories. Cette appréciation doit s'appuyer sur toutes les diligences raisonnables nécessaires pour obtenir des informations suffisantes afin d'évaluer le risque de corruption. Les diligences raisonnables doivent être revues à une fréquence définie pour que les changements et les nouvelles informations soient correctement pris en compte. L'organisme peut conduire qu'il n'est pas nécessaire, pas raisonnable ou disproportionné de réaliser des diligences raisonnables concernant certaines catégories de personnel et de partenaires commerciaux. Les facteurs énumérés ci-dessous ne sont pas exhaustifs.
+    - financial_controls: L'organisme doit mettre en œuvre des moyens de contrôle financiers pour gérer le risque de corruption.
+    - non_financial_controls: L'organisme doit mettre en œuvre des moyens de contrôle non financiers pour gérer le risque de corruption relatif à des domaines tels que l'agronomie en avant, les opérations, les services, les opérations commerciales, les ressources humaines, les activités légales et réglementaires. Toute transaction, activité ou relation particulière peut être soumise à des moyens de contrôle financiers et non financiers.
+    - implementation_by_controlled_entities_and_business_partners:
+        - controlled_entities: L'organisme doit mettre en œuvre des procédures qui imposent que toute entité sur laquelle il exerce un contrôle:
+            - mette en œuvre le système de management anti-corruption de l'organisme
+            - mette en œuvre ses propres moyens de contrôle anti-corruption
+          dans les deux cas, uniquement dans une mesure raisonnable et proportionnée eu égard aux risques de corruption auxquels font face les entités sur lesquelles l'organisme exerce un contrôle, en tenant compte de l'évaluation des risques de corruption réalisée. Un organisme exerce un contrôle sur une autre entité s'il contrôle directement ou indirectement la gestion de l'entité.
+        - uncontrolled_business_partners: Pour les partenaires commerciaux sur lesquels l'organisme n'exerce pas de contrôle, pour lesquels l'évaluation des risques de corruption ou les diligences raisonnables ont permis d'identifier un risque de corruption plus que faible, et pour lesquels les moyens de contrôle anticorruption mis en œuvre par les partenaires commerciaux aideraient à atténuer le risque de corruption en question, l'organisme doit mettre en œuvre des procédures comme suit:
+            - l'organisme doit déterminer si le partenaire commercial a mis en place les moyens de contrôle anticorruption applicables au risque de corruption en question
+            - lorsqu'un partenaire commercial n'a pas mis en place de moyens de contrôle anti-corruption ou qu'il est impossible de vérifier leur mise en place:
+                - si possible, l'organisme doit exiger du partenaire commercial qu'il mette en œuvre des moyens de contrôle anti-corruption pour la transaction, le projet ou l'activité concerné(e)
+                - lorsqu'il est impossible d'exiger du partenaire commercial qu'il mette en œuvre des moyens de contrôle anti-corruption, ce facteur doit être pris en compte lors de l'évaluation des risques de corruption relative à la relation établie avec ce partenaire commercial et de la façon dont l'organisme gère ces risques
+    - anti_corruption_commitments: Pour les partenaires commerciaux qui représentent un risque de corruption plus que faible, l'organisme doit mettre en œuvre des procédures qui imposent, dans la mesure du possible:
+        - que les partenaires commerciaux s'engagent à prévenir la corruption, qu'elle soit initiée par eux-mêmes, pour leur compte ou dans leur intérêt, en relation avec la transaction, le projet, l'activité ou la relation concerné(e)
+        - que l'organisme soit en mesure de mettre fin à la relation qu'elle a établie avec le partenaire commercial si un cas de corruption est identifié, qu'il soit initié par le partenaire commercial, pour son compte ou dans son intérêt, en relation avec la transaction, le projet, l'activité ou la relation concerné(e)
+      Lorsqu'il est impossible de satisfaire aux exigences ci-dessus, ce facteur doit être pris en compte lors de l'évaluation des risques de corruption relative à la relation établie avec le partenaire commercial et de la façon dont l'organisme gère ces risques.
+    - gifts_hospitality_donations: L'organisme doit mettre en œuvre des procédures conçues pour prévenir l'offre, la mise à disposition ou l'acceptation de cadeaux, de marques d'hospitalité, de dons et d'avantages similaires lorsque l'offre, la mise à disposition ou l'acceptation est, ou pourrait raisonnablement être perçue comme, un acte de corruption.
+    - inadequacy_of_controls: Lorsque les diligences raisonnables appliquées à une transaction, un projet, une activité ou une relation spécifique avec un partenaire commercial établissent que les risques de corruption ne peuvent pas être gérés par les moyens de contrôle anti-corruption existants et que l'organisme ne peut ou ne veut pas mettre en œuvre des moyens de contrôle anti-corruption additionnels ou plus performants, ou prendre d'autres mesures appropriées (comme modifier la nature de la transaction, du projet, de l'activité ou de la relation) qui permettent à l'organisme de gérer les risques de corruption concernés, l'organisme doit:
+        - dans le cas d'une transaction, d'un projet, d'une activité ou d'une relation existant(e), prendre des mesures appropriées aux risques de corruption et à la nature de la transaction, du projet, de l'activité ou de la relation pour y mettre fin, l'interrompre, la suspendre ou s'en retirer aussitôt que possible
+        - dans le cas de la proposition d'une nouvelle transaction, d'un nouveau projet, d'une nouvelle activité ou d'une nouvelle relation, différer ou décliner de poursuivre
+    - reporting_concerns: L'organisme doit mettre en œuvre des procédures qui:
+        - encouragent et permettent aux personnes de rapporter de bonne foi, ou sur des motifs qui les ont raisonnablement poussées à le croire, les tentatives de corruption, les cas de corruption avérés et les cas de corruption suspectés, ou une violation ou une lacune du système de management anticorruption, à la fonction de conformité anti-corruption ou au personnel approprié (directement ou par le biais d'une force partie appropriée)
+        - excepté dans la mesure requise par le bon déroulement d'une enquête, imposent que l'organisme traite les rapports de manière confidentielle, de sorte que l'identité de l'émetteur et des personnes impliquées ou mentionnées dans le rapport soit protégée
+        - permettent des rapports anonymes
+        - interdisent les représailles, et protègent les émetteurs des rapports de représailles, après qu'ils ont formulé des inquiétudes ou rapporté des faits relatifs à une tentative de corruption, à un cas de corruption avéré ou à un cas de corruption suspecté, ou à une violation de la politique anticorruption ou du système de management anti-corruption, de bonne foi ou sur des motifs qui les ont raisonnablement poussés à le croire
+        - permettent au personnel de recevoir des conseils de la part d'une personne appropriée sur le comportement à adopter face à une inquiétude ou à une situation qui pourrait impliquer une forme de corruption
+      L'organisme doit s'assurer que l'ensemble du personnel est informé des procédures de rapport et qu'il est en mesure de les utiliser, et qu'il connaît ses droits et les mécanismes de protection applicables dans le cadre de ces procédures. Ces procédures peuvent être identiques à celles utilisées pour les rapports d'autres inquiétudes (par exemple: sécurité, mauvaise pratique, mauvais comportement ou autre risque sérieux), ou en faire partie. L'organisme peut faire appel à un partenaire commercial pour gérer le système de rapport en son nom. Dans certains pays, les exigences de confidentialité et d'anonymat ci-dessus sont interdites par la loi. Dans ce cas, l'organisme documente son incapacité à s'y conformer.
+    - investigation_and_treatment: L'organisme doit mettre en œuvre des procédures qui:
+        - imposent l'évaluation de tout cas de corruption ou de violation de la politique anti-corruption ou du système de management anti-corruption signalé, détecté ou raisonnablement suspecté et, le cas échéant, son enquête
+        - requièrent la mise en place de mesures appropriées si l'enquête révèle un cas de corruption ou de violation de la politique anti-corruption ou du système de management anti-corruption
+        - donnent les moyens et la légitimité aux enquêteurs
+        - imposent la coopération du personnel concerné dans le cadre de l'enquête
+        - imposent que l'état d'avancement et les résultats de l'enquête soient rapportés à la fonction de conformité anti-corruption et aux autres fonctions de conformité, le cas échéant
+        - imposent que l'enquête soit réalisée de manière confidentielle et que les éléments de sortie de l'enquête soient confidentiels
+      L'enquête doit être menée par du personnel qui ne fait pas partie du rôle ou de la fonction objet de l'enquête et rapportée à du personnel qui ne fait pas partie du rôle ou de la fonction objet de l'enquête. L'organisme peut désigner un partenaire commercial qui réalisera l'enquête et rapportera les résultats à du personnel qui ne fait pas partie du rôle ou de la fonction objet de l'enquête. Dans certains pays, l'exigence de confidentialité ci-dessus est interdite par la loi. Dans ce cas, l'organisme documente son incapacité à s'y conformer.
+  performance_evaluation:
+    - monitoring_measurement_analysis_evaluation: L'organisme doit déterminer:
+        - ce qu'il est nécessaire de surveiller et mesurer
+        - qui est responsable de la surveillance
+        - les méthodes de surveillance, de mesure, d'analyse et d'évaluation, selon le cas, pour assurer la validité des résultats
+        - quand la surveillance et la mesure doivent être effectuées
+        - quand les résultats de la surveillance et de la mesure doivent être analysés et évalués
+        - à qui et de quelle façon ces informations doivent être rapportées
+      L'organisme doit conserver des informations documentées pertinentes comme preuves des méthodes et des résultats. Il doit évaluer la performance anti-corruption, ainsi que l'efficacité et l'efficience du système de management anti-corruption.
+    - internal_audit:
+        - L'organisme doit réaliser des audits internes à des intervalles planifiés pour fournir des informations permettant de déterminer si le système de management anti-corruption:
+            - est conforme aux propres exigences de l'organisme concernant le système de management anti-corruption
+            - est conforme aux exigences du présent document
+            - est efficacement mis en œuvre et tenu à jour
+          Des préconisations pour l'audit des systèmes de management sont données dans l'ISO 19011. Le périmètre et l'échelle des activités d'audit interne d'un organisme peuvent varier en fonction de facteurs variés comprenant la taille, la structure, la maturité et les lieux d'activité de l'organisme.
+        - L'organisme doit:
+            - planifier, établir, mettre en œuvre et maintenir un ou des programmes d'audit, couvrant notamment la fréquence, les méthodes, les responsabilités, les exigences de planification et le compte rendu. Le ou les programmes d'audit doivent tenir compte de l'importance des processus concernés et des résultats des audits précédents
+            - définir les critères d'audit et le périmètre de chaque audit
+            - sélectionner des auditeurs compétents et réaliser des audits pour assurer l'objectivité et l'impartialité du processus d'audit
+            - veiller à ce que les résultats des audits soient rapportés aux responsables concernés, à la fonction de conformité anti-corruption, à la direction et, suivant le cas, à l'organe de gouvernance (s'il existe)
+            - conserver des informations documentées comme preuves de la mise en œuvre du programme d'audit et des résultats d'audit
+        - Ces audits doivent être raisonnables, proportionnés et basés sur les risques. Ils doivent comprendre des processus d'audit interne ou d'autres procédures qui analysent les procédures, les contrôles et les systèmes relatifs à:
+            - la corruption ou les cas de corruption suspectés
+            - la violation des exigences de la politique anti-corruption ou du système de management anticorruption
+            - l'incapacité des partenaires commerciaux à se conformer aux exigences anti-corruption applicables de l'organisme
+            - les lacunes ou les opportunités d'amélioration du système de management anti-corruption
+        - Afin de garantir l'objectivité et l'impartialité de ces programmes d'audit, l'organisme doit s'assurer que ces audits sont réalisés selon l'une des options suivantes:
+            - une fonction ou un personnel indépendant(e) établi(e) ou désigné(e) pour ce processus
+            - la fonction de conformité anti-corruption (à moins que le périmètre d'audit comprenne l'évaluation du système de management anti-corruption lui-même ou d'un élément similaire dont la fonction de conformité anti-corruption est responsable)
+            - une personne appropriée d'un service ou d'une fonction autre que celui/celle qui est audité(e)
+            - une tierce partie appropriée
+            - un groupe réunissant des personnes citées ci-dessus
+          L'organisme doit s'assurer qu'aucun auditeur n'audite son propre domaine d'activité.
+    - management_review:
+        - highest_level: À des intervalles planifiés, la direction, au niveau le plus élevé, doit procéder à la revue du système de management anti-corruption mis en place par l'organisme, afin de s'assurer qu'il est toujours approprié, adéquat et efficace. La revue de direction doit prendre en compte:
+            - l'état d'avancement des actions décidées à l'issue des revues de direction précédentes
+            - les modifications des enjeux externes et internes pertinents pour le système de management anticorruption
+            - les informations sur la performance du système de management anti-corruption, y compris les tendances concernant:
+                - les non-conformités et les actions correctives
+                - les résultats de la surveillance et de la mesure
+                - les résultats d'audit
+                - les rapports de cas de corruption
+                - les enquêtes
+                - la nature et l'étendue des risques de corruption auxquels l'organisme est exposé
+            - l'efficacité des actions mises en place pour gérer les risques de corruption
+            - les opportunités d'amélioration continue du système de management anti-corruption
+          Les éléments de sortie de la revue de direction doivent inclure les décisions relatives aux opportunités d'amélioration continue et aux éventuels changements à apporter au système de management anticorruption. Une synthèse des résultats de la revue de direction doit être remise à l'organe de gouvernance (s'il existe). L'organisme doit conserver des informations documentées comme preuves des résultats des revues de direction.
+        - governing_body: L'organe de gouvernance (s'il existe) doit réaliser des revues périodiques du système de management anti-corruption en fonction des informations fournies par la direction et par la fonction de conformité anti-corruption et de toute autre information que l'organe de gouvernance demande ou obtient. L'organisme doit conserver des informations documentées de synthèse comme preuves des résultats des revues de l'organe de gouvernance.
+    - compliance_function_review: La fonction de conformité anti-corruption doit évaluer de façon continue si le système de management de la corruption est:
+        - adéquat pour gérer efficacement les risques de corruption auxquels l'organisme est exposé
+        - mis en œuvre de façon efficace
+      La fonction de conformité anti-corruption doit rendre compte, à des intervalles planifiés et de façon ad hoc, suivant le cas, à l'organe de gouvernance (s'il existe) et à la direction, ou au comité compétent de l'organe de gouvernance ou de la direction, de l'adéquation et de la mise en œuvre du système de management anti-corruption, y compris les résultats des enquêtes et des audits. La fréquence de ces comptes rendus dépend des exigences de l'organisme, mais au moins une fois par an est recommandée. L'organisme peut faire appel à un partenaire commercial pour l'assister dans sa revue, sous réserve que les observations de ce dernier soient communiquées de manière appropriée à la fonction de conformité anticorruption, à la direction et, suivant le cas, à l'organe de gouvernance (s'il existe).
+  improvement:
+    - non_conformity_and_corrective_actions: Lorsqu'une non-conformité se produit, l'organisme doit:
+        - réagir promptement à la non-conformité, et le cas échéant:
+            - agir pour la maîtriser et la corriger
+            - faire face aux conséquences
+        - évaluer s'il est nécessaire de mener une action pour éliminer la ou les causes de la non-conformité, afin qu'elle ne se reproduise pas ou n'apparaisse pas ailleurs, en:
+            - effectuant la revue de la non-conformité
+            - recherchant et analysant les causes de la non-conformité
+            - recherchant si des non-conformités similaires existent ou pourraient éventuellement se produire
+        - mettre en œuvre toutes les actions requises
+        - examiner l'efficacité de toute action corrective mise en œuvre
+        - modifier, si nécessaire, le système de management anti-corruption
+      Les actions correctives doivent être appropriées aux conséquences des non-conformités rencontrées. L'organisme doit conserver des informations documentées comme preuves:
+        - de la nature des non-conformités et de toute action menée ultérieurement
+        - des résultats de toute action corrective
+    - continuous_improvement: L'organisme doit améliorer en continu la pertinence, l'adéquation et l'efficacité du système de management anti-corruption.
+  annex_a:
+    - guidelines: Lignes directrices pour l'utilisation du présent document
+    - scope_of_anti_corruption_management_system:
+        - autonomous_or_integrated: L'organisme peut choisir de mettre en œuvre ce système de management anti-corruption sous la forme d'un système séparé ou sous la forme d'un composant intégré à un système de management de la conformité global. L'organisme peut également choisir de mettre en œuvre ce système de management anti-corruption de façon parallèle ou intégrée à ses autres systèmes de management, tels qu'un système de management de la qualité, environnemental et de la sécurité de l'information, ainsi qu'à l'ISO 26000 et l'ISO 31000.
+        - facilitation_payments_and_extortion:
+            - facilitation_payments: «Paiement de facilitation» est le terme parfois donné à un paiement illégal ou officieux d'une somme en contrepartie de services que le payeur aurait eu légalement le droit de recevoir sans un tel paiement. Il s'agit généralement d'une somme relativement faible versée à un représentant public ou une personne exerçant une fonction de certification afin d'assurer ou d'accélérer la réalisation d'une procédure routinière ou d'une action nécessaire, telle que l'émission d'un visa ou d'un permis de travail, un dédouanement ou l'installation d'un téléphone. Même si les paiements de facilitation sont fréquemment considérés comme étant, par nature, différents de pots-de-vin versés pour remporter un contrat par exemple, ils sont illégaux dans la plupart des pays et sont traités comme des cas de corruption dans le cadre du présent document. Il convient qu'ils soient interdits par le système de management anti-corruption de l'organisme.
+            - extortion: Une extorsion de fonds a lieu lorsque de l'argent est soutiré du personnel par la force suite à des menaces avérées ou perçues à la santé, la sécurité ou la liberté, et n'entre pas dans le domaine d'application du présent document. La sécurité et la liberté d'une personne sont primordiales et nombre de systèmes juridiques ne sanctionnent pas le versement d'une somme par quiconque craint de façon raisonnable pour sa santé, sa sécurité ou sa liberté propre ou celles d'autrui. L'organisme peut disposer d'une politique qui permet le versement d'une somme par le personnel s'il se sent menacé par une atteinte imminente à sa santé, sa sécurité ou sa liberté propres ou celles d'autrui.
+            - recommendations: Il convient que l'organisme fournisse des préconisations spécifiques sur la façon d'éviter et de gérer de tels paiements à tout personnel qui pourrait y être confronté. De telles préconisations peuvent par exemple comprendre:
+                - indication de l'action à entreprendre par tout personnel confronté à une demande de ce type:
+                    - pour les paiements de facilitation, demander la preuve de la légitimité du paiement et un reçu officiel du paiement et, si aucune preuve satisfaisante ne peut être obtenue, refuser de procéder audit paiement
+                    - pour les cas d'extorsion de fonds, procéder au paiement si sa santé, sa sécurité ou sa liberté propre ou celles d'autrui sont menacées
+                - description de l'action à entreprendre par le personnel qui a réalisé un paiement de facilitation ou une extorsion de fonds:
+                    - documenter l'événement
+                    - rapporter l'événement au dirigeant approprié ou à la fonction de conformité anti-corruption
+                - description de l'action à entreprendre par l'organisme lorsque son personnel a réalisé un paiement de facilitation ou une extorsion de fonds:
+                    - désigner un dirigeant approprié pour enquêter sur l'événement (de préférence, la fonction de conformité anti-corruption ou un dirigeant indépendant du service ou de la fonction du personnel)
+                    - enregistrer de façon adéquate le paiement dans la comptabilité de l'organisme
+                    - si approprié, ou si requis par la loi, signalement du paiement aux autorités compétentes
+        - reasonable_and_proportionate:
+            - general: La corruption est habituellement dissimulée. Elle peut être difficile à prévenir, à détecter et à traiter. Dans cette optique, l'intention générale du présent document est de justifier le besoin pour l'organe de gouvernance (s'il existe) et pour la direction d'un organisme de:
+                - s'engager sincèrement à prévenir, détecter et lutter contre la corruption relative aux activités de l'organisme
+                - mettre en œuvre, de façon sincère, des mesures au sein de l'organisme conçues pour prévenir, détecter et lutter contre la corruption
+              Les organismes ne peuvent pas mettre en place des mesures trop coûteuses, trop fastidieuses et trop bureaucratiques qu'ils ne pourraient pas financièrement se permettre ou qui entraîneraient l'interruption de leurs activités, tandis que des mesures trop simples et inefficaces seraient synonymes de porte ouverte à la corruption. Les mesures doivent être appropriées au risque de corruption et il convient qu'elles soient raisonnablement efficaces pour atteindre leur objectif de prévention et de détection de la corruption, et de lutte contre celle-ci.
+            - factors: Tandis que les types de mesures anti-corruption devant être mises en œuvre sont raisonnablement bien reconnus par les bonnes pratiques internationales, dont certains ont été transposés en exigence dans le présent document, le détail des mesures à mettre en œuvre diffère amplement en fonction des circonstances. Il est impossible de prescrire en détail l'attitude qu'un organisme devrait adopter dans des circonstances particulières. La qualification vraisemblable et proportionnée a été introduite dans le présent document afin que chaque situation fasse l'objet d'un jugement approprié.
+            - examples: Les exemples suivants fournissent certaines préconisations sur la façon dont la qualification vraisemblable et proportionnée peut s'appliquer dans différentes circonstances.
+                - un très grand organisme multinational peut avoir besoin de gérer plusieurs niveaux hiérarchiques et un personnel s'élevant à des milliers de personnes. Son système de management anti-corruption devra généralement être beaucoup plus détaillé que celui d'un organisme de petite taille au personnel limité
+                - un organisme dont les activités se déroulent dans un lieu où le risque de corruption est élevé aura normalement besoin d'une évaluation des risques de corruption et de procédures de diligence raisonnables plus complètes, et de moyens de contrôle anti-corruption renforcés applicables aux transactions qu'il réalise dans ce même lieu, qu'un organisme dont les activités se limitent à un lieu où les risques de corruption sont faibles et où la corruption est relativement rare
+                - bien que des risques de corruption existent pour un grand nombre de transactions ou d'activités, l'évaluation des risques de corruption, les procédures de diligences raisonnables et les moyens de contrôle anti-corruption mis en œuvre par un organisme impliqué dans une transaction ou des activités de grande envergure et de valeur élevée auxquelles participent un vaste éventail de partenaires commerciaux sont susceptibles d'être plus complets que ceux mis en œuvre par un organisme pour une activité qui implique la vente d'articles de moindre valeur à de multiples clients ou de multiples transactions de faible valeur avec une seule partie
+                - un organisme disposant d'un très vaste éventail de partenaires commerciaux peut conclure, dans le cadre de son évaluation des risques de corruption, que certaines catégories de partenaires commerciaux, par exemple des clients finaux, sont peu susceptibles de représenter un risque de corruption plus que faible, et prendre en compte cette conclusion pour la conception et la mise en œuvre de son système de management anti-corruption. Par exemple, les diligences raisonnables ne sont probablement pas nécessaires, ou ne sont probablement pas un moyen de contrôle raisonnable et proportionné pour les clients finaux qui achètent des articles tels que des biens de consommation auprès de l'organisme
+        - corruption_risk_assessment:
+            - general: L'intention de l'évaluation des risques de corruption requise est de permettre à l'organisme de construire des bases solides pour son système de management anti-corruption. Cette évaluation identifie les risques de corruption sur lesquels se concentrent le système de management, c'est-à-dire les risques de corruption considérés par l'organisme comme une priorité pour l'atténuation des risques de corruption, la mise en œuvre des moyens de contrôle et l'affectation du personnel chargé de la conformité anti-corruption, les ressources et les activités. Il appartient à l'organisme de déterminer la façon dont il réalise l'évaluation des risques de corruption, la méthodologie utilisée, la façon d'apprécier les risques et d'établir des priorités, et le niveau d'acceptation ou de tolérance des risques de corruption (c'est-à-dire son appétit pour le risque). Plus particulièrement, l'organisme est celui qui établit les critères de l'évaluation des risques de corruption (par exemple si le risque est faible, moyen ou élevé). Il convient néanmoins qu'il tienne compte de sa politique anti-corruption et de ses objectifs.
+            - criteria: Un exemple de la façon dont un organisme peut choisir de réaliser cette évaluation est donné ci-dessous:
+                - selection_of_criteria: sélection des critères d'évaluation des risques de corruption. Par exemple, l'organisme peut sélectionner des critères sur trois niveaux (par exemple faible, moyen et élevé), des critères détaillés sur cinq ou sept niveaux ou une approche davantage approfondie. Les critères prendront fréquemment en compte plusieurs facteurs, notamment la nature du risque de corruption, la vraisemblance de l'occurrence de la corruption et l'ampleur des conséquences si un cas de corruption devait se produire
+                - size_and_structure: évaluation des risques de corruption associés à la taille et à la structure de l'organisme. Un petit organisme évoluant dans un seul lieu et disposant de moyens de contrôle du management contrôlés gérés par quelques personnes peut être en mesure de maîtriser ses risques de corruption plus facilement qu'un organisme de très grande taille à la structure décentralisée opérant sur de nombreux sites
+                - locations_and_sectors: étude des lieux et secteurs dans lesquels l'organisme opère ou prévoit d'opérer et évaluation du niveau de risque de corruption que ces lieux et secteurs peuvent représenter. Un indice de corruption approprié peut être utilisé pour aider l'organisme dans cette évaluation. Les lieux ou secteurs présentant un risque de corruption plus élevé peuvent être associés par l'organisme à un risque moyen ou élevé par exemple, ce qui peut amener l'organisme à imposer des moyens de contrôle plus complets pour les activités de l'organisme dans ces lieux ou secteurs
+                - nature_scale_complexity: étude de la nature, de l'échelle et de la complexité des types d'activités et d'opérations de l'organisme:
+                    - il peut, par exemple, être plus facile de maîtriser un risque de corruption lorsqu'un organisme entreprend une opération de fabrication de petite échelle dans un seul lieu que lorsqu'un organisme prend part à de nombreux projets de construction de grande envergure dans plusieurs lieux
+                    - certaines activités peuvent donner lieu à des risques de corruption spécifiques, par exemple des mécanismes de compensation par lesquels le gouvernement qui achète des produits ou des services impose au fournisseur de réinvestir une certaine partie de la valeur du contrat dans le pays d'achat. Il convient que l'organisme prenne des mesures appropriées pour éviter que les mécanismes de compensation ne soient assimilés à de la corruption
+                - business_partners: étude des types de partenaires commerciaux existants et potentiels de l'organisme par catégorie et évaluation du risque de corruption qu'ils représentent en principe. Par exemple:
+                    - l'organisme peut disposer d'un grand nombre de clients qui lui achètent des produits de très faible valeur et dont les pratiques représentent un risque de corruption minimal pour l'organisme. Dans ce cas, l'organisme peut considérer ces clients comme représentant un risque de corruption faible et peut déterminer que des moyens de contrôle anti-corruption spécifiques ne sont pas nécessaires. L'organisme peut également disposer de clients qui lui achètent des produits de très grande valeur et qui peuvent représenter un risque de corruption significatif (par exemple: le risque de sollicitation de pots-de-vin en contrepartie de paiements, d'approbations). Ces types de clients peuvent être considérés comme représentant un risque de corruption moyen ou élevé et peuvent impliquer la mise en place de moyens de contrôle anti-corruption plus complets par l'organisme
+                    - différentes catégories de fournisseurs peuvent représenter différents niveaux de risques de corruption. Par exemple, les fournisseurs dont le périmètre d'activité est très étendu, ou qui pourraient être en contact avec les clients de l'organisme ou des représentants publics pertinents, peuvent représenter un risque de corruption moyen ou élevé. Certaines catégories de fournisseurs peuvent être associées à un risque faible, par exemple: les fournisseurs basés dans des lieux à risque de corruption faible qui n'ont pas de contact avec les représentants publics pertinents dans le cadre de la transaction ou avec les clients de l'organisme. Certaines catégories de fournisseurs peuvent être associées à un risque très faible, par exemple: les fournisseurs de petites quantités d'articles de faible valeur; les services d'achat de billets d'avion ou de réservation d'hôtel en ligne. L'organisme pourrait ainsi conclure que des moyens de contrôle anti-corruption spécifiques n'ont pas besoin d'être mis en œuvre pour ces fournisseurs qui représentent un risque de corruption faible ou très faible
+                    - les agents ou intermédiaires qui interagissent, pour le compte de l'organisme, avec les clients de l'organisme ou des représentants publics sont susceptibles de représenter un risque de corruption moyen ou élevé, en particulier s'ils sont rémunérés à la commission ou en fonction de leurs résultats
+                - public_representatives: étude de la nature et de la fréquence des interactions avec les représentants publics étrangers ou nationaux qui peuvent représenter un risque de corruption. Par exemple, les interactions avec des représentants publics responsables de l'émission de permis et des approbations peuvent représenter un risque de corruption
+                - obligations: évaluation des obligations et devoirs statutaires, réglementaires, contractuels et professionnels applicables, par exemple l'interdiction ou la limitation des avantages octroyés aux représentants publics ou du recours à des agents
+                - influence: prise en compte de la mesure dans laquelle l'organisme est capable d'influencer ou de maîtriser les risques évoqués. Les facteurs de risques de corruption ci-dessus sont interdépendants. Par exemple, les fournisseurs d'une même catégorie peuvent représenter un risque de corruption différent en fonction du lieu dans lequel ils opèrent
+            - risk_levels: Après évaluation des risques de corruption pertinents, l'organisme peut déterminer le type et le degré des moyens de contrôle anti-corruption appliqués à chaque catégorie de risque et peut évaluer si les moyens de contrôle existants sont adéquats. Dans la négative, les moyens de contrôle peuvent être améliorés de façon appropriée. Par exemple, un moyen de contrôle de niveau élevé est susceptible d'être mis en œuvre pour les lieux présentant des risques de corruption élevés et les catégories de partenaires commerciaux représentant des risques de corruption élevés. L'organisme peut déterminer qu'il est acceptable de mettre en œuvre un moyen de contrôle de niveau faible pour les activités ou partenaires commerciaux présentant des risques de corruption faibles. Certaines exigences du présent document excluent expressément le besoin d'appliquer ces exigences à des activités ou partenaires commerciaux présentant des risques de corruption faibles (même si l'organisme peut choisir de les appliquer si tel est son souhait).
+            - review: L'exercice de l'évaluation des risques de corruption n'est pas destiné à être exhaustif ou trop complexe, et l'exactitude des résultats de l'évaluation ne sera pas nécessairement avérée (par exemple, une transaction évaluée comme représentant un risque de corruption faible peut tout de même impliquer un acte de corruption). Dans la mesure du possible et du raisonnable, il convient que les résultats de l'évaluation des risques de corruption reflètent les risques de corruption avérés auxquels l'organisme est exposé. Il convient que l'exercice soit conçu comme un outil qui aide l'organisme à évaluer ses risques de corruption et à établir des priorités, et qu'il soit régulièrement passé en revue et révisé en fonction des changements ayant lieu au sein de l'organisme ou des circonstances (par exemple, nouveaux marchés ou produits, exigences légales, expérience acquise).
+        - roles_and_responsibilities_of_governing_body_and_management:
+            - general: Nombre d'organismes disposent d'une certaine forme d'organe de gouvernance (par exemple un conseil d'administration ou un conseil de surveillance) qui assume généralement des responsabilités de supervision vis-à-vis des opérations de l'organisme. Ces responsabilités comprennent la supervision du système de management anti-corruption de l'organisme. Néanmoins, l'organe de gouvernance n'exerce généralement aucun contrôle quotidien sur les activités de l'organisme. Ce rôle incombe à la direction générale (par exemple président-directeur général, directeur de l'exploitation), à laquelle il est fait référence dans le présent document sous le terme direction. Eu égard au système de management anti-corruption, il convient que l'organe de gouvernance soit informé du contenu et du fonctionnement du système de management et qu'il exerce une supervision raisonnable vis-à-vis de l'adéquation, de l'efficacité et de la mise en œuvre du système de management. Il convient qu'il reçoive régulièrement des informations relatives aux performances du système de management dans le cadre du processus de la revue de direction (ce qui peut concerner l'ensemble de l'organe de gouvernance ou l'un de ses comités comme le comité d'audit). À cet égard, il convient que la fonction de conformité anti-corruption soit en mesure de rapporter des informations sur le système de management directement à l'organe de gouvernance (ou au comité approprié).
+            - no_governing_body: Certains organismes, en particulier les plus petits d'entre eux, peuvent ne pas disposer d'un organe de gouvernance indépendant ou il se peut que les attributions de l'organe de gouvernance et de la direction générale soient confiées à un même groupe, voire à une seule personne. Dans ce cas, le groupe ou la personne assumera les responsabilités que le présent document définit pour la direction et l'organe de gouvernance.
+        - compliance_function:
+            - general: Le nombre de personnes travaillant au sein de la fonction de conformité anti-corruption dépend de facteurs tels que la taille de l'organisme, l'étendue du risque de corruption auquel l'organisme est exposé et la charge de travail qui en résulte pour la fonction. Dans un petit organisme, la fonction de conformité anti-corruption sera susceptible d'être confiée à une personne responsable à temps partiel qui assume d'autres responsabilités. Lorsque l'étendue du risque de corruption et la charge de travail qui en résulte le justifient, la fonction de conformité anti-corruption peut être confiée à une personne responsable à temps plein. Dans les grands organismes, la fonction réunira probablement plusieurs personnes. Certains organismes peuvent attribuer cette responsabilité à un comité comprenant un éventail d'experts pertinents. Certains organismes peuvent choisir de faire appel à une tierce partie pour qu'elle se charge de tout ou partie de la fonction de conformité anti-corruption. Cela est acceptable sous réserve qu'un dirigeant approprié appartenant à l'organisme conserve la responsabilité globale et l'autorité sur la fonction de conformité anti-corruption, et supervise les services fournis par la tierce partie.
+            - competence_status_authority_independence: La fonction de conformité anti-corruption doit être confiée à une ou des personnes disposant des compétences, du statut, de l'autorité et de l'indépendance appropriés. À cet égard:
+                - competence: signifie que la ou les personnes concernées disposent de l'éducation, de la formation ou de l'expérience appropriées, d'une aptitude personnelle à gérer les exigences du rôle et de la capacité à se former à ses attributions et à les honorer de façon appropriée
+                - status: signifie que les autres membres du personnel sont susceptibles d'écouter et de respecter les opinions de la personne responsable de la conformité
+                - authority: signifie que l'organe de gouvernance (s'il existe) et la direction confèrent des pouvoirs suffisants à la ou aux personnes pertinentes responsables de la conformité pour qu'elles puissent assumer efficacement leurs responsabilités en matière de conformité
+                - independence: signifie que la ou les personnes pertinentes responsables de la conformité ne sont pas, autant que possible, personnellement impliquées dans les activités de l'organisme qui sont exposées à un risque de corruption. Elle peut être plus facilement garantie lorsque l'organisme désigne une personne pour occuper le poste à temps plein, mais elle est plus difficile pour un petit organisme qui désigne une personne responsable du rôle de conformité et d'autres fonctions. Lorsque la fonction de conformité anti-corruption est assumée à temps partiel, il convient que le rôle ne soit pas confié à une personne qui peut être exposée à la corruption dans le cadre de sa fonction principale. Pour les organismes de très petite taille où il peut être plus difficile d'assurer l'indépendance de la fonction, il convient que la personne concernée distingue, au mieux de ses capacités, ses responsabilités de conformité de ses autres responsabilités afin d'être impartiale
+            - direct_access: Il est important que la fonction de conformité anti-corruption puisse contacter directement la direction et l'organe de gouvernance (s'il existe), afin de communiquer les informations pertinentes. Il est recommandé que la fonction n'ait pas à rendre compte uniquement à un autre dirigeant de la chaîne qui rendrait par la suite compte à la direction, cette approche augmentant le risque que le message transmis par la fonction de conformité anti-corruption ne soit pas complètement ou clairement entendu par la direction. Il convient également que la fonction de conformité anti-corruption entretienne des relations de communication directe avec l'organe de gouvernance (s'il existe) sans avoir à passer par la direction. Il peut s'agir de l'organe de gouvernance dans son intégralité (par exemple: le conseil d'administration ou un conseil de surveillance) ou d'un comité de délégation spécifique de l'organe de gouvernance ou de la direction (par exemple: un comité d'audit ou de déontologie).
+            - primary_responsibility: La responsabilité première de la fonction de conformité anti-corruption est de superviser la conception et la mise en œuvre du système de management anti-corruption. Il convient de ne pas confondre avec la responsabilité directe des performances anti-corruption de l'organisme et avec la conformité aux lois anti-corruption applicables. Chacun est responsable de se comporter de façon déontologique et conforme, y compris en respectant les exigences du système de management anti-corruption et des lois anti-corruption. Il est particulièrement important que les dirigeants encouragent la conformité pour les domaines d'activité de l'organisme dont ils sont responsables.
+        - resources: Les ressources nécessaires dépendent de facteurs tels que la taille de l'organisme, la nature de ses opérations et les risques de corruption auxquels il est exposé. Les ressources comprennent les exemples suivants:
+            - human_resources: Il convient d'avoir suffisamment de personnel en mesure de consacrer suffisamment de temps à ses responsabilités anti-corruption respectives afin de garantir le fonctionnement efficace du système de management anti-corruption. Cela inclut la désignation d'un nombre suffisant de personnes (internes ou externes) au sein de la fonction de conformité anti-corruption
+            - physical_resources: Il convient que l'organisme dispose des ressources physiques nécessaires, y compris pour la fonction de conformité anti-corruption, afin que le système de management anti-corruption fonctionne efficacement, par exemple: bureau, mobilier, matériel et logiciels informatiques, supports de formation, téléphones, papeteries
+            - financial_resources: Il convient de prévoir un budget suffisant, y compris pour la fonction de conformité anti-corruption, afin que le système de management anti-corruption fonctionne efficacement
+        - employment_procedures:
+            - due_diligence_for_personnel: Lors de la réalisation de diligences raisonnables vis-à-vis du personnel avant son embauche, l'organisme, conformément aux fonctions proposées au candidat et au risque de corruption associé, peut prendre des mesures, comme:
+                - aborder la politique anti-corruption de l'organisme avec les candidats lors de l'entretien et conclure s'ils comprennent et acceptent l'importance de son respect
+                - prendre des mesures raisonnables pour vérifier que les qualifications des candidats sont exactes
+                - prendre des mesures raisonnables pour obtenir des références satisfaisantes auprès des employeurs précédents du candidat
+                - prendre des mesures raisonnables pour déterminer si le candidat prend part à des cas de corruption
+                - prendre des mesures raisonnables pour vérifier que l'organisme n'offre pas un poste à un candidat pour avoir favorisé, de façon inadéquate, l'organisme dans le cadre d'un emploi précédent
+                - vérifier que la finalité de l'offre d'emploi au candidat n'est pas de garantir un traitement favorable inapproprié de l'organisme
+                - prendre des mesures raisonnables pour identifier les relations du candidat avec les représentants publics
+            - performance_bonuses: Les mécanismes de rémunération, y compris les bonus et les primes, peuvent encourager, même involontairement, le personnel à prendre part à des cas de corruption. Par exemple, si un dirigeant reçoit une prime fondée sur la conclusion d'un contrat pour l'organisme, il pourrait être tenté de verser un pot-de-vin ou de fermer les yeux sur le versement d'un pot-de-vin par un agent ou un partenaire d'entreprise commune afin de garantir la conclusion du contrat. Le même cas de figure pourrait se produire si une pression trop élevée est exercée sur le dirigeant vis-à-vis de ses performances (par exemple: si le dirigeant risque d'être licencié s'il n'atteint pas des objectifs de ventes trop ambitieux). L'organisme doit accorder une attention particulière à ces aspects de la rémunération pour s'assurer, dans la mesure du raisonnable, qu'ils n'encouragent pas la corruption. Les évaluations, les promotions, les primes et autres récompenses du personnel peuvent être utilisés comme mécanismes d'incitation pour encourager ce dernier à se comporter conformément à la politique anti-corruption et au système de management anti-corruption de l'organisme. Néanmoins, l'organisme doit être prudent sur cette question, car les menaces portant sur la perte d'une prime, etc. peuvent inciter le personnel à dissimuler son manque de performances dans le cadre du système de management anti-corruption. Il convient que le personnel soit informé que la violation du système de management anti-corruption dans le but d'améliorer l'évaluation de ses performances relatives à d'autres domaines (par exemple: l'atteinte d'objectifs et autres) n'est pas acceptable et qu'il convient que cela donne lieu à des actions correctives et/ou des sanctions disciplinaires.
+            - conflicts_of_interest: Il convient que l'organisme identifie et évalue le risque de conflits d'intérêts internes et externes. Il est recommandé que l'organisme informe clairement l'ensemble du personnel de son obligation de rendre compte de tout conflit d'intérêts avéré ou potentiel relatif (par exemple: familial, financier ou autre) directement ou indirectement lié à son domaine d'activité. Cette approche aide l'organisme à identifier les situations dans lesquelles le personnel pourrait faciliter ou ne pas parvenir à prévenir ou à rapporter un cas de corruption, par exemple:
+                - si le dirigeant commercial de l'organisme fait partie de la famille du responsable des achats d'un client
+                - si un cadre hiérarchique de l'organisme exerce un intérêt financier personnel dans les activités d'un concurrent
+              Il convient que l'organisme conserve, de préférence, un enregistrement des cas de conflit d'intérêts avérés ou potentiels, indiquant également si des actions ont été entreprises pour atténuer le conflit.
+            - active_vs_passive_corruption: Les mesures nécessaires pour prévenir, détecter et lutter contre le risque de corruption par le personnel de l'organisme pour le compte de l'organisme (corruption active) peuvent différer des mesures utilisées pour prévenir, détecter et lutter contre la corruption du personnel de l'organisme (corruption passive). Par exemple, la capacité à identifier et à atténuer le risque de corruption passive peut être significativement limitée par la disponibilité des informations que l'organisme ne contrôle pas (par exemple: comptes bancaires personnels de l'employé et données transactionnelles de sa carte bancaire), par la loi applicable (par exemple: loi sur la confidentialité) ou par d'autres facteurs. Par conséquent, le nombre et les types de moyens de contrôle à disposition de l'organisme pour atténuer le risque de corruption active peuvent être plus nombreux que les moyens de contrôle qu'il peut mettre en œuvre pour atténuer le risque de corruption passive. La corruption du personnel de l'organisme est plus susceptible de se produire pour le personnel en mesure de prendre ou d'influencer des décisions pour le compte de l'organisme (par exemple: un responsable des achats qui peut attribuer des contrats; un superviseur qui peut approuver le travail effectué; un dirigeant qui peut affecter le personnel ou approuver les salaires ou les primes; un assistant juridique qui prépare les documents pour l'octroi de licences et de permis). La corruption étant susceptible d'être acceptée par le personnel non couvert par le périmètre des systèmes ou des moyens de contrôle de l'organisme, la capacité de l'organisme à prévenir ou à détecter ces cas de corruption peut être limitée. Outre les étapes mentionnées, le risque de corruption passive peut être atténué par les exigences suivantes du présent document:
+                - il convient que la politique anti-corruption de l'organisme interdise clairement la sollicitation et l'acceptation de pots-de-vin par le personnel de l'organisme et quiconque travaillant pour le compte de l'organisme
+                - il est recommandé que les guides et les supports de formation renforcent l'interdiction portant sur la sollicitation et l'acceptation de pots-de-vin et incluent:
+                    - des conseils sur la façon de rendre compte des préoccupations relatives à la corruption
+                    - une mise en exergue de la politique de l'organisme en matière d'absence de représailles
+                - il convient que la politique de l'organisme en matière de cadeaux et de marques d'hospitalité limite l'acceptation de cadeaux et de marques d'hospitalité par le personnel
+                - la publication sur le site Web de l'organisme de la politique anti-corruption de l'organisme et des détails sur la façon de rapporter les cas de corruption aide à définir les attentes vis-à-vis des partenaires commerciaux afin de diminuer la probabilité que des partenaires commerciaux offrent ou que le personnel de l'organisme sollicite ou accepte un pot-de-vin
+                - les moyens de contrôle requérant, par exemple, l'utilisation de fournisseurs agréés, la mise en place d'un appel d'offres, la signature d'au moins deux personnes sur un contrat, l'approbation des travaux, etc. réduisent le risque de contrats, d'approbations, de paiements ou d'avantages frauduleux
+              L'organisme peut également mettre en œuvre des procédures d'audit pour identifier les moyens que le personnel peut exploiter pour tirer personnellement profit des lacunes des moyens de contrôle existants. Ces procédures peuvent par exemple comprendre:
+                - le passage en revue des fichiers de paie pour identifier les dossiers fantômes et dupliqués du personnel
+                - le passage en revue des notes de frais du personnel pour identifier des dépenses anormales
+                - la comparaison des informations du fichier de paie du personnel (comme les numéros de compte bancaire personnel et les adresses) avec les informations de compte bancaire et les coordonnées du fichier de référence des fournisseurs de l'organisme pour identifier les conflits d'intérêts potentiels
+            - contractual_or_temporary_staff: Dans certains cas, les contractuels ou le personnel intérimaire peuvent être fournis à l'organisme par une agence de travail intérimaire ou un autre partenaire commercial. Dans ce cas, il convient que l'organisme détermine si le risque de corruption que représentent ces contractuels ou ce personnel intérimaire (s'il y a lieu) est géré de façon appropriée en traitant les contractuels ou le personnel intérimaire de la même façon que son propre personnel en matière de formation et de contrôle, ou s'il impose des moyens de contrôle appropriés au partenaire commercial qui fournit les contractuels ou le personnel intérimaire
+        - awareness_and_training:
+            - intention: L'intention de la formation est de contribuer à garantir que le personnel concerné comprend, dans le cadre de son rôle ou au sein de l'organisme, les éléments suivants:
+                - les risques de corruption auxquels lui-même et l'organisme sont exposés
+                - la politique anti-corruption
+                - les aspects du système de management anti-corruption relatifs à son rôle
+                - toute action de prévention et de rapport nécessaire à entreprendre vis-à-vis d'un risque de corruption ou d'un cas de corruption suspecté
+            - format_and_extent: Le format et l'étendue de la formation dépendent de la taille de l'organisme et des risques de corruption auxquels l'organisme est exposé. Elle peut prendre la forme d'un module en ligne ou en présentiel (par exemple: sessions collectives, ateliers, tables rondes avec le personnel concerné ou sessions individuelles). La méthode de formation est moins importante que le résultat, c'est-à-dire la compréhension par l'ensemble du personnel concerné des problématiques mentionnées.
+            - presential_training: La formation en présentiel est recommandée pour l'organe de gouvernance (s'il existe), ainsi que pour tout personnel (indépendamment de son poste ou de son niveau hiérarchique au sein de l'organisme) et partenaire commercial qui prend part à des opérations et des processus représentant un risque de corruption plus que faible.
+            - dedicated_or_integrated: La formation peut se dérouler sous la forme d'une formation dédiée à la corruption ou faire partie du programme d'intégration ou de formation global de l'organisme en matière de conformité et de déontologie.
+            - content: Le contenu de la formation peut être adapté au rôle que le personnel occupe. Le personnel qui n'est pas exposé à un risque de corruption significatif dans le cadre de ses fonctions peut suivre une formation très simple sur la politique de l'organisme afin qu'il comprenne la politique et sache quoi faire s'il est confronté à une violation potentielle. Il est recommandé que le personnel dont le rôle implique un risque de corruption élevé suive une formation plus approfondie.
+            - frequency: La formation doit être organisée aussi souvent que nécessaire afin de garantir que le personnel reste informé des politiques et procédures de l'organisme, de toute évolution relative à son rôle et de toute modification réglementaire.
+            - business_partners: L'application des exigences de formation et de sensibilisation aux partenaires commerciaux identifiés dans le cadre des exigences de la formation peut entraîner des difficultés particulières, car les employés de ces partenaires commerciaux ne travaillent généralement pas directement pour l'organisme et l'organisme ne sera, en général, pas en contact direct avec ces employés pour ses exigences de formation. La formation des employés travaillant pour des partenaires commerciaux sera habituellement dispensée par les partenaires commerciaux ou par d'autres parties sélectionnées à cette fin. Il est important que les employés qui travaillent pour des partenaires commerciaux qui peuvent représenter un risque de corruption plus que faible pour l'organisme soient informés de la problématique et suivent une formation raisonnablement orientée sur la réduction de ce risque. Le contenu de la formation requiert que l'organisme, au minimum, identifie les partenaires commerciaux dont les employés devraient suivre une formation anti-corruption, le contenu minimal de la formation et la nécessité de la formation. La formation en elle-même peut être dispensée par le partenaire commercial, par d'autres parties désignées ou, si l'organisme le souhaite, par l'organisme. L'organisme peut communiquer ces obligations à ses partenaires commerciaux de plusieurs manières, y compris dans le cadre d'un accord contractuel.
+        - due_diligence:
+            - purpose: La finalité d'exercer des diligences raisonnables vis-à-vis de certain(e)s transactions, projets, activités, partenaires commerciaux ou personnel de l'organisme est d'évaluer de façon plus approfondie le périmètre, l'échelle et la nature des risques de corruption plus que faibles identifiés dans le cadre de l'évaluation des risques de l'organisme. Cette approche permet également d'appliquer un moyen de contrôle additionnel et ciblé pour la prévention et la détection du risque de corruption, et d'orienter la décision de l'organisme sur la nécessité de différer, d'interrompre ou de revoir ces transactions, projets ou relations avec ses partenaires commerciaux ou son personnel.
+            - projects_transactions_activities: Les facteurs qui peuvent se révéler utiles pour évaluer les projets, les transactions et les activités comprennent:
+                - la structure, la nature et la complexité (par exemple: vente directe ou indirecte, niveau de rabais, attribution d'un contrat et procédures d'appel d'offres)
+                - les modalités de financement et de paiement
+                - le périmètre de la mission de l'organisme et les ressources disponibles
+                - le niveau de contrôle et de visibilité
+                - les partenaires commerciaux et autres tierces parties impliqués (y compris les représentants publics)
+                - les liens entre les parties mentionnées ci-dessus et les représentants publics
+                - la compétence et les qualifications des parties impliquées
+                - la réputation du client
+                - le lieu
+                - les rapports disponibles sur le marché ou dans la presse
+            - business_partners:
+                - factors: Les facteurs qui peuvent se révéler utiles pour évaluer un partenaire commercial comprennent:
+                    - si le partenaire commercial est une entité commerciale légitime, comme démontré par des indicateurs tels que les documents d'enregistrement d'entreprise, le dépôt des comptes annuels, le numéro d'identification fiscale, la cotation en bourse
+                    - si le partenaire commercial dispose des qualifications, de l'expérience et des ressources nécessaires pour honorer ses engagements contractuels
+                    - si le partenaire commercial dispose d'un système de management anti-corruption et à quel périmètre il s'applique
+                    - si le partenaire commercial est connu pour son implication dans des cas de corruption, de fraude, de malversation ou des comportements similaires, ou s'il fait l'objet d'une enquête, d'une décision de justice, d'une sanction ou d'une interdiction suite à un cas de corruption ou un agissement criminel similaire
+                    - l'identité des actionnaires (y compris le ou les bénéficiaires ultimes) et des membres de la direction du partenaire commercial et s'ils:
+                        - sont connus pour leur implication dans des cas de corruption, de fraude, de malversation ou des comportements similaires
+                        - font l'objet d'une enquête, d'une décision de justice, d'une sanction ou d'une interdiction suite à un cas de corruption ou un agissement criminel similaire
+                        - entretiennent des liens directs ou indirects avec un client de l'organisme ou un représentant public impliqué qui pourraient déboucher sur un cas de corruption (ce qui inclut les personnes qui ne sont pas elles-mêmes des représentants publics, mais qui peuvent directement ou indirectement avoir une relation avec des représentants publics, des candidats à un poste public, etc.)
+                    - la structure des accords transactionnels et de paiement
+                - nature_type_extent: La nature, le type et l'étendue des diligences raisonnables réalisées dépendront de facteurs tels que la capacité de l'organisme à obtenir des informations suffisantes, le coût de l'obtention des informations et l'étendue du risque de corruption possible associé à la relation
+                - coherence: Il convient que les procédures de diligences raisonnables mises en œuvre par l'organisme vis-à-vis de ses partenaires commerciaux soient cohérentes pour tous les niveaux de risques de corruption (des partenaires commerciaux représentant un risque de corruption élevé dans des lieux ou sur des marchés où un risque de corruption élevé existe sont susceptibles de nécessiter un degré de diligences raisonnables supérieur à celui exercé vis-à-vis de partenaires commerciaux représentant un risque de corruption plus faible dans des lieux ou sur des marchés associés à un risque de corruption plus faible)
+                - types: Différents types de partenaires commerciaux sont susceptibles de nécessiter différents degrés de diligences raisonnables, par exemple:
+                    - concernant la responsabilité juridique et financière potentielle de l'organisme, les partenaires commerciaux représentent un risque de corruption plus élevé pour l'organisme lorsqu'ils agissent pour le compte de l'organisme ou dans son intérêt que lorsqu'ils fournissent des produits ou des services à l'organisme. Par exemple, un agent qui assiste un organisme dans le cadre de l'obtention d'un contrat pourrait verser un pot-de-vin au dirigeant d'un client de l'organisme afin d'aider l'organisme à remporter le contrat, une situation qui pourrait engager la responsabilité de l'organisme vis-à-vis de la corruption initiale par l'agent. Par conséquent, les diligences raisonnables réalisées par l'organisme vis-à-vis de l'agent sont donc susceptibles d'être les plus complètes possibles. En outre, un fournisseur qui vend un équipement ou du matériel à l'organisme et qui n'entretient aucune relation avec les clients de l'organisme ou les représentants publics concernés par les activités de l'organisme est moins susceptible de verser un pot-de-vin pour le compte de l'organisme ou dans son intérêt. Le degré de diligences raisonnables vis-à-vis du fournisseur peut ainsi être moindre
+                    - le degré d'influence que l'organisme exerce sur ses partenaires commerciaux affecte également la capacité de l'organisme à obtenir des informations directement de ces mêmes partenaires commerciaux dans le cadre de ses diligences raisonnables. Il peut être relativement simple pour un organisme d'imposer à ses agents et à ses partenaires d'entreprise commune de fournir des informations exhaustives sur eux-mêmes dans le cadre des diligences raisonnables avant que l'organisme ne s'engage à travailler avec eux, l'organisme ayant la capacité de choisir avec qui il s'engage contractuellement dans cette situation. Néanmoins, il peut être plus difficile pour un organisme d'imposer à un client de fournir des informations qui le concernent ou de remplir des questionnaires de diligences raisonnables. Cette situation peut découler du fait que l'organisme ne dispose pas d'une influence suffisante sur le client pour y parvenir (par exemple, lorsque l'organisme prend part à un appel d'offres pour fournir des services au client)
+                - procedures: Les diligences raisonnables réalisées par l'organisme vis-à-vis de ses partenaires commerciaux peuvent inclure, par exemple:
+                    - un questionnaire envoyé au partenaire commercial dans lequel il est invité à répondre aux questions mentionnées
+                    - une recherche sur Internet sur le partenaire commercial, ses actionnaires et les membres de sa direction pour identifier toute information liée à la corruption
+                    - l'étude des ressources gouvernementales, judiciaires et internationales appropriées pour obtenir des informations pertinentes
+                    - la vérification des listes d'exclusion publiquement disponibles des organismes qui font l'objet de restrictions ou d'interdictions de s'engager contractuellement avec des entités publiques ou gouvernementales tenues par les gouvernements nationaux ou locaux, ou les institutions multilatérales, comme la Banque mondiale
+                    - la formulation de demandes auprès d'autres parties appropriées sur la réputation déontologique du partenaire commercial
+                    - la désignation d'autres personnes ou organismes disposant de l'expertise pertinente pour assister l'organisme dans sa procédure de diligences raisonnables
+                    - le partenaire commercial peut être invité à répondre à d'autres questions en fonction des résultats de la procédure de diligences raisonnables initiale (par exemple, expliquer toute information défavorable)
+            - personnel: Les diligences raisonnables vis-à-vis du personnel sont définies.
+            - not_perfect_tool: Les diligences raisonnables ne sont pas un outil parfait. L'absence d'informations négatives ne signifie pas nécessairement qu'aucun risque de corruption n'est associé au partenaire commercial. Des informations négatives ne signifient pas nécessairement que le partenaire commercial représente un risque de corruption. Néanmoins, les résultats doivent être appréciés avec prudence et l'organisme doit porter un jugement rationnel en fonction des faits à sa disposition. L'intention générale est la suivante: l'organisme formule des demandes raisonnables et proportionnées sur le partenaire commercial, en tenant compte des activités que ce dernier assurerait et du risque de corruption inhérent à ces activités, de sorte qu'un jugement raisonnable du niveau de risque de corruption auquel l'organisme est exposé s'il travaille avec le partenaire commercial soit formulé.
+        - financial_controls: Les moyens de contrôle financiers sont les systèmes de management et les processus mis en œuvre par l'organisme afin de gérer ses transactions financières de façon adéquate et d'enregistrer ces transactions avec exactitude, de manière complète, en temps et en heure. En fonction de la taille de l'organisme et de la transaction, les moyens de contrôle financiers mis en œuvre par un organisme pouvant réduire le risque de corruption peuvent comprendre, par exemple:
+            - mise en œuvre d'une séparation des pouvoirs, afin que la même personne ne puisse pas initier et approuver un paiement
+            - mise en œuvre des niveaux d'autorité appropriés pour l'autorisation de paiements (de sorte que les transactions les plus élevées soient approuvées par un membre hiérarchiquement plus gradé)
+            - vérification que la désignation du bénéficiaire du paiement et le travail ou les services qu'il réalise ont été approuvés par le biais des mécanismes d'approbation pertinents de l'organisme
+            - obligation d'apposer au moins deux signatures sur les autorisations de paiement
+            - obligation de joindre les justificatifs appropriés aux autorisations de paiement
+            - restriction de l'utilisation d'espèces et mise en œuvre de méthodes de contrôle efficace pour les espèces
+            - obligation que la catégorisation et la description des paiements dans la comptabilité soient précises et claires
+            - mise en œuvre d'une revue de direction périodique des transactions financières importantes
+            - mise en œuvre d'audits financiers périodiques et indépendants et changement régulier de la personne ou de l'organisme chargé(e) de réaliser l'audit
+        - non_financial_controls: Les moyens de contrôle non financiers sont les systèmes de management et les processus mis en œuvre par l'organisme qui l'aident à s'assurer de la bonne gestion des aspects de ses activités relatifs aux achats, aux opérations, aux ventes et aux autres aspects non financiers. En fonction de la taille de l'organisme et de la transaction, les moyens de contrôle relatifs aux achats, aux opérations, aux ventes et aux autres aspects non financiers mis en œuvre par un organisme pouvant réduire le risque de corruption, peuvent comprendre, par exemple, les moyens de contrôle suivants:
+            - recours à des contractants, sous-traitants, fournisseurs et consultants agréés qui ont fait l'objet d'une procédure de préqualification dans le cadre de laquelle la vraisemblance de leur participation à des cas de corruption est évaluée. Cette procédure est susceptible d'inclure des procédures de diligences raisonnables sous la forme définie
+            - évaluation:
+                - de la nécessité et de la légitimité des services sur le point d'être fournis par un partenaire commercial (à l'exclusion des clients) à l'organisme
+                - de la réalisation correcte des services
+                - de la nature raisonnable et proportionnée des paiements à effectuer au partenaire commercial en regard aux services. Ce point est particulièrement important afin d'éviter le risque que le partenaire commercial utilise une partie du paiement effectué par l'organisme pour verser un pot-de-vin pour le compte ou dans l'intérêt de l'organisme. Par exemple, si un agent a été désigné par l'organisme pour contribuer aux performances de vente et doit percevoir une commission ou des honoraires à la signature d'un contrat pour l'organisme, l'organisme doit être raisonnablement satisfait du montant raisonnable et proportionné de la commission par rapport aux services légitimes fournis par l'agent, en tenant compte du risque pris par l'agent si le contrat n'est pas signé. Si une commission ou des honoraires disproportionnément élevés doivent être versés, il existe un risque accru qu'une partie de ce dernier soit utilisée de façon inappropriée par l'agent afin d'acquérir un représentant public ou un employé d'un client de l'organisme à confier le contrat à l'organisme. L'organisme peut également demander que ses partenaires commerciaux fournissent des documents démontrant que les services ont été fournis
+            - attribution des contrats, lorsque cela est possible et raisonnable, uniquement après qu'un processus d'appel d'offres équitable, approprié et transparent impliquant au moins trois concurrents a été réalisé
+            - obligation d'évaluation des participants à l'appel d'offres et approbation de l'attribution du contrat par au moins deux personnes
+            - mise en œuvre d'une séparation des pouvoirs afin que le personnel qui approuve l'attribution d'un contrat diffère de celui qui en fait la demande et appartienne à un service ou à une fonction différent(e) de celui qui gère le contrat ou approuve le travail effectué dans le cadre du contrat
+            - obligation qu'au moins deux personnes signent les contrats et les documents qui modifient les dispositions contractuelles ou qui valident le travail effectué ou l'approvisionnement objet du contrat
+            - mise en œuvre d'une supervision plus complète de la part de la direction sur les transactions représentant potentiellement un risque de corruption élevé
+            - protection de l'intégrité des participants à l'appel d'offres et des autres informations sensibles concernant les tarifs en limitant l'accès aux personnes appropriées
+            - mise à disposition des outils et modèles appropriés pour assister le personnel (par exemple: guide pratique, liste des choses à faire et à ne pas faire, chaîne d'approbation, listes de contrôle, formulaires, flux de travail informatiques)
+        - controlled_entities_and_business_partners:
+            - general: L'exigence en 8.5 est justifiée par le fait que les entités sur lesquelles l'organisme exerce un contrôle et les partenaires commerciaux peuvent représenter un risque de corruption pour l'organisme. Les types de risques de corruption que l'organisme vise à éviter dans ces situations sont, par exemple:
+                - une filiale de l'organisme versant un pot-de-vin pouvant engager la responsabilité de l'organisme
+                - une entreprise commune ou un partenaire d'entreprise commune versant un pot-de-vin pour remporter un contrat pour une entreprise commune dont fait partie l'organisme
+                - un responsable des achats d'un client sollicitant un pot-de-vin auprès de l'organisme en contrepartie de l'attribution d'un contrat
+                - un client de l'organisme requérant que l'organisme désigne un sous-traitant ou un fournisseur spécifique dans des circonstances où un dirigeant du client ou un représentant public pourrait personnellement tirer parti de cette désignation
+                - un agent de l'organisme versant un pot-de-vin à un dirigeant d'un client de l'organisme pour le compte de l'organisme
+                - un fournisseur ou un sous-traitant de l'organisme versant un pot-de-vin au responsable des achats de l'organisme en contrepartie de l'attribution d'un contrat
+              Si l'entité sur laquelle l'organisme exerce un contrôle ou le partenaire commercial a mis en œuvre des moyens de contrôle anti-corruption associés à ces risques, le risque de corruption qui en découle pour l'organisme est en général réduit.
+            - control: Pour les besoins de cette exigence, un organisme exerce un contrôle sur une autre entité s'il contrôle directement ou indirectement la gestion de l'entité. Un organisme peut exercer un contrôle, par exemple, sur une filiale, une entreprise commune ou un consortium par le biais d'une voix majoritaire ou d'une détention majoritaire de capital. Si l'organisme confie simplement un nombre élevé de travaux à réaliser à une entité, il n'exerce pas de contrôle sur cette dernière en regard à cette exigence.
+            - controlled_entities: Il est raisonnable d'attendre de l'organisme qu'il demande que toute autre entité sur laquelle il exerce un contrôle mette en œuvre des moyens de contrôle anti-corruption raisonnables et proportionnés. Cela peut prendre la forme soit de la mise en œuvre par l'entité du même système de management anti-corruption que celui mis en œuvre par l'organisme lui-même, ou de la mise en œuvre par l'entité de ses propres moyens de contrôle anti-corruption spécifiques. Il convient que ces moyens de contrôle soient raisonnables et proportionnés en regard aux risques de corruption auxquels font face les entités sur lesquelles l'organisme exerce un contrôle, en tenant compte de l'évaluation des risques de corruption réalisée conformément. Lorsque l'organisme exerce un contrôle sur un partenaire commercial (par exemple: une entreprise commune sur laquelle l'organisme exerce un contrôle de direction), ce partenaire commercial est visé par les exigences.
+            - uncontrolled_business_partners: Pour les partenaires commerciaux sur lesquels l'organisme n'exerce pas de contrôle, l'organisme peut ne pas avoir besoin de prendre les mesures définies pour imposer la mise en œuvre par le partenaire commercial de moyens de contrôle anti-corruption, dans les circonstances suivantes:
+                - lorsque le partenaire commercial ne représente aucun risque de corruption ou représente un risque de corruption faible
+                - lorsque le partenaire commercial représente un risque de corruption plus que faible, mais que les moyens de contrôle qui pourraient être mis en œuvre par le partenaire commercial ne permettraient pas d'atténuer le risque de corruption identifié (il n'y a aucun intérêt à insister sur la mise en œuvre de moyens de contrôle inefficaces par le partenaire commercial); néanmoins, dans ce cas, il serait attendu de l'organisme qu'il tienne compte de ce facteur dans son évaluation des risques pour orienter sa décision d'établir ou non la relation et la façon de l'établir
+              Cela reflète la nature raisonnable et proportionnée du présent document. Si l'évaluation des risques de corruption ou la réalisation de diligences raisonnables ont permis de conclure que le partenaire commercial sur lequel l'organisme n'exerce pas de contrôle représente un risque de corruption plus que faible et que les moyens de contrôle anti-corruption mis en œuvre par le partenaire commercial permettraient d'atténuer ce risque de corruption, il convient que l'organisme prenne les mesures supplémentaires suivantes conformément.
+                - the organisme détermine si le partenaire commercial a mis en place les contrôles anti-corruption appropriés applicables au risque de corruption en question. Il convient que l'organisme exerce des diligences raisonnables appropriées en regard à cette détermination (voir). L'organisme tente de vérifier que ces moyens de contrôle permettent de gérer le risque de corruption relatif à la transaction entre l'organisme et le partenaire commercial. L'organisme n'a pas besoin de vérifier que le partenaire commercial dispose de moyens de contrôle sur des risques de corruption plus étendus. Il faut noter qu'il convient que l'étendue des moyens de contrôle et les étapes devant être mises en place par l'organisme dans le but de vérifier ces moyens de contrôle soient raisonnables et proportionnées au risque de corruption en question. Si l'organisme détermine dans la mesure du raisonnable que le partenaire commercial ne dispose pas de moyens de contrôle appropriés, l'exigence est applicable à ce partenaire commercial
+                - si possible, l'organisme impose au partenaire commercial de mettre en œuvre des moyens de contrôle anti-corruption pour la transaction, le projet ou l'activité concerné(e)
+                - lorsqu'il est impossible d'exiger du partenaire commercial qu'il mette en œuvre des contrôles anti-corruption, l'organisme tient compte de ce facteur lors de l'évaluation des risques de corruption que représente le partenaire commercial et la façon dont l'organisme gère ces risques. Cela ne signifie pas que l'organisme ne peut pas poursuivre la relation ou procéder à la transaction. Néanmoins, il convient que l'organisme tienne compte, dans le cadre de son évaluation des risques de corruption, de la vraisemblance de l'implication du partenaire commercial dans un cas de corruption et il convient que l'organisme tienne compte de l'absence de tels moyens de contrôle lors de son évaluation du risque de corruption global. Si l'organisme pense que les risques de corruption que représente le partenaire commercial sont inacceptablement élevés et si ces derniers ne peuvent pas être réduits par d'autres moyens (par exemple en restructurant la transaction), les dispositions s'appliqueront
+            - types: Les types de moyens de contrôle requis par l'organisme dépendent des circonstances. Il convient qu'ils soient raisonnables et proportionnés au risque de corruption, et il convient qu'ils couvrent, au minimum, le risque de corruption identifié. En fonction de la nature du partenaire commercial et de la nature du risque de corruption qu'il représente, l'organisme peut, par exemple, prendre les mesures suivantes:
+                - dans le cas d'un partenaire commercial présentant un risque de corruption élevé disposant d'un périmètre de travail étendu et complexe, l'organisme peut demander au partenaire commercial de mettre en œuvre des moyens de contrôle équivalents à ceux que spécifie le présent document conformément aux risques de corruption qu'il représente pour l'organisme
+                - dans le cas d'un partenaire commercial de taille moyenne présentant un risque de corruption moyen, l'organisme peut demander au partenaire commercial de mettre en œuvre certaines exigences anti-corruption minimales pertinentes pour la transaction, par exemple une politique anti-corruption, la formation de ses employés concernés, la désignation d'un dirigeant responsable de la conformité de la transaction, des moyens de contrôle pour les principaux paiements et une chaîne de rapport
+                - dans le cas d'un partenaire commercial de petite taille disposant d'un périmètre de travail très spécifique (par exemple, un agent ou un fournisseur secondaire), l'organisme peut imposer la formation des employés concernés et la mise en place de moyens de contrôle pour les principaux paiements et pour les cadeaux et marques d'hospitalité
+              Les moyens de contrôle doivent uniquement être appliqués pour la transaction entre l'organisme et le partenaire commercial (même si, en pratique, il se peut que le partenaire commercial ait mis en œuvre des moyens de contrôle pour l'ensemble de ses activités). Ce ne sont donc que des exemples. La question importante pour l'organisme est d'identifier les principaux risques de corruption associés à la transaction et de demander, dans la mesure du possible, que le partenaire commercial mette en œuvre des moyens de contrôle raisonnables et proportionnés applicables à ces principaux risques de corruption.
+            - contractual_or_otherwise: L'organisme imposera normalement ces exigences au partenaire commercial sur lequel il n'exerce pas de contrôle sous la forme d'une condition préalable à sa collaboration avec le partenaire commercial et/ou dans le document contractuel.
+            - verification: L'organisme n'est pas obligé de vérifier l'entière conformité du partenaire commercial à ces exigences. Néanmoins, il convient que l'organisme prenne des mesures raisonnables pour vérifier la conformité du partenaire commercial (par exemple, en demandant au partenaire commercial qu'il fournisse des copies des documents pertinents de sa politique). Pour les risques de corruption élevés (par exemple, pour un agent), l'organisme peut mettre en œuvre des procédures de surveillance, de rapport et/ou d'audit.
+            - time: Les moyens de contrôle anti-corruption pouvant nécessiter du temps à mettre en œuvre, il est susceptible d'être raisonnable pour un organisme de laisser du temps à ses partenaires commerciaux pour mettre en œuvre de tels moyens de contrôle. L'organisme peut continuer à travailler avec le partenaire commercial dans l'intervalle, mais l'absence de tels moyens de contrôle représente un facteur à prendre en compte dans la réalisation de l'évaluation des risques et des diligences raisonnables. Néanmoins, il convient que l'organisme envisage de demander un droit de résiliation du contrat ou de l'accord en question si le partenaire commercial ne met pas effectivement en œuvre les moyens de contrôle requis en temps utile.
+        - anti_corruption_commitments: Cette exigence visant à obtenir des engagements anti-corruption s'applique uniquement aux partenaires commerciaux qui représentent un risque de corruption plus que faible. Le risque de corruption associé à une transaction est susceptible d'être faible, par exemple:
+            - lorsque l'organisme achète un petit nombre d'articles de très faible valeur
+            - lorsque l'organisme réserve des billets d'avion ou réserve des chambres d'hôtel en ligne, directement auprès de compagnies aériennes ou d'hôtels
+            - lorsque l'organisme fournit des biens ou des services de faible valeur, directement à un client (par exemple aliments, places de cinéma)
+          Dans ces circonstances, l'organisme n'est pas obligé d'obtenir des engagements anti-corruption de la part de ces fournisseurs ou de ces clients représentant un risque de corruption faible. Pour un partenaire commercial qui représente un risque de corruption plus que faible, il convient que l'organisme, dans la mesure du possible, obtienne des engagements anti-corruption de la part de ce partenaire commercial. Il sera normalement possible d'exiger ces engagements lorsque l'organisme a une influence sur le partenaire commercial pour obtenir ces engagements. L'organisme est susceptible d'exiger ces engagements, par exemple, lorsqu'il désigne un agent pour agir en son nom dans le cadre d'une transaction ou un sous-traitant disposant d'un périmètre de travail étendu. L'organisme peut ne pas disposer d'une influence suffisante pour exiger ces engagements dans le cadre, par exemple, de ses négociations avec des clients de premier plan, ou lorsque l'organisme achète des composants auprès d'un fournisseur important d'après les conditions standard du fournisseur. Dans ces circonstances, l'absence de telles dispositions ne signifie pas que le projet ou la relation ne devrait pas se poursuivre, mais il convient que l'absence d'un tel engagement soit considérée comme un facteur pertinent dans le cadre de l'évaluation des risques de corruption et des diligences raisonnables réalisées conformément. Il convient que ces engagements soient, dans la mesure du possible, obtenus par écrit. Il peut s'agir d'un document d'engagement distinct ou d'une partie du contrat entre l'organisme et le partenaire commercial.
+        - gifts_hospitality_donations:
+            - general: L'organisme doit savoir que les cadeaux, les marques d'hospitalité, les dons et autres avantages peuvent être perçus par une tierce partie (par exemple, un concurrent, la presse, un procureur ou un juge) comme induisant une corruption, même si ni le donateur ni le bénéficiaire n'en avait l'intention. Un mécanisme de contrôle utile consiste à éviter, dans la mesure du possible, les cadeaux, les marques d'hospitalité, les dons et autres avantages qui pourraient être raisonnablement considérés comme un acte de corruption par une tierce partie.
+            - types: Les avantages auxquels il est fait référence peuvent, par exemple, comprendre:
+                - cadeaux, divertissements et marques d'hospitalité
+                - dons à des organisations politiques ou caritatives
+                - déplacement de représentants de clients ou de représentants publics
+                - frais promotionnels
+                - mécénat
+                - avantages pour la communauté
+                - formation
+                - adhésion à un club
+                - avantages personnels
+                - informations confidentielles et protégées
+            - gifts_hospitality: Concernant les cadeaux et marques d'hospitalité, les procédures mises en œuvre par l'organisme peuvent, par exemple, être conçues pour:
+                - contrôler l'étendue et la fréquence des cadeaux et marques d'hospitalité en:
+                    - interdisant totalement les cadeaux et marques d'hospitalité
+                    - autorisant les cadeaux et marques d'hospitalité, mais en les limitant en accord avec des facteurs tels que:
+                        - un montant maximal (qui peut varier en fonction du lieu et du type de cadeau et de marque d'hospitalité)
+                        - la fréquence (des cadeaux et marques d'hospitalité relativement petits peuvent s'accumuler et représenter une valeur importante s'ils se répètent)
+                        - le moment (par exemple, hors ou pas immédiatement avant ou après les négociations relatives à un appel d'offres)
+                        - la nature raisonnable (en tenant compte du lieu, du secteur et de l'âge du donateur ou du bénéficiaire)
+                        - l'identité du bénéficiaire (personnes en mesure d'attribuer un contrat ou d'approuver des permis, des certificats ou des paiements par exemple)
+                        - la réciprocité (personne au sein de l'organisme ne peut recevoir un cadeau ou une marque d'hospitalité d'une valeur supérieure à celle que le bénéficiaire est autorisé à offrir)
+                        - l'environnement légal et réglementaire (certains pays et organismes peuvent avoir mis en œuvre des interdictions ou des moyens de contrôle)
+                - imposer d'obtenir une approbation avant d'accepter un cadeau ou une marque d'hospitalité d'une valeur ou à une fréquence supérieure à celle définie par un dirigeant compétent
+                - imposer de documenter ouvertement et de façon efficace (par exemple, dans un registre ou dans un livre comptable) et de faire superviser un cadeau ou une marque d'hospitalité d'une valeur ou à une fréquence supérieure à celle définie
+            - political_charitable_donations_sponsorship_community_benefits: Concernant les dons à des organisations politiques ou caritatives, le sponsorat, les frais promotionnels et les avantages à la communauté, les procédures mises en œuvre par l'organisme peuvent, par exemple, être conçues pour:
+                - prohiber les paiements qui visent à influencer, ou pourraient être raisonnablement considérés comme influençant, un appel d'offres ou une autre décision en faveur de l'organisme
+                - réaliser des diligences raisonnables au sujet d'un parti politique, d'une œuvre caritative ou d'un autre bénéficiaire afin de déterminer s'ils sont légitimes et non utilisés comme moyen de corruption (ce qui peut comprendre, par exemple, des recherches sur Internet ou d'autres demandes appropriées destinées à vérifier si les dirigeants du parti politique ou de l'œuvre caritative sont connus pour leur implication dans des cas de corruption ou des comportements criminels similaires ou non, ou s'ils entretiennent des liens avec les projets ou les clients de l'organisme)
+                - imposer que le dirigeant approprié autorise le paiement
+                - imposer la divulgation publique du paiement
+                - s'assurer que le paiement est permis par la loi et les réglementations applicables
+                - éviter toute contribution immédiatement avant, pendant ou immédiatement après les négociations contractuelles
+            - travel_of_public_representatives_or_clients: Concernant les déplacements de représentants publics ou de représentants de clients, les procédures mises en œuvre par l'organisme peuvent, par exemple, être conçues pour:
+                - autoriser uniquement les paiements permis par les procédures du client ou de l'organisme public et par la loi et les réglementations applicables
+                - autoriser uniquement les déplacements nécessaires pour la bonne réalisation des obligations du représentant du client ou du représentant public (par exemple pour l'inspection des procédures qualité de l'organisme dans son sujet)
+                - imposer qu'un dirigeant approprié de l'organisme autorise le paiement
+                - imposer, si possible, que le superviseur ou l'employeur du représentant public ou la fonction de conformité anti-corruption soient informés du déplacement et des marques d'hospitalité sur le point d'être offerts
+                - restreindre les paiements aux dépenses nécessaires en termes de déplacement, d'hébergement et de repas directement associées à un itinéraire de déplacement raisonnable
+                - limiter les divertissements associés à un niveau raisonnable conformément à la politique de l'organisme en matière de cadeaux et de marques d'hospitalité
+                - interdire le paiement des frais de membres de la famille ou d'amis
+                - interdire le paiement des dépenses liées aux vacances ou aux loisirs
+        - inadequacy_of_controls: Lorsque les diligences raisonnables appliquées à une transaction, un projet, une activité ou une relation spécifique avec un partenaire commercial établissent que les risques de corruption ne peuvent pas être gérés par les moyens de contrôle anti-corruption existants et que l'organisme ne peut ou ne veut pas mettre en œuvre des moyens de contrôle anti-corruption additionnels ou plus performants, ou prendre d'autres mesures appropriées (comme modifier la nature de la transaction, du projet, de l'activité ou de la relation) qui permettent à l'organisme de gérer les risques de corruption concernés, l'organisme doit:
+            - dans le cas d'une transaction, d'un projet, d'une activité ou d'une relation existant(e), prendre des mesures appropriées aux risques de corruption et à la nature de la transaction, du projet, de l'activité ou de la relation pour y mettre fin, l'interrompre, la suspendre ou s'en retirer aussitôt que possible
+            - dans le cas de la proposition d'une nouvelle transaction, d'un nouveau projet, d'une nouvelle activité ou d'une nouvelle relation, différer ou décliner de poursuivre
+        - reporting_concerns: L'organisme doit mettre en œuvre des procédures qui:
+            - encouragent et permettent aux personnes de rapporter de bonne foi, ou sur des motifs qui les ont raisonnablement poussées à le croire, les tentatives de corruption, les cas de corruption avérés et les cas de corruption suspectés, ou une violation ou une lacune du système de management anticorruption, à la fonction de conformité anti-corruption ou au personnel approprié (directement ou par le biais d'une force partie appropriée)
+            - excepté dans la mesure requise par le bon déroulement d'une enquête, imposent que l'organisme traite les rapports de manière confidentielle, de sorte que l'identité de l'émetteur et des personnes impliquées ou mentionnées dans le rapport soit protégée
+            - permettent des rapports anonymes
+            - interdisent les représailles, et protègent les émetteurs des rapports de représailles, après qu'ils ont formulé des inquiétudes ou rapporté des faits relatifs à une tentative de corruption, à un cas de corruption avéré ou à un cas de corruption suspecté, ou à une violation de la politique anticorruption ou du système de management anti-corruption, de bonne foi ou sur des motifs qui les ont raisonnablement poussés à le croire
+            - permettent au personnel de recevoir des conseils de la part d'une personne appropriée sur le comportement à adopter face à une inquiétude ou à une situation qui pourrait impliquer une forme de corruption
+          L'organisme doit s'assurer que l'ensemble du personnel est informé des procédures de rapport et qu'il est en mesure de les utiliser, et qu'il connaît ses droits et les mécanismes de protection applicables dans le cadre de ces procédures. Ces procédures peuvent être identiques à celles utilisées pour les rapports d'autres inquiétudes (par exemple: sécurité, mauvaise pratique, mauvais comportement ou autre risque sérieux), ou en faire partie. L'organisme peut faire appel à un partenaire commercial pour gérer le système de rapport en son nom. Dans certains pays, les exigences de confidentialité et d'anonymat ci-dessus sont interdites par la loi. Dans ce cas, l'organisme documente son incapacité à s'y conformer.
+        - investigation_and_treatment: L'organisme doit mettre en œuvre des procédures qui:
+            - imposent l'évaluation de tout cas de corruption ou de violation de la politique anti-corruption ou du système de management anti-corruption signalé, détecté ou raisonnablement suspecté et, le cas échéant, son enquête
+            - requièrent la mise en place de mesures appropriées si l'enquête révèle un cas de corruption ou de violation de la politique anti-corruption ou du système de management anti-corruption
+            - donnent les moyens et la légitimité aux enquêteurs
+            - imposent la coopération du personnel concerné dans le cadre de l'enquête
+            - imposent que l'état d'avancement et les résultats de l'enquête soient rapportés à la fonction de conformité anti-corruption et aux autres fonctions de conformité, le cas échéant
+            - imposent que l'enquête soit réalisée de manière confidentielle et que les éléments de sortie de l'enquête soient confidentiels
+          L'enquête doit être menée par du personnel qui ne fait pas partie du rôle ou de la fonction objet de l'enquête et rapportée à du personnel qui ne fait pas partie du rôle ou de la fonction objet de l'enquête. L'organisme peut désigner un partenaire commercial qui réalisera l'enquête et rapportera les résultats à du personnel qui ne fait pas partie du rôle ou de la fonction objet de l'enquête. Dans certains pays, l'exigence de confidentialité ci-dessus est interdite par la loi. Dans ce cas, l'organisme documente son incapacité à s'y conformer.
+    - monitoring_measurement_analysis_evaluation: L'organisme doit déterminer:
+        - ce qu'il est nécessaire de surveiller et mesurer
+        - qui est responsable de la surveillance
+        - les méthodes de surveillance, de mesure, d'analyse et d'évaluation, selon le cas, pour assurer la validité des résultats
+        - quand la surveillance et la mesure doivent être effectuées
+        - quand les résultats de la surveillance et de la mesure doivent être analysés et évalués
+        - à qui et de quelle façon ces informations doivent être rapportées
+      L'organisme doit conserver des informations documentées pertinentes comme preuves des méthodes et des résultats. Il doit évaluer la performance anti-corruption, ainsi que l'efficacité et l'efficience du système de management anti-corruption.
+    - internal_audit:
+        - L'organisme doit réaliser des audits internes à des intervalles planifiés pour fournir des informations permettant de déterminer si le système de management anti-corruption:
+            - est conforme aux propres exigences de l'organisme concernant le système de management anti-corruption
+            - est conforme aux exigences du présent document
+            - est efficacement mis en œuvre et tenu à jour
+          Des préconisations pour l'audit des systèmes de management sont données dans l'ISO 19011. Le périmètre et l'échelle des activités d'audit interne d'un organisme peuvent varier en fonction de facteurs variés comprenant la taille, la structure, la maturité et les lieux d'activité de l'organisme.
+        - L'organisme doit:
+            - planifier, établir, mettre en œuvre et maintenir un ou des programmes d'audit, couvrant notamment la fréquence, les méthodes, les responsabilités, les exigences de planification et le compte rendu. Le ou les programmes d'audit doivent tenir compte de l'importance des processus concernés et des résultats des audits précédents
+            - définir les critères d'audit et le périmètre de chaque audit
+            - sélectionner des auditeurs compétents et réaliser des audits pour assurer l'objectivité et l'impartialité du processus d'audit
+            - veiller à ce que les résultats des audits soient rapportés aux responsables concernés, à la fonction de conformité anti-corruption, à la direction et, suivant le cas, à l'organe de gouvernance (s'il existe)
+            - conserver des informations documentées comme preuves de la mise en œuvre du programme d'audit et des résultats d'audit
+        - Ces audits doivent être raisonnables, proportionnés et basés sur les risques. Ils doivent comprendre des processus d'audit interne ou d'autres procédures qui analysent les procédures, les contrôles et les systèmes relatifs à:
+            - la corruption ou les cas de corruption suspectés
+            - la violation des exigences de la politique anti-corruption ou du système de management anticorruption
+            - l'incapacité des partenaires commerciaux à se conformer aux exigences anti-corruption applicables de l'organisme
+            - les lacunes ou les opportunités d'amélioration du système de management anti-corruption
+        - Afin de garantir l'objectivité et l'impartialité de ces programmes d'audit, l'organisme doit s'assurer que ces audits sont réalisés selon l'une des options suivantes:
+            - une fonction ou un personnel indépendant(e) établi(e) ou désigné(e) pour ce processus
+            - la fonction de conformité anti-corruption (à moins que le périmètre d'audit comprenne l'évaluation du système de management anti-corruption lui-même ou d'un élément similaire dont la fonction de conformité anti-corruption est responsable)
+            - une personne appropriée d'un service ou d'une fonction autre que celui/celle qui est audité(e)
+            - une tierce partie appropriée
+            - un groupe réunissant des personnes citées ci-dessus
+          L'organisme doit s'assurer qu'aucun auditeur n'audite son propre domaine d'activité.
+    - management_review:
+        - highest_level: À des intervalles planifiés, la direction, au niveau le plus élevé, doit procéder à la revue du système de management anti-corruption mis en place par l'organisme, afin de s'assurer qu'il est toujours approprié, adéquat et efficace. La revue de direction doit prendre en compte:
+            - l'état d'avancement des actions décidées à l'issue des revues de direction précédentes
+            - les modifications des enjeux externes et internes pertinents pour le système de management anticorruption
+            - les informations sur la performance du système de management anti-corruption, y compris les tendances concernant:
+                - les non-conformités et les actions correctives
+                - les résultats de la surveillance et de la mesure
+                - les résultats d'audit
+                - les rapports de cas de corruption
+                - les enquêtes
+                - la nature et l'étendue des risques de corruption auxquels l'organisme est exposé
+            - l'efficacité des actions mises en place pour gérer les risques de corruption
+            - les opportunités d'amélioration continue du système de management anti-corruption
+          Les éléments de sortie de la revue de direction doivent inclure les décisions relatives aux opportunités d'amélioration continue et aux éventuels changements à apporter au système de management anticorruption. Une synthèse des résultats de la revue de direction doit être remise à l'organe de gouvernance (s'il existe). L'organisme doit conserver des informations documentées comme preuves des résultats des revues de direction.
+        - governing_body: L'organe de gouvernance (s'il existe) doit réaliser des revues périodiques du système de management anti-corruption en fonction des informations fournies par la direction et par la fonction de conformité anti-corruption et de toute autre information que l'organe de gouvernance demande ou obtient. L'organisme doit conserver des informations documentées de synthèse comme preuves des résultats des revues de l'organe de gouvernance.
+    - compliance_function_review: La fonction de conformité anti-corruption doit évaluer de façon continue si le système de management de la corruption est:
+        - adéquat pour gérer efficacement les risques de corruption auxquels l'organisme est exposé
+        - mis en œuvre de façon efficace
+      La fonction de conformité anti-corruption doit rendre compte, à des intervalles planifiés et de façon ad hoc, suivant le cas, à l'organe de gouvernance (s'il existe) et à la direction, ou au comité compétent de l'organe de gouvernance ou de la direction, de l'adéquation et de la mise en œuvre du système de management anti-corruption, y compris les résultats des enquêtes et des audits. La fréquence de ces comptes rendus dépend des exigences de l'organisme, mais au moins une fois par an est recommandée. L'organisme peut faire appel à un partenaire commercial pour l'assister dans sa revue, sous réserve que les observations de ce dernier soient communiquées de manière appropriée à la fonction de conformité anticorruption, à la direction et, suivant le cas, à l'organe de gouvernance (s'il existe).
+    - non_conformity_and_corrective_actions: Lorsqu'une non-conformité se produit, l'organisme doit:
+        - réagir promptement à la non-conformité, et le cas échéant:
+            - agir pour la maîtriser et la corriger
+            - faire face aux conséquences
+        - évaluer s'il est nécessaire de mener une action pour éliminer la ou les causes de la non-conformité, afin qu'elle ne se reproduise pas ou n'apparaisse pas ailleurs, en:
+            - effectuant la revue de la non-conformité
+            - recherchant et analysant les causes de la non-conformité
+            - recherchant si des non-conformités similaires existent ou pourraient éventuellement se produire
+        - mettre en œuvre toutes les actions requises
+        - examiner l'efficacité de toute action corrective mise en œuvre
+        - modifier, si nécessaire, le système de management anti-corruption
+      Les actions correctives doivent être appropriées aux conséquences des non-conformités rencontrées. L'organisme doit conserver des informations documentées comme preuves:
+        - de la nature des non-conformités et de toute action menée ultérieurement
+        - des résultats de toute action corrective
+    - continuous_improvement: L'organisme doit améliorer en continu la pertinence, l'adéquation et l'efficacité du système de management anti-corruption.
+  bibliography: Bibliographie
